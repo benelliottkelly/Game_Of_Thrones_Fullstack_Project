@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const housesSchema = mongoose.Schema({
+const housesSchema = new mongoose.Schema({
   houseName: {type: String, required: true, unique: true, maxlength: 60},
   crest: {type: String, required: true},
   description: {type: String, required: true},

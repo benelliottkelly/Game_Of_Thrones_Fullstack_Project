@@ -6,11 +6,10 @@ const placeSchema = new mongoose.Schema({
     region: { type: String },
     image: { type: String },
     occupiedBy: { type: [String] }
-})
-
-placeSchema.set('toJSON', {
+}, {
     virtuals: true
 })
+
 
 placeSchema.virtual('charactersInPlace', {
     ref: 'Character',
