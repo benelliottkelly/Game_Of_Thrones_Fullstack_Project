@@ -1,9 +1,9 @@
 import mongoose from 'mongoose'
 
 const placeSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    region: { type: String, required: true },
+    name: { type: String },
+    description: { type: String },
+    region: { type: String },
     image: { type: String },
     occupiedBy: { type: [String] }
 })
