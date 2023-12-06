@@ -9,9 +9,12 @@ const characterSchema = new mongoose.Schema({
   // places: [], // Collection of places character has visited ??
   house: { type: String },
   owner: {type: mongoose.ObjectId, ref: 'User', required: true}
-}, {
+})
+
+characterSchema.set('toJSON', {
   virtuals: true
 })
+
 
 // virtual field for displaying the character house information when we toggle into their individual page.
 

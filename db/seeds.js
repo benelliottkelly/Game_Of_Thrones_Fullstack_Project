@@ -39,7 +39,7 @@ async function seed() {
             return { ...char, owner: usersCreated[0]._id }
         })
 
-        const charactersCreated = await Place.create(ownedCharacters)
+        const charactersCreated = await Character.create(ownedCharacters)
         console.log(`Seeded ${charactersCreated.length} characters to the database`)
 
 

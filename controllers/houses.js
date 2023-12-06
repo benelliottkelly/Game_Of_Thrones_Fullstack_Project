@@ -1,7 +1,8 @@
 import House from '../models/house.js'
 
 export const getAllHouses = async (req, res) => {
-  const houses = await House.find()
+  const houses = await House.find().populate('characters').populate('places')
+  console.log(houses)
   return res.status(200).json(houses)
 }
 
