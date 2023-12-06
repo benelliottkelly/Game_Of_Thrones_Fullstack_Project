@@ -6,9 +6,12 @@ const housesSchema = new mongoose.Schema({
   description: {type: String, required: true},
   notableBattles: [{type: String}],
   bannermen: [{type: String}],
-}, {
+})
+
+housesSchema.set('toJSON', {
   virtuals: true
 })
+
 
 housesSchema
 	.virtual('characters', {

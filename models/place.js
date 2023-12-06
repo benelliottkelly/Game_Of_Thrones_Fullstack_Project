@@ -1,15 +1,16 @@
 import mongoose from 'mongoose'
 
 const placeSchema = new mongoose.Schema({
-    name: { type: String },
-    description: { type: String },
-    region: { type: String },
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    region: { type: String, required: true },
     image: { type: String },
     occupiedBy: { type: [String] }
-}, {
-    virtuals: true
 })
 
+placeSchema.set('toJSON', {
+    virtuals: true
+})
 
 placeSchema.virtual('charactersInPlace', {
     ref: 'Character',

@@ -1,13 +1,13 @@
 import Place from "../models/place.js"
 export const getAllPlaces = async (req, res) => {
-    const places = await Place.find()
+    const places = await Place.find().populate('charactersInPlace')
     console.log(places)
     return res.json(places)
 }
 export const getSinglePlace = async (req, res) => {
     try {
         const { placeId } = req.params
-        const place = await Place.findById(placeId)
+        const place = await Place.findById(placeId).populate('charactersInPlace')
         if (!place) {
             return res.status(404).json({ message: 'Place not found' })
         }
