@@ -41,5 +41,4 @@ router.route('/places')
 router.route('/places/:placesId')
   .get(getSinglePlace)
 
-
 export default router
