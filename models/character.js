@@ -5,7 +5,7 @@ const characterSchema = new mongoose.Schema({
   lastName: { type: String, required: true, maxlength: 20 },
   battles: [String],
   biography: { type: String },
-  hometown: { type: String },
+  hometown: { type: String, required: true },
   // places: [], // Collection of places character has visited ??
   house: { type: String },
   owner: {type: mongoose.ObjectId, ref: 'User', required: true}

@@ -6,6 +6,8 @@ const housesSchema = mongoose.Schema({
   description: {type: String, required: true},
   notableBattles: [{type: String}],
   bannermen: [{type: String}],
+}, {
+  virtuals: true
 })
 
 housesSchema

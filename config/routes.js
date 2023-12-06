@@ -1,5 +1,4 @@
 import express from 'express'
-import { createCharacter, deleteCharacter, getAllCharacters, showSingleCharacter, updateCharacter } from '../controllers/characters'
 
 const router = express.Router()
 
@@ -12,5 +11,12 @@ router.route('/characters/:characterId')
   .get(showSingleCharacter)
   .put(updateCharacter)
   .delete(deleteCharacter)
+
+router.route('/places')
+  .get(getAllPlaces)
+
+router.route('/places/:placesId')
+  .get(getSinglePlace)
+
 
 export default router
