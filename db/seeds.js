@@ -39,16 +39,17 @@ async function seed() {
             return { ...char, owner: usersCreated[0]._id }
         })
 
-        const placesCreated = await Place.create(placeData)
-        console.log(`Seeded ${placesCreated.length} places to the database`)
-      
-        const housesCreated = await House.create(houseData)
-        console.log(`Seeded ${housesCreated.length} houses to the database`)
-
-        // Use the updated character with owner fields to create documents
         const charactersCreated = await Place.create(ownedCharacters)
         console.log(`Seeded ${charactersCreated.length} characters to the database`)
 
+
+        const placesCreated = await Place.create(placeData)
+        console.log(`Seeded ${placesCreated.length} places to the database`)
+
+        const housesCreated = await House.create(houseData)
+        console.log(`Seeded ${housesCreated.length} houses to the database`)
+
+        console.log(usersCreated, housesCreated, placesCreated, 'houses created --> ', charactersCreated)
 
 
         // Close connection to the database
