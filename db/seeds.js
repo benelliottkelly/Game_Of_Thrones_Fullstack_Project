@@ -49,7 +49,7 @@ async function seed() {
         const housesCreated = await House.create(houseData)
         console.log(`Seeded ${housesCreated.length} houses to the database`)
 
-        console.log(usersCreated, housesCreated, placesCreated, 'houses created --> ', charactersCreated)
+        console.log(charactersCreated)
 
 
         // Close connection to the database
