@@ -1,6 +1,7 @@
 export default [
     {
         houseName: "Stark",
+        motto: "Winter is Coming",
         crest: "https://example.com/stark_crest_image",
         description: "House Stark hails from the North and is known for their honor and resilience.",
         notableBattles: [
@@ -18,6 +19,7 @@ export default [
     },
     {
         houseName: "Targaryen",
+        motto: "Fire and Blood",
         crest: "https://example.com/targaryen_crest_image",
         description: "House Targaryen is known for its dragons and its ancestral seat in Dragonstone.",
         notableBattles: [
@@ -35,6 +37,7 @@ export default [
     },
     {
         houseName: "Lannister",
+        motto: "Hear Me Roar",
         crest: "https://example.com/lannister_crest_image",
         description: "House Lannister is one of the richest and most powerful families in Westeros, known for their wealth, cunning, and the phrase 'A Lannister always pays his debts.'",
         notableBattles: [
@@ -52,6 +55,7 @@ export default [
     },
     {
         houseName: "Baratheon",
+        motto: "Ours is the Fury",
         crest: "https://example.com/baratheon_crest_image",
         description: "House Baratheon is known for its strength and leadership, originating from the Stormlands.",
         notableBattles: [
@@ -69,6 +73,7 @@ export default [
     },
     {
         houseName: "Greyjoy",
+        motto: "We Do Not Sow",
         crest: "https://example.com/greyjoy_crest_image",
         description: "House Greyjoy hails from the Iron Islands and is known for their seafaring skills and dedication to the Old Way.",
         notableBattles: [
@@ -86,6 +91,7 @@ export default [
     },
     {
         houseName: "Martell",
+        motto: "Unbowed, Unbent, Unbroken",
         crest: "https://example.com/martell_crest_image",
         description: "House Martell, rulers of Dorne, are known for their resilience, independence, and adherence to their own customs and traditions.",
         notableBattles: [
@@ -103,6 +109,7 @@ export default [
     },
     {
         houseName: "Tyrell",
+        motto: "Growing Strong",
         crest: "https://example.com/tyrell_crest_image",
         description: "House Tyrell of Highgarden is known for their wealth, political savvy, and mastery in agriculture.",
         notableBattles: [
@@ -120,6 +127,7 @@ export default [
     },
     {
         houseName: "Arryn",
+        motto: "As High as Honor",
         crest: "https://example.com/arryn_crest_image",
         description: "House Arryn rules the Vale from the Eyrie and is known for its strong connections to the Vale's mountainous terrain.",
         notableBattles: [
@@ -137,6 +145,7 @@ export default [
     },
     {
         houseName: "Tully",
+        motto: "Family, Duty, Honor",
         crest: "https://example.com/tully_crest_image",
         description: "House Tully rules the Riverlands from Riverrun and is associated with the rivers and waterways of the region.",
         notableBattles: [
@@ -154,6 +163,7 @@ export default [
     },
     {
         houseName: "Frey",
+        motto: "We Stand Together",
         crest: "https://example.com/frey_crest_image",
         description: "House Frey, known for their infamous role in the Red Wedding, held the strategic Twins in the Riverlands.",
         notableBattles: [
@@ -171,6 +181,7 @@ export default [
     },
     {
         houseName: "Bolton",
+        motto: "Our Blades Are Sharp",
         crest: "https://example.com/bolton_crest_image",
         description: "House Bolton, known for their cruel and ruthless nature, controlled the North from the Dreadfort.",
         notableBattles: [
@@ -188,6 +199,7 @@ export default [
     },
     {
         houseName: "Reed",
+        motto: "We Remember",
         crest: "https://example.com/reed_crest_image",
         description: "House Reed is a small but ancient house located in the swamps of the Neck, fiercely loyal to House Stark.",
         notableBattles: [
@@ -201,6 +213,7 @@ export default [
     },
     {
         houseName: "Mormont",
+        motto: "Here We Stand",
         crest: "https://example.com/mormont_crest_image",
         description: "House Mormont is a noble house known for their fierce loyalty to the Starks and their home on Bear Island.",
         notableBattles: [
@@ -218,6 +231,7 @@ export default [
     },
     {
         houseName: "Tarth",
+        motto: "In Darkness We Rise",
         crest: "https://example.com/tarth_crest_image",
         description: "House Tarth of Evenfall Hall is located on the Sapphire Isle and known for their honor and loyalty.",
         notableBattles: [
@@ -231,6 +245,7 @@ export default [
     },
     {
         houseName: "Karstark",
+        motto: "The Sun of Winter",
         crest: "https://example.com/karstark_crest_image",
         description: "House Karstark, once loyal bannermen to the Starks, holds the castle of Karhold in the North.",
         notableBattles: [
@@ -261,6 +276,7 @@ export default [
     },
     {
         houseName: "Dayne",
+        motto: "And Now it Begins",
         crest: "https://example.com/dayne_crest_image",
         description: "House Dayne, from Starfall in Dorne, is known for their famous ancestral sword, Dawn, and its wielders.",
         notableBattles: [
@@ -274,6 +290,7 @@ export default [
     },
     {
         houseName: "Clegane",
+        motto: "Death Before Disloyalty",
         crest: "https://example.com/clegane_crest_image",
         description: "House Clegane is a landed knightly house known for their loyalty and fierce service to House Lannister.",
         notableBattles: [
@@ -287,6 +304,7 @@ export default [
     },
     {
         houseName: "Umber",
+        motto: "Only Loyalty Can Bind",
         crest: "https://example.com/umber_crest_image",
         description: "House Umber, from Last Hearth in the North, is known for their strength and loyalty to the Starks.",
         notableBattles: [
@@ -304,6 +322,7 @@ export default [
     },
     {
         houseName: "Hightower",
+        motto: "We Light the Way",
         crest: "https://example.com/hightower_crest_image",
         description: "House Hightower of Oldtown is one of the oldest and most influential houses in Westeros.",
         notableBattles: [
@@ -311,6 +330,20 @@ export default [
         ],
         bannermen: [
             "None (House Hightower is a powerful house)"
+        ]
+    },
+    {
+        houseName: "Free Folk",
+        motto: "We don't kneal for anyone beyond the wall",
+        crest: "https://example.com/free_folk_symbol_image",
+        description: "The Free Folk, or Wildlings, are a diverse group of people living beyond the Wall, rejecting the authority of the Seven Kingdoms.",
+        notableBattles: [
+            "Battle of Castle Black",
+            "Hardhome",
+            "Raid on Tormund's camp"
+        ],
+        bannermen: [
+            "No formal bannermen (The Free Folk are composed of various clans and groups)"
         ]
     }
 ]
