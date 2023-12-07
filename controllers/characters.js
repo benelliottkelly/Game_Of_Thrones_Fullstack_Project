@@ -5,8 +5,9 @@ import Character from "../models/character.js";
 // Path: /Characters
 
 export const getAllCharacters = async (req, res) => {
-  const character = await Character.find()
-  return res.json(movies)
+  const characters = await Character.find().populate('associatedHouse')
+  console.log(characters)
+  return res.json(characters)
 }
 
 // * Create 
@@ -16,8 +17,8 @@ export const getAllCharacters = async (req, res) => {
 export const createCharacter =  async (req, res) => {
   try {
     req.body.owner = req.currentUser._id
-    const characterToCreate = Character.create()
-    return res.status(201).json(chracterToCreate)
+    const characterToCreate = await Character.create(req.body)
+    return res.status(201).json(characterToCreate)
   } catch(error){
     console.log(error)
     return res.status(400).json(error)
@@ -31,7 +32,7 @@ export const createCharacter =  async (req, res) => {
 export const showSingleCharacter = async (req, res) => {
   try {
     const { characterId } = req.params
-    const character = await Character.findById(characterId)
+    const character = await Character.findById(characterId).populate('associatedHouse')
 
     if (!character) {
       return res.status(400).json({ message: 'Character not found' })
@@ -50,13 +51,19 @@ export const showSingleCharacter = async (req, res) => {
 
 export const updateCharacter = async (req, res) => {
   try {
-      const character = await Character.findOneAndUpdate({ _id: req.params.characterId })
+    const { characterId } = req.params
+      const character = await Character.findById(characterId)
+
+      if(!character) {
+        return res.status(404).json({ message: 'Character Not Found' })
+      }
+
       if(!character.owner.equals(req.currentUser._id)) {
           return res.status(401).json({ message: 'Unauthorized' })
       }
-      if(!character) {
-          return res.status(404).json({ message: "Character not found" })
-      }
+
+      Object.assign(character, req.body)
+      await character.save()
       return res.json(character)
   } catch (error) {
       console.log(error)

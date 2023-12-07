@@ -39,7 +39,7 @@ async function seed() {
             return { ...char, owner: usersCreated[0]._id }
         })
 
-        const charactersCreated = await Place.create(ownedCharacters)
+        const charactersCreated = await Character.create(ownedCharacters)
         console.log(`Seeded ${charactersCreated.length} characters to the database`)
 
 
@@ -48,9 +48,6 @@ async function seed() {
 
         const housesCreated = await House.create(houseData)
         console.log(`Seeded ${housesCreated.length} houses to the database`)
-
-        console.log(charactersCreated)
-
 
         // Close connection to the database
         await mongoose.connection.close()

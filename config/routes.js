@@ -18,29 +18,38 @@ import {
   getSinglePlace
 } from '../controllers/places.js'
 
+import { register, login } from '../controllers/users.js'
+
+import secureRoute from './secureRoute.js'
+
 const router = express.Router()
 
 router.route('/houses')
   .get(getAllHouses)
 
-router.route('/houses/houseId')
+router.route('/houses/:houseId')
   .get(getSingleHouse)
   
 // characters
 router.route('/characters')
   .get(getAllCharacters)
-  .post(createCharacter)
+  .post(secureRoute, createCharacter)
 
 router.route('/characters/:characterId')
   .get(showSingleCharacter)
-  .put(updateCharacter)
-  .delete(deleteCharacter)
+  .put(secureRoute, updateCharacter)
+  .delete(secureRoute, deleteCharacter)
 
 router.route('/places')
   .get(getAllPlaces)
 
-router.route('/places/:placesId')
+router.route('/places/:placeId')
   .get(getSinglePlace)
 
+router.route('/login')
+  .post(login)
+
+router.route('/register')
+  .post(register)
 
 export default router

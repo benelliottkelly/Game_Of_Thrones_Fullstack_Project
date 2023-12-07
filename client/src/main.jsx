@@ -7,6 +7,10 @@ import Home from './components/Home.jsx'
 import AllCharacters from './components/AllCharacters.jsx'
 import AllHouses from './components/AllHouses.jsx'
 import AllPlaces from './components/AllPlaces.jsx'
+import SingleCharacter from './components/SingleCharacter.jsx'
+import SinglePlace from './components/SinglePlace.jsx'
+import SingleHouse from './components/SingleHouse.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -22,12 +26,24 @@ const router = createBrowserRouter([
         element: <AllPlaces />
       },
       {
+        path: '/places/:placeId',
+        element: <SinglePlace />
+      },
+      {
         path: '/houses',
         element: <AllHouses />
       },
       {
+        path: '/houses/:houseId',
+        element: <SingleHouse />
+      },
+      {
         path: '/characters',
         element: <AllCharacters />
+      },
+      {
+        path: '/characters/:characterId',
+        element: <SingleCharacter />
       }
     ]
   }
