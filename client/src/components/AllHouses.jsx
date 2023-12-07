@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigation } from 'react-router-dom'
+import { useLoaderData, useNavigation, Link } from 'react-router-dom'
 import { useEffect } from 'react'
 
 
@@ -18,13 +18,18 @@ export default function AllPlaces() {
                 {houses.map(house => {
                     return (
                         <>
-                            <div className="card" key={house.id}>
-                                <img className="card-img-top" src={house.crest} alt="Crest Image" />
-                                <div className="card-body">
-                                    <h5 className="card-title">{house.houseName}</h5>
-                                    <p className="card-text">{house.motto}</p>
+                            <Link to={`/places/${house.id}`} style={{
+                                textDecoration: 'none',
+                                color: 'black'
+                            }}>
+                                <div className="card" key={house.id}>
+                                    <img className="card-img-top" src={house.crest} alt="Crest Image" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{house.houseName}</h5>
+                                        <p className="card-text">{house.motto}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </>
                     )
                 })
