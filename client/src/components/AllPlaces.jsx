@@ -10,28 +10,25 @@ export default function AllPlaces() {
         console.log(places)
     }, [places])
 
-
-
-
-
-
-
     return (
         <>
             <h1>All Places</h1>
-            {places.map(place => {
-                return (
-                    <>
-                        <div className="card" key={place.id}>
-                            <div className="card-body">
-                                <h5 className="card-title">{place.name}</h5>
-                                <p className="card-text">{place.description}</p>
+            <section className="card-layout">
+                {places.map(place => {
+                    return (
+                        <>
+                            <div className="card" key={place.id}>
+                                <img className="card-img-top" src={place.image} alt="Place Image" />
+                                <div className="card-body">
+                                    <h5 className="card-title">{place.name}</h5>
+                                    <p className="card-text">{place.region}</p>
+                                </div>
                             </div>
-                        </div>
-                    </>
-                )
-            })
-            }
+                        </>
+                    )
+                })
+                }
+            </section>
         </>
     )
 }

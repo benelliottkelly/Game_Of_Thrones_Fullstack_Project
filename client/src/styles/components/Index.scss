@@ -1,8 +1,26 @@
-.card-body {
-    background-color: grey;
+
+
+.card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+        margin: 10px;
+        background-color: grey;
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .card-img-top {
+            height: 200px;
+            width: 200px;
+            background-color: white;
+        }
+        .card-body {
+            .card-title {
+                text-align: center;
+                background-color: grey;
+            }
+        }
+    }
 }
 
-.card-img-top {
-    height: 200px;
-    width: 200px;
-}

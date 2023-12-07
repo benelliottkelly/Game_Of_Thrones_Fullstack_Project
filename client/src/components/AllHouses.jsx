@@ -7,27 +7,29 @@ export default function AllPlaces() {
     const navigation = useNavigation()
     const houses = useLoaderData()
 
-    useEffect (() => {
+    useEffect(() => {
         console.log(houses)
     }, [houses])
 
     return (
         <>
-            <h1>All Places</h1>
-            {houses.map(house => {
-                return (
-                    <>
-                        <div className="card" key={house.id}>
-                            <img className="card-img-top" src={house.crest} alt="Crest Image" />
-                            <div className="card-body">
-                                <h5 className="card-title">{house.houseName}</h5>
-                                <p className="card-text">{house.motto}</p>
+            <h1>All Houses</h1>
+            <section className="card-layout">
+                {houses.map(house => {
+                    return (
+                        <>
+                            <div className="card" key={house.id}>
+                                <img className="card-img-top" src={house.crest} alt="Crest Image" />
+                                <div className="card-body">
+                                    <h5 className="card-title">{house.houseName}</h5>
+                                    <p className="card-text">{house.motto}</p>
+                                </div>
                             </div>
-                        </div>
-                    </>
-                )
-            })
-            }
+                        </>
+                    )
+                })
+                }
+            </section>
         </>
     )
 }
