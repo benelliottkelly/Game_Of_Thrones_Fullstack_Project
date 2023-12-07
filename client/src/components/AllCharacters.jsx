@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigation } from 'react-router-dom'
+import { useLoaderData, useNavigation, Link } from 'react-router-dom'
 import { useEffect } from 'react'
 
 export default function AllCharacters() {
@@ -17,6 +17,10 @@ export default function AllCharacters() {
                 {characters.map(character => {
                     return (
                         <>
+                       <Link to={`/characters/${character.id}`} style={{
+                                textDecoration: 'none',
+                                color: 'black'
+                            }}>
                             <div className="card" key={character.id}>
                                 <img className="card-img-top" src={character.image} alt="Character Image" />
                                 <div className="card-body">
@@ -24,6 +28,7 @@ export default function AllCharacters() {
                                     <p className="card-text">{character.hometown}</p>
                                 </div>
                             </div>
+                            </Link>
                         </>
                     )
                 })

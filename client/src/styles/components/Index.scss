@@ -1,24 +1,41 @@
-
+$card-bottom-color: rgb(10, 145, 150);
+$border-radius: 10px;
 
 .card-layout {
     display: flex;
     flex-wrap: wrap;
     .card {
         margin: 10px;
-        background-color: grey;
+        background-color: $card-bottom-color;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             cursor: pointer;
+            background-color: $card-bottom-color;
         }
         .card-img-top {
             height: 200px;
             width: 200px;
-            background-color: white;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
         }
         .card-body {
             .card-title {
                 text-align: center;
-                background-color: grey;
+                background-color: $card-bottom-color;
+                text-decoration: none;
+                margin: 0.5em 0 0 0;
+                border: 1px solid $card-bottom-color;
+            }
+            .card-text {
+                text-align: center;
+                background-color: $card-bottom-color;
+                margin: 0;
+                padding-bottom: 0.5em;
+                border: 1px solid $card-bottom-color;
+                border-bottom-left-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
             }
         }
     }
