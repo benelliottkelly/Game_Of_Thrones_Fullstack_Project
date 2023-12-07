@@ -1,38 +1,41 @@
-const tokenName = 'GAMEOFTHRONES-FULLSTACK-TOKEN'
+const tokenName = 'SEI-76-BREADBORED-TOKEN'
 
-// Take a request objecr and return form data as a JS object
-export async function formToObj(request) {
-    const formData = await request.formData()
-    return Object.fromEntries(formData.entries())
+// This function takes a request object and returns form data as a JS object
+export async function formToObj(request){
+  const formData = await request.formData()
+  return Object.fromEntries(formData.entries())
 }
 
-export function setToken(token) {
-    localStorage.setItem(tokenName, token)
+export function setToken(token){
+  localStorage.setItem(tokenName, token)
 }
 
-export function getToken() {
-    return localStorage.getItem(tokenName)
+export function getToken(){
+  return localStorage.getItem(tokenName)
 }
 
-export function removeToken() {
-    localStorage.removeItem(tokenName)
+export function removeToken(){
+  localStorage.removeItem(tokenName)
 }
 
-// Decode JWT token in local storage
-// !token === null
-// token === decoide, validate expirty date and return payload
+// This function will decode the JWT token in our localstorage
+// If the token does not exist, will return null
+// If the token exists, we will decode, validate expiry date, return the payload.sub
+export function activeUser(){
+  // Get token from localstorage
+  const token = getToken()
+  if (!token) return null
 
-export function activeUser() {
-    const token = getToken()
-    if (!token) return null
+  // If token exists
+  const b64 = token.split('.')[1]
+  const payload = JSON.parse(atob(b64))
 
-    const b64 = token.split('.')[1]
-    const payload = JSON.parse(atob(b64))
+  const now = Date.now() / 1000
+  const exp = payload.exp
+  if (exp > now) {
+    console.log(payload.sub)
+    return payload.sub
+  }
 
-    const now = Date.now() / 1000
-    const exp = payload.exp
-    if (exp > now) {
-        console.log(payload.sub)
-        return payload.sub
-    }
+  // Validate expiry date (payload.exp) by checking the number is greater than the date right now
 }
