@@ -1,0 +1,34 @@
+
+
+.logo-icon {
+  width: 70px;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  
+  span {
+    height: 6px;
+    display: block;
+    width: 50px;
+    background: black;
+    margin-bottom: 3px;
+  }
+}
+ header {
+  background-color: rgba(173, 215, 230, 0.6);
+ }
+
+
+  nav {
+    a{
+      text-decoration: none;
+      font-size: 10px;
+      color: blue($color: #000000);
+    }
+  }
+ 

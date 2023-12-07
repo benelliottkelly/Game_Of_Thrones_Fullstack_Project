@@ -17,7 +17,7 @@ export default function Nav(){
   return (
     <>
     <header className='p-2 p-md-3 p-lg-4'>
-        <Link to="/"><img className='logo' src={wolf} alt="Stark Wolf" /></Link>
+        <Link to="/"><img className='logo-icon' src={wolf} alt="Stark Wolf" /></Link>
         <button className='nav-toggle' onClick={() => setShow(true)}>
           <span></span>
           <span></span>
