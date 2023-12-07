@@ -27,7 +27,7 @@ export default function Nav(){
         </button>
       </header>
 
-      <Modal show={show} fullscreen={true} onHide={() => setShow(false)}>
+      <Modal show={show} fullscreen={true} onHide={() => setShow(false)} dialogClassName="modal-fullscreen">
         <Modal.Header closeButton>
           <nav onClick={() => setShow(false)}>
             <Link to="/register"></Link>
