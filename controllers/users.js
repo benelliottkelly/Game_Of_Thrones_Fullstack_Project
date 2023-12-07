@@ -32,7 +32,7 @@ export const login = async (req, res) => {
         const token = jwt.sign({ sub: userToLogin._id }, process.env.SECRET, { expiresIn: '1d' })
 
         console.log('Password match, user validated')
-        return res.json({ message: `Welcome back to the database ${userToLogin.username}`, token: token })
+        return res.status(202).json({ message: `Welcome back to the database ${userToLogin.username}`, token: token })
 
     } catch (error) {
         console.log(error)

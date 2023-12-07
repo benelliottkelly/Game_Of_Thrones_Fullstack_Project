@@ -2,7 +2,7 @@ export default [
     {
         firstName: "Jon",
         lastName: "Snow",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/a/a0/Cristi_Balanescu_Jon_SnowGhost.png",
         battles: [
             "Battle of the Bastards",
             "Raid on Crasters Keep",
@@ -12,13 +12,13 @@ export default [
             "Battle of Castle Black"
         ],
         biography: "Born as the illegitimate son (bastard) of Eddard Stark, the honorable lord of Winterfell, Jon's mother's identity remains a mystery. Raised alongside the Stark children at Winterfell, Jon faces the stigma of his illegitimacy but shares a close bond with his half-siblings.",
-        hometown: "Sinterfell",
+        hometown: "Winterfell",
         house: "Stark"
     },
     {
         firstName: "Daenerys",
         lastName: "Targaryen",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/c/ca/Daenerys_by_Hylora.JPG",
         battles: [
             "Battle of Meereen",
             "Battle of Astapor",
@@ -34,7 +34,7 @@ export default [
     {
         firstName: "Tyrion",
         lastName: "Lannister",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/f/f6/Tyrion_lannister_Sebastian_Giacobino.jpg",
         battles: [
             "Battle of Blackwater",
             "Battle of the Green Fork",
@@ -47,7 +47,7 @@ export default [
     {
         firstName: "Arya",
         lastName: "Stark",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/3/36/John_Picacio_Arya.jpg",
         battles: [
             "Battle of Winterfell",
             "Massacre at the Red Wedding"
@@ -59,7 +59,7 @@ export default [
     {
         firstName: "Cersei",
         lastName: "Lannister",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/2/21/Cersei_Lannister_by_Magali_Villeneueve_%28cropped%29.jpg",
         battles: [
             "Battle of the Blackwater",
             "Battle of King's Landing"
@@ -71,7 +71,7 @@ export default [
     {
         firstName: "Sansa",
         lastName: "Stark",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/1/1e/Sansa_Stark_by_Vanessa_Cole.jpg",
         battles: [
             "Battle of the Bastards",
             "Battle of Winterfell"
@@ -83,7 +83,7 @@ export default [
     {
         firstName: "Jaime",
         lastName: "Lannister",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/e/e1/Mathia_Arkoniel_Jaime_Lannister.jpg",
         battles: [
             "Battle of the Whispering Wood",
             "Battle of Blackwater",
@@ -96,7 +96,7 @@ export default [
     {
         firstName: "Bran",
         lastName: "Stark",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/7/79/Bran_stark_dreams_by_teiiku.jpg",
         battles: [
             "Battle of Winterfell"
         ],
@@ -107,7 +107,7 @@ export default [
     {
         firstName: "Brienne",
         lastName: "Tarth",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/0/07/Brienne_by_quickreaver.jpg",
         battles: [
             "Battle of Winterfell",
             "Siege of Riverrun"
@@ -119,7 +119,7 @@ export default [
     {
         firstName: "Samwell",
         lastName: "Tarly",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/c/ca/Samwell_Tarly.jpg",
         battles: [
             "Battle of Castle Black",
             "Battle of Winterfell"
@@ -131,7 +131,7 @@ export default [
     {
         firstName: "Theon",
         lastName: "Greyjoy",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/7/73/Theon_Greyjoy.jpg",
         battles: [
             "Sack of Winterfell",
             "Battle of Winterfell"
@@ -143,7 +143,7 @@ export default [
     {
         firstName: "Jorah",
         lastName: "Mormont",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/a/af/Jorah_Mormont.jpg",
         battles: [
             "Siege of Pyke",
             "Battle of the Goldroad"
@@ -155,7 +155,7 @@ export default [
     {
         firstName: "Sandor",
         lastName: "Clegane",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/7/7b/MiguelRegod%C3%B3nHarkness_theHound.jpg",
         battles: [
             "Battle of Blackwater",
             "Battle of the Green Fork"
@@ -167,7 +167,7 @@ export default [
     {
         firstName: "Oberyn",
         lastName: "Martell",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/f/fc/MagaliVilleneuve_Prince_Oberyn_Nymeros_Martell.jpg",
         battles: [
             "Trial by Combat (Tyrion Lannister)"
         ],
@@ -178,7 +178,7 @@ export default [
     {
         firstName: "Margaery",
         lastName: "Tyrell",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/d/dd/MargaeryTyrell_by_BellaBergolts.jpg",
         battles: [
             "Battle of the Blackwater"
         ],
@@ -189,7 +189,7 @@ export default [
     {
         firstName: "Stannis",
         lastName: "Baratheon",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/f/f0/Stannis_Baratheon.jpg",
         battles: [
             "Battle of Blackwater",
             "Battle of Winterfell"
@@ -201,7 +201,7 @@ export default [
     {
         firstName: "Varys",
         lastName: " ",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/1/14/Varys_by_Amoka.jpg",
         battles: [
             "Battle of the Blackwater"
         ],
@@ -212,7 +212,7 @@ export default [
     {
         firstName: "Ygritte",
         lastName: " ",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/9/97/Ygritte_by_steamey.jpg",
         battles: [
             "Raid on Mole's Town",
             "Battle of Castle Black"
@@ -224,7 +224,7 @@ export default [
     {
         firstName: "Osha",
         lastName: " ",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/5/5c/Osha.jpg",
         battles: [
             "Battle of Winterfell"
         ],
@@ -235,7 +235,7 @@ export default [
     {
         firstName: "Gendry",
         lastName: " ",
-        image: "character image",
+        image: "https://awoiaf.westeros.org/images/8/81/Gendry_Amoka.png",
         battles: [
             "Battle of King's Landing"
         ],

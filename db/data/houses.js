@@ -263,6 +263,7 @@ export default [
     },
     {
         houseName: "Blackwood",
+        motto: "Watching Eyes, Hidden Strength",
         crest: "https://awoiaf.westeros.org/images/thumb/e/e1/House_Blackwood.svg/545px-House_Blackwood.svg.png",
         description: "House Blackwood, rooted in the Riverlands, is known for their rivalry with House Bracken.",
         notableBattles: [
