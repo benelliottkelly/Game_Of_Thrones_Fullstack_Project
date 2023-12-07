@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+
+// bootstrap components
 import Modal from 'react-bootstrap/Modal'
 
 // Image
@@ -29,11 +31,10 @@ export default function Nav(){
         <Modal.Header closeButton>
           <nav onClick={() => setShow(false)}>
             <Link to="/register"></Link>
-            <Link to="/places">Places</Link>
-            <Link to="/houses">Houses</Link>
-            <Link to="/characters">Characters</Link>
+            <Link to="/places"><i className='bold display-2'>Places</i></Link>
+            <Link to="/houses"><i className='bold display-2'>Houses</i></Link>
+            <Link to="/characters"><i className='bold display-2'>Characters</i></Link>
           </nav>
-          <Modal.Title>Modal</Modal.Title>
         </Modal.Header>
       </Modal>
     </>

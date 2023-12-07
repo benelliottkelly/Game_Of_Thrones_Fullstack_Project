@@ -1,34 +1,47 @@
-
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .logo-icon {
-  width: 70px;
+  width: 60px;
 }
 
 .nav-toggle {
   background: none;
   border: none;
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
-  
   span {
-    height: 6px;
+    height: 3px;
     display: block;
-    width: 50px;
+    width: 40px;
     background: black;
     margin-bottom: 3px;
   }
 }
- header {
-  background-color: rgba(173, 215, 230, 0.6);
- }
 
-
+.modal-header {
+  flex-grow: 2;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
   nav {
-    a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a, span {
+      font-size: large;
       text-decoration: none;
-      font-size: 10px;
-      color: blue($color: #000000);
+      cursor: pointer;
     }
   }
- 
+}
