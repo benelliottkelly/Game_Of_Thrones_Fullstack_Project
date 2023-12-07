@@ -2,7 +2,9 @@
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+
 // Styles
+import 'bootstrap/dist/css/bootstrap.css';
 import './styles/main.scss'
 
 // Page components
@@ -24,7 +26,7 @@ import Login from './components/Login.jsx'
 import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singleHouseLoader, singlePlaceLoader } from './utils/loaders.js'
 
 // Actions
-
+import { loginUser, registerUser } from './utils/actions/auth.js'
 
 // Browser Router
 const router = createBrowserRouter([
@@ -81,11 +83,13 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />,
+        action: async ({ request }) => registerUser(request),
         // Add action
       },
       {
         path: '/login',
-        element: <Login />
+        element: <Login />,
+        action: async ({ request }) => loginUser(request)
         // Add action
       }
     ]
