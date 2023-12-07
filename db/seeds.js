@@ -49,9 +49,6 @@ async function seed() {
         const housesCreated = await House.create(houseData)
         console.log(`Seeded ${housesCreated.length} houses to the database`)
 
-        console.log(charactersCreated)
-
-
         // Close connection to the database
         await mongoose.connection.close()
         console.log('Connection to database is closed')
