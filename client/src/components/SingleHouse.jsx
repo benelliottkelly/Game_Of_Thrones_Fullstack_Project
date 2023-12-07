@@ -7,8 +7,8 @@ export default function SingleHouse(){
   useEffect(() => {
     async function getHouseSingle() {
       try {
-        const data = await axios.get('api/houses')
-        console.log(data)
+        const house = useLoaderData()
+        console.log(house)
       } catch (error) {
         console.log(error)
       }

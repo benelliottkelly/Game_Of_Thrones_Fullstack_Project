@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
+import { useLoaderData } from "react-router-dom"
 
 export default function SingleCharacter(){
   const [ character, setCharacter ] = useState({})
@@ -7,8 +8,8 @@ export default function SingleCharacter(){
   useEffect(() => {
     async function getCharacterSingle() {
       try {
-        const data = await axios.get('api/characters')
-        console.log(data)
+        const character = useLoaderData()
+        console.log(character)
       } catch (error) {
         console.log(error)
       }

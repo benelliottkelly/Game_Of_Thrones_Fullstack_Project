@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 const characterSchema = new mongoose.Schema({
   firstName: { type: String, required: true, maxlength: 20 },
   lastName: { type: String, required: true, maxlength: 20 },
+  image: { type: String },
   battles: [String],
   biography: { type: String },
   hometown: { type: String, required: true },

@@ -1,8 +1,12 @@
+// Packages
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+// Styles
+import './styles/main.scss'
+
+// Page components
+import App from './App.jsx'
 import Home from './components/Home.jsx'
 import AllCharacters from './components/AllCharacters.jsx'
 import AllHouses from './components/AllHouses.jsx'
@@ -10,8 +14,19 @@ import AllPlaces from './components/AllPlaces.jsx'
 import SingleCharacter from './components/SingleCharacter.jsx'
 import SinglePlace from './components/SinglePlace.jsx'
 import SingleHouse from './components/SingleHouse.jsx'
+import EditCharacter from './components/CharacterEdit.jsx'
+import CreateCharacter from './components/CreateCharacter.jsx'
+import Register from './components/Register.jsx'
+import Login from './components/Login.jsx'
 
 
+// Loaders
+import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singleHouseLoader, singlePlaceLoader } from './utils/loaders.js'
+
+// Actions
+
+
+// Browser Router
 const router = createBrowserRouter([
   {
     path: '/',
@@ -23,27 +38,55 @@ const router = createBrowserRouter([
       },
       {
         path: '/places',
-        element: <AllPlaces />
+        element: <AllPlaces />,
+        loader: placeLoader
       },
       {
         path: '/places/:placeId',
-        element: <SinglePlace />
+        element: <SinglePlace />,
+        loader: async ({ params }) => singlePlaceLoader(params.placeId)
       },
       {
         path: '/houses',
-        element: <AllHouses />
+        element: <AllHouses />,
+        loader: houseLoader
       },
       {
         path: '/houses/:houseId',
-        element: <SingleHouse />
+        element: <SingleHouse />,
+        loader: async ({ params }) => singleHouseLoader(params.houseId)
       },
       {
         path: '/characters',
-        element: <AllCharacters />
+        element: <AllCharacters />,
+        loader: characterLoader
       },
       {
         path: '/characters/:characterId',
-        element: <SingleCharacter />
+        element: <SingleCharacter />,
+        loader: async ({ params }) => singleCharacterLoader(params.characterId)
+        // Add action for delete character
+      },
+      {
+        path: '/characters/:characterId/edit',
+        element: <EditCharacter />,
+        loader: async ({ params }) => singleCharacterLoader(params.characterId)
+        // Add action for edit character
+      },
+      {
+        path: '/characters/create',
+        element: <CreateCharacter />,
+        // Add action for create
+      },
+      {
+        path: '/register',
+        element: <Register />,
+        // Add action
+      },
+      {
+        path: '/login',
+        element: <Login />
+        // Add action
       }
     ]
   }

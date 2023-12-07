@@ -2,6 +2,7 @@ export default [
     {
         firstName: "Jon",
         lastName: "Snow",
+        image: "character image",
         battles: [
             "Battle of the Bastards",
             "Raid on Crasters Keep",
@@ -17,6 +18,7 @@ export default [
     {
         firstName: "Daenerys",
         lastName: "Targaryen",
+        image: "character image",
         battles: [
             "Battle of Meereen",
             "Battle of Astapor",
@@ -32,6 +34,7 @@ export default [
     {
         firstName: "Tyrion",
         lastName: "Lannister",
+        image: "character image",
         battles: [
             "Battle of Blackwater",
             "Battle of the Green Fork",
@@ -44,6 +47,7 @@ export default [
     {
         firstName: "Arya",
         lastName: "Stark",
+        image: "character image",
         battles: [
             "Battle of Winterfell",
             "Massacre at the Red Wedding"
@@ -55,6 +59,7 @@ export default [
     {
         firstName: "Cersei",
         lastName: "Lannister",
+        image: "character image",
         battles: [
             "Battle of the Blackwater",
             "Battle of King's Landing"
@@ -66,6 +71,7 @@ export default [
     {
         firstName: "Sansa",
         lastName: "Stark",
+        image: "character image",
         battles: [
             "Battle of the Bastards",
             "Battle of Winterfell"
@@ -77,6 +83,7 @@ export default [
     {
         firstName: "Jaime",
         lastName: "Lannister",
+        image: "character image",
         battles: [
             "Battle of the Whispering Wood",
             "Battle of Blackwater",
@@ -89,6 +96,7 @@ export default [
     {
         firstName: "Bran",
         lastName: "Stark",
+        image: "character image",
         battles: [
             "Battle of Winterfell"
         ],
@@ -99,6 +107,7 @@ export default [
     {
         firstName: "Brienne",
         lastName: "Tarth",
+        image: "character image",
         battles: [
             "Battle of Winterfell",
             "Siege of Riverrun"
@@ -110,6 +119,7 @@ export default [
     {
         firstName: "Samwell",
         lastName: "Tarly",
+        image: "character image",
         battles: [
             "Battle of Castle Black",
             "Battle of Winterfell"
@@ -121,6 +131,7 @@ export default [
     {
         firstName: "Theon",
         lastName: "Greyjoy",
+        image: "character image",
         battles: [
             "Sack of Winterfell",
             "Battle of Winterfell"
@@ -132,6 +143,7 @@ export default [
     {
         firstName: "Jorah",
         lastName: "Mormont",
+        image: "character image",
         battles: [
             "Siege of Pyke",
             "Battle of the Goldroad"
@@ -143,6 +155,7 @@ export default [
     {
         firstName: "Sandor",
         lastName: "Clegane",
+        image: "character image",
         battles: [
             "Battle of Blackwater",
             "Battle of the Green Fork"
@@ -154,6 +167,7 @@ export default [
     {
         firstName: "Oberyn",
         lastName: "Martell",
+        image: "character image",
         battles: [
             "Trial by Combat (Tyrion Lannister)"
         ],
@@ -164,6 +178,7 @@ export default [
     {
         firstName: "Margaery",
         lastName: "Tyrell",
+        image: "character image",
         battles: [
             "Battle of the Blackwater"
         ],
@@ -174,6 +189,7 @@ export default [
     {
         firstName: "Stannis",
         lastName: "Baratheon",
+        image: "character image",
         battles: [
             "Battle of Blackwater",
             "Battle of Winterfell"
@@ -185,6 +201,7 @@ export default [
     {
         firstName: "Varys",
         lastName: " ",
+        image: "character image",
         battles: [
             "Battle of the Blackwater"
         ],
@@ -195,6 +212,7 @@ export default [
     {
         firstName: "Ygritte",
         lastName: " ",
+        image: "character image",
         battles: [
             "Raid on Mole's Town",
             "Battle of Castle Black"
@@ -206,6 +224,7 @@ export default [
     {
         firstName: "Osha",
         lastName: " ",
+        image: "character image",
         battles: [
             "Battle of Winterfell"
         ],
@@ -216,6 +235,7 @@ export default [
     {
         firstName: "Gendry",
         lastName: " ",
+        image: "character image",
         battles: [
             "Battle of King's Landing"
         ],
