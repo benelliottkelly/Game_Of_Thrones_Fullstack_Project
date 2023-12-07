@@ -17,7 +17,7 @@ export default function AllCharacters() {
                 {characters.map(character => {
                     return (
                         <>
-                       <Link to={`/places/${character.id}`} style={{
+                       <Link to={`/characters/${character.id}`} style={{
                                 textDecoration: 'none',
                                 color: 'black'
                             }}>

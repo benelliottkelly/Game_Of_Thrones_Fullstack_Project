@@ -18,7 +18,7 @@ export default function AllPlaces() {
                 {houses.map(house => {
                     return (
                         <>
-                            <Link to={`/places/${house.id}`} style={{
+                            <Link to={`/houses/${house.id}`} style={{
                                 textDecoration: 'none',
                                 color: 'black'
                             }}>
