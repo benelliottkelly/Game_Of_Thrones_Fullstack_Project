@@ -7,8 +7,8 @@ export default function SinglePlace(){
   useEffect(() => {
     async function getPlaceSingle() {
       try {
-        const data = await axios.get('api/places')
-        console.log(data)
+        const place = useLoaderData()
+        console.log(place)
       } catch (error) {
         console.log(error)
       }
