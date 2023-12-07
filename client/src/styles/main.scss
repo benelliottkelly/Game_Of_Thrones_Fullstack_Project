@@ -1,6 +1,11 @@
 @import './components/Index.scss';
 @import './components/Nav.scss';
+@import './components/SingleCharacter.scss';
 
 * {
     background-color: beige;
+}
+
+.crest-single {
+  width: 80%;
 }

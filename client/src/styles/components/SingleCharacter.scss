@@ -1,0 +1,8 @@
+@import '../global/variables.scss';
+
+.split-page {
+  @include flex-center(row);
+  .column{
+    @include flex-center(column);
+  }
+}
