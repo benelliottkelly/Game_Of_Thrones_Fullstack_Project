@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
 import Filter from './Filters'
+import Card from 'react-bootstrap/Card'
 
 export default function AllHouses() {
 
@@ -26,7 +26,7 @@ export default function AllHouses() {
                     <Col
                         xs={4}
                         md={3}
-                        lg={3}><Filter houses={houses} setfilteredHouses={setfilteredHouses} /></Col>
+                        lg={3}><Filter houses={houses} setfilteredHouses={setfilteredHouses}/></Col>
                     <Col>
                         <section className="card-layout">
                             {filteredHouses.map(house => {
@@ -36,13 +36,13 @@ export default function AllHouses() {
                                             textDecoration: 'none',
                                             color: 'black'
                                         }}>
-                                            <div className="card" key={house.id}>
-                                                <img className="card-img-top" src={house.crest} alt="Crest Image" />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{house.houseName}</h5>
-                                                    <p className="card-text">{house.motto}</p>
-                                                </div>
-                                            </div>
+                                            <Card className="card" key={house.id}>
+                                                <Card.Img variant="top" className="card-img-top" src={house.crest} alt="Crest Image" />
+                                                <Card.Body className="card-body">
+                                                    <Card.Title className="card-title">{house.houseName}</Card.Title>
+                                                    <Card.Text className="card-text">{house.motto}</Card.Text >
+                                                </Card.Body>
+                                            </Card>
                                         </Link>
                                     </>
                                 )
@@ -51,7 +51,7 @@ export default function AllHouses() {
                         </section>
                     </Col>
                 </Row>
-            </Container >
+            </Container>
         </>
     )
 }

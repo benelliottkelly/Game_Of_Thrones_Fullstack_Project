@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 
 
 
-export default function Filter({ places, setFilteredPlaces, setfilteredHouses, houses }) {
+export default function Filter({ places, setFilteredPlaces, setfilteredHouses, houses, characters, setFilteredCharacters }) {
 
     const [filters, setFilters] = useState({
         search: ''
@@ -11,11 +12,10 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
     function handleSearch(e) {
         const newObj = {
-            ...filters, 
+            ...filters,
             'search': e.target.value
         }
         setFilters(newObj)
-        console.log(e.target.name)
     }
 
 
@@ -27,14 +27,42 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                 return pattern.test(place.name) || pattern.test(place.occupiedBy)
             })
             setFilteredPlaces(filteredArray)
+
+
         } else if (houses) {
             filteredArray = houses.filter(house => {
+                if (house.characters) {
+            
+                    const filteredChars = house.characters.filter(char => {
+                        return pattern.test(char.firstName) || 
+                        pattern.test(char.lastName)
+                    })
+                    if (filteredChars.length > 0) {
+                        house.characters = filteredChars
+                        return true
+                    }
+                }
+                // if (house.occupiedBy) {
+                //     const filteredPlaces = house.occupiedBy.filter(place => {
+                //         console.log(place)
+                //     })
+                // }
                 return pattern.test(house.houseName)
             })
             setfilteredHouses(filteredArray)
+
+
+        } else if (characters) {
+            filteredArray = characters.filter(char => {
+                if (char.associatedHouse[0]) {
+                    return pattern.test(char.firstName) ||
+                        pattern.test(char.lastName) ||
+                        pattern.test(char.associatedHouse[0].houseName)
+                }
+            })
+            setFilteredCharacters(filteredArray)
         }
-        
-    }, [filters, places, setFilteredPlaces, houses, setfilteredHouses])
+    }, [filters, places, setFilteredPlaces, houses, setfilteredHouses, characters, setFilteredCharacters])
 
     // useEffect(() => {
     //     const pattern2 = new RegExp(filters.search, 'i')

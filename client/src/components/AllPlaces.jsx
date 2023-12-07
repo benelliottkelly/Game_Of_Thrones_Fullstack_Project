@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
+import Card from 'react-bootstrap/Card'
 
 import Filter from './Filters'
 
 export default function AllPlaces() {
 
-    const [ places, setPlaces ] = useState([])
-    const [ filteredPlaces, setFilteredPlaces ] = useState([])
+    const [places, setPlaces] = useState([])
+    const [filteredPlaces, setFilteredPlaces] = useState([])
 
     const navigation = useNavigation()
     const location = useLoaderData()
@@ -24,10 +24,10 @@ export default function AllPlaces() {
             <h1>All Places</h1>
             <Container fluid>
                 <Row>
-                    <Col 
-                    xs={4} 
-                    md={3} 
-                    lg={3}><Filter places={places} setFilteredPlaces={setFilteredPlaces}/></Col>
+                    <Col
+                        xs={4}
+                        md={3}
+                        lg={3}><Filter places={places} setFilteredPlaces={setFilteredPlaces} /></Col>
                     <Col>
                         <section className="card-layout">
                             {filteredPlaces.map(place => {
@@ -37,13 +37,13 @@ export default function AllPlaces() {
                                             textDecoration: 'none',
                                             color: 'black'
                                         }}>
-                                            <div className="card" key={place.id}>
-                                                <img className="card-img-top" src={place.image} alt="Place Image" />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{place.name}</h5>
-                                                    <p className="card-text">{place.region}</p>
-                                                </div>
-                                            </div>
+                                            <Card className="card" key={place.id}>
+                                                <Card.Img variant="top" className="card-img-top" src={place.image} alt="Crest Image" />
+                                                <Card.Body className="card-body">
+                                                    <Card.Title className="card-title">{place.name}</Card.Title>
+                                                    <Card.Text className="card-text">{place.region}</Card.Text >
+                                                </Card.Body>
+                                            </Card>
                                         </Link>
                                     </>
                                 )
