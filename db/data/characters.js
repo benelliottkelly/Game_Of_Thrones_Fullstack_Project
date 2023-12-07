@@ -12,7 +12,7 @@ export default [
             "Battle of Castle Black"
         ],
         biography: "Born as the illegitimate son (bastard) of Eddard Stark, the honorable lord of Winterfell, Jon's mother's identity remains a mystery. Raised alongside the Stark children at Winterfell, Jon faces the stigma of his illegitimacy but shares a close bond with his half-siblings.",
-        hometown: "Sinterfell",
+        hometown: "Winterfell",
         house: "Stark"
     },
     {
