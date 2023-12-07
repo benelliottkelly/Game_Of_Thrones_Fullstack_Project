@@ -1,4 +1,20 @@
+import { useLoaderData, useNavigation } from 'react-router-dom'
+import { useEffect } from 'react'
+
 export default function AllPlaces() {
+
+    const navigation = useNavigation()
+    const places = useLoaderData()
+
+    useEffect(() => {
+        console.log(places)
+    }, [places])
+
+
+
+
+
+
 
     return (
         <>
