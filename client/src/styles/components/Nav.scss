@@ -9,6 +9,14 @@ header {
   width: 60px;
 }
 
+.modal-fullscreen {
+  width: 100vw;
+  height: 50vh;
+  margin: 0;
+}
+
+/* Ensure the content inside the modal takes up the full height of the modal */
+
 .nav-toggle {
   background: none;
   border: none;
