@@ -1,0 +1,12 @@
+%flex-fill{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@mixin flex-center($direction){
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
