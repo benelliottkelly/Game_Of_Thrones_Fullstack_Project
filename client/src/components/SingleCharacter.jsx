@@ -14,24 +14,20 @@ export default function SingleCharacter() {
   return (
     <>
       <Container fluid>
-        <Row className="split-page">
+        <Row className="split-page" xs={12} md={12} lg={12}>
           <Col className="column" xs={12} md={6} lg={6}>
             <img className='picture-single' src={image} alt={`Image of ${firstName} ${lastName}`} />
             <img className='crest-single p-1' src={crest} alt={`${house} family crest`} />
           </Col>
-          <Col className="column" xs={12} md={6} lg={6}>
-            <Row>
-            <h2>{firstName} {lastName}</h2>
-            </Row>
-            <Row>
-            <h3>House {house}</h3>
-            </Row>
-            <Row>
-            <article className="description">
-              <h3>Bio:</h3>
-              <h4>{biography}</h4>
-            </article>
-            </Row>
+          <Col className="column column-right" xs={12} md={6} lg={6}>
+            <div className="throne-background">
+              <h2>{firstName} {lastName}</h2>
+              <h3>House {house}</h3>
+              <article className="description">
+                <h3>Bio:</h3>
+                <h4>{biography}</h4>
+              </article>
+            </div>
           </Col>
         </Row>
       </Container>
