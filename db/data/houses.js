@@ -2,7 +2,7 @@ export default [
     {
         houseName: "Stark",
         motto: "Winter is Coming",
-        crest: "https://www.pngfind.com/pngs/m/170-1708814_game-of-thrones-house-transparent-background-png-game.png",
+        crest: "https://awoiaf.westeros.org/images/thumb/7/7e/House_Stark.svg/250px-House_Stark.svg.png",
         description: "House Stark hails from the North and is known for their honor and resilience.",
         notableBattles: [
             "Battle of the Bastards",
@@ -20,7 +20,7 @@ export default [
     {
         houseName: "Targaryen",
         motto: "Fire and Blood",
-        crest: "https://p7.hiclipart.com/preview/663/305/235/daenerys-targaryen-house-targaryen-sigil-decal-sticker-showcase-vector.jpg",
+        crest: "https://awoiaf.westeros.org/images/thumb/1/1e/House_Targaryen.svg/250px-House_Targaryen.svg.png",
         description: "House Targaryen is known for its dragons and its ancestral seat in Dragonstone.",
         notableBattles: [
             "War of Conquest",
@@ -38,7 +38,7 @@ export default [
     {
         houseName: "Lannister",
         motto: "Hear Me Roar",
-        crest: "https://www.pngfind.com/pngs/m/510-5106262_game-of-thrones-sigils-png-house-lannister-logo.png",
+        crest: "https://awoiaf.westeros.org/images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png",
         description: "House Lannister is one of the richest and most powerful families in Westeros, known for their wealth, cunning, and the phrase 'A Lannister always pays his debts.'",
         notableBattles: [
             "Battle of the Blackwater",
@@ -56,7 +56,7 @@ export default [
     {
         houseName: "Baratheon",
         motto: "Ours is the Fury",
-        crest: "https://www.pngfind.com/pngs/m/677-6779390_transparent-baratheon-sigil-png-game-of-thrones-house.png",
+        crest: "https://awoiaf.westeros.org/images/thumb/2/2d/House_Baratheon.svg/250px-House_Baratheon.svg.png",
         description: "House Baratheon is known for its strength and leadership, originating from the Stormlands.",
         notableBattles: [
             "Battle of the Blackwater",
@@ -74,7 +74,7 @@ export default [
     {
         houseName: "Greyjoy",
         motto: "We Do Not Sow",
-        crest: "https://www.pngfind.com/pngs/m/329-3298236_house-greyjoy-hd-png-download.png",
+        crest: "https://awoiaf.westeros.org/images/thumb/5/5b/House_Greyjoy.svg/250px-House_Greyjoy.svg.png",
         description: "House Greyjoy hails from the Iron Islands and is known for their seafaring skills and dedication to the Old Way.",
         notableBattles: [
             "Greyjoy Rebellion",
@@ -92,7 +92,7 @@ export default [
     {
         houseName: "Martell",
         motto: "Unbowed, Unbent, Unbroken",
-        crest: "https://static.wikia.nocookie.net/gameofthrones/images/6/60/House_Martell.svg/revision/latest?cb=20230905231024",
+        crest: "https://awoiaf.westeros.org/images/thumb/6/60/House_Martell.svg/250px-House_Martell.svg.png",
         description: "House Martell, rulers of Dorne, are known for their resilience, independence, and adherence to their own customs and traditions.",
         notableBattles: [
             "First Dornish War",
@@ -128,7 +128,7 @@ export default [
     {
         houseName: "Arryn",
         motto: "As High as Honor",
-        crest: "https://www.clipartmax.com/png/middle/188-1883096_sigil-of-house-arryn-house-arryn-sigil-transparent.png",
+        crest: "https://awoiaf.westeros.org/images/thumb/b/b4/House_Arryn.svg/545px-House_Arryn.svg.png",
         description: "House Arryn rules the Vale from the Eyrie and is known for its strong connections to the Vale's mountainous terrain.",
         notableBattles: [
             "Battle of the Seven Stars",
@@ -214,7 +214,7 @@ export default [
     {
         houseName: "Mormont",
         motto: "Here We Stand",
-        crest: "https://toppng.com/uploads/preview/house-mormont-sigil-download-house-mormont-11562990397aojbgatnqh.png",
+        crest: "https://awoiaf.westeros.org/images/thumb/4/46/House_Mormont.svg/250px-House_Mormont.svg.png",
         description: "House Mormont is a noble house known for their fierce loyalty to the Starks and their home on Bear Island.",
         notableBattles: [
             "Battle of the Whispering Wood",
