@@ -29,15 +29,13 @@ export default function AllPlaces() {
             <h1>All Places</h1>
            
             <Container fluid>
-            <button className="btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-target
-  </button>
+        
                 <Row>
                     <Col
                         xs={4}
                         md={3}
                         lg={3}
-                        className="collapse">
+                        className="filter">
                             
                             <Filter places={places} setFilteredPlaces={setFilteredPlaces} />
                            

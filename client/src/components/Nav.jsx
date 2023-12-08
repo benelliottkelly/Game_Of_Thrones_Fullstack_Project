@@ -44,7 +44,7 @@ export default function NavbarFunction(){
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="/houses">Houses</Nav.Link>
                   <Nav.Link href="/characters">Characters</Nav.Link>
-                  <Nav.Link href="/characters">Places</Nav.Link>
+                  <Nav.Link href="/places">Places</Nav.Link>
                   {activeUser() ? 
                   <>
                   <Nav.Link href="/profile">Profile Page</Nav.Link>
