@@ -1,42 +1,77 @@
-import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 // bootstrap components
-import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+// helpers
+import { removeToken, activeUser } from '../utils/helpers/common'
+
 
 // Image
 import wolf from '../images/wolf-logo.png'
 
-export default function Nav(){
+export default function NavbarFunction(){
 
-  // State
-  const [show, setShow] = useState(false)
+  const navigate = useNavigate()
 
-  useEffect(() => {
-    console.log(show)
-  }, [show])
+  function handleLogOut(){
+    removeToken()
+    navigate('/')
+  }
 
   return (
     <>
-    <header className='p-2 p-md-3 p-lg-4'>
-        <Link to="/"><img className='logo-icon' src={wolf} alt="Stark Wolf" /></Link>
-        <button className='nav-toggle' onClick={() => setShow(true)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header>
+        <Navbar key={false} expand={false} className="bg-body-tertiary mb-3">
+          <Container fluid>
+            <Link to="/"><img className='logo-icon' src={wolf} alt="Stark Wolf" /></Link>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${false}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${false}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${false}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${false}`}>
+                  Browse
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="/houses">Houses</Nav.Link>
+                  <Nav.Link href="/characters">Characters</Nav.Link>
+                  <Nav.Link href="/characters">Places</Nav.Link>
+                  {activeUser() ? 
+                  <>
+                  <Nav.Link href="/profile">Profile Page</Nav.Link>
+                  <Nav.Link href="/create">Create A Character</Nav.Link>
+                  <span onClick={handleLogOut}>Log Out</span>
+                  </>
+                  :
+                  <>
+                  <Nav.Link href="Register">Register</Nav.Link>
+                  <Nav.Link href="Login">Login</Nav.Link>
+                  </>
+                  }
+                </Nav>
+                <Form className="d-flex">
+                  <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                  />
+                  <Button variant="outline-success">Search</Button>
+                </Form>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
 
-      <Modal show={show} fullscreen={true} onHide={() => setShow(false)} container={document.getElementById('root')} dialogClassName="modal-50w">
-        <Modal.Header closeButton>
-          <nav onClick={() => setShow(false)}>
-            <Link to="/register"></Link>
-            <Link to="/places"><i className='bold display-2'>Places</i></Link>
-            <Link to="/houses"><i className='bold display-2'>Houses</i></Link>
-            <Link to="/characters"><i className='bold display-2'>Characters</i></Link>
-          </nav>
-        </Modal.Header>
-      </Modal>
     </>
   )
 

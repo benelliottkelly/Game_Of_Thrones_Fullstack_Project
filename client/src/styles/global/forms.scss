@@ -7,8 +7,12 @@
   align-items: center;
   justify-content: center;
   input, textarea {
-    border: black;
+    width: 75%;
+    border: 1px solid black;
     padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
   }
   button {
     margin-top: 1rem;
