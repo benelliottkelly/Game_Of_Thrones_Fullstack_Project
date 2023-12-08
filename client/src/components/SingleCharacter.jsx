@@ -13,7 +13,7 @@ export default function SingleCharacter() {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className={`${house}-character-container`}>
         <Row className="split-page" xs={12} md={12} lg={12}>
           <Col className="column" xs={12} md={6} lg={6}>
             <div className="pictureFrame">
@@ -22,7 +22,7 @@ export default function SingleCharacter() {
             <img className='crest-single p-1' src={crest} alt={`${house} family crest`} />
           </Col>
           <Col className="column column-right" xs={12} md={6} lg={6}>
-            <div className="throne-background">
+            <div className="character-text">
               <h2>{firstName} {lastName}</h2>
               <h3>House {house}</h3>
               <article className="description">
