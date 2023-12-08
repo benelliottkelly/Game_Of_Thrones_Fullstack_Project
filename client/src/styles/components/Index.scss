@@ -1,6 +1,11 @@
 $border-radius: 10px;
 $card-color: rgb(167, 167, 167);
 
+h1 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
 .card-layout {
     display: flex;
     flex-wrap: wrap;
