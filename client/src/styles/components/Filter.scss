@@ -1,8 +1,30 @@
 .filter {
-    background-color: white;
-    border: 5px solid black
+    background: url('https://b.kisscc0.com/20180920/iaw/kisscc0-picture-frames-medieval-ornament-950-illustration-frame-1-5ba36645213e39.2758425615374352051362.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid black;
+    height: 40vh;
+    margin: 0 5px 0 5px;
+}
+
+.main-title {
+    margin-top: 40px;
+    margin-bottom: 0;
 }
 
 .search-bar {
     background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 180px;
+}
+
+.drop {
+    margin: 5px 0 5px 0;
+    width: 180px;
+}
+
+.drop-title{
+    color: white;
 }
