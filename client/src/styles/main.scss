@@ -3,8 +3,18 @@
 @import './components/SingleCharacter.scss';
 @import './global/forms.scss';
 
+// Fonts
+@font-face {
+  font-family: 'Game of Thrones';
+  src: './fonts/GameofThrones.woff' format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 * {
-    background-color: beige;
+    background-color: rgb(221, 221, 107);
 }
 
 body{

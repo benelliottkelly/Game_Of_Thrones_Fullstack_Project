@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 const housesSchema = new mongoose.Schema({
-  houseName: {type: String, required: true, unique: true, maxlength: 60},
+  houseName: {type: String, required: true, maxlength: 60},
   motto: { type: String, required: true },
   crest: {type: String, required: true},
   description: {type: String, required: true},

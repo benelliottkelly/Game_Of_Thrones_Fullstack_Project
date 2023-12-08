@@ -1,8 +1,29 @@
 @import '../global/variables.scss';
 
+
+
 .split-page {
-  @include flex-center(row);
+  .picture-single{
+    width: 80%;
+    padding: 2em;
+  };
+  .crest-single{
+    width: 60%;
+    margin: 1em;
+  };
+  @include flex-top(row);
+  h2 {
+    font-family: 'Game of Thrones';
+    font-weight: bold;
+  }
   .column{
     @include flex-center(column);
+    height: 100%;
+  }
+  .throne-background{
+    background-image: url("../images/throne.png");
+    @include background-image;
+    height: 100%;
+    min-height: 100vh;
   }
 }

@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // Styles
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/main.scss'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Page components
 import App from './App.jsx'
