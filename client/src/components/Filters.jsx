@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 export default function Filter({ places, setFilteredPlaces, setfilteredHouses, houses, characters, setFilteredCharacters }) {
 
     const [filters, setFilters] = useState({
+        // houseF: '',
+        // place: 'All',
         search: ''
     })
 
@@ -17,6 +19,7 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
             'search': e.target.value
         }
         setFilters(newObj)
+        // e.target.textContent = 'All'
     }
 
     useEffect(() => {
@@ -25,20 +28,17 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
         if (places) {
             filteredArray = places.filter(place => {
 
-
                 if (place.charactersInPlace.length === 0) {
                     return pattern.test(place.name) || pattern.test(place.occupiedBy)
                 }
 
                 else if (place.charactersInPlace.length > 0) {
                     const filtArr = place.charactersInPlace.filter(char => {
-                        console.log(char.firstName)
-                    return pattern.test(char.firstName) || pattern.test(char.lastName) || pattern.test(`${char.firstName} ${char.lastName}`)
-                })
-                console.log(filtArr)
-                return pattern.test(place.name) || pattern.test(place.occupiedBy) || filtArr.length
+                        return pattern.test(char.firstName) || pattern.test(char.lastName) || pattern.test(`${char.firstName} ${char.lastName}`)
+                    })
+                    return pattern.test(place.name) || pattern.test(place.occupiedBy) || filtArr.length
                 }
-                
+
             })
             setFilteredPlaces(filteredArray)
 
@@ -168,21 +168,22 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
     return (
         <>
-            <h3>Filters</h3>
+            <h5 className="main-title">Filters</h5>
             <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
 
             {/* Houses DropDown */}
-            <select name="house" onChange={handleSearch}>
+            <h6 className="drop-title">Search By House</h6>
+            <select className="drop house-drop" name="house" onChange={handleSearch}>
                 <option value=''>All Houses</option>
                 {housesDropDown.length > 0 &&
                     housesDropDown.map((house, idx) => {
                         return <option key={idx} value={house}>{house}</option>
-                    })
-                }
+                    })}
             </select>
 
             {/* Places DropDown */}
-            <select name="place" onChange={handleSearch}>
+            <h6 className="drop-title">Search By Place</h6>
+            <select className="drop place-drop" name="place" onChange={handleSearch}>
                 <option value=''>All Places</option>
                 {placesDropDown.length > 0 &&
                     placesDropDown.map((place, idx) => {
@@ -191,15 +192,14 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
             </select>
 
             {/* Characters DropDown */}
-            <select name="character" onChange={handleSearch}>
-                <p>Search for House By Character</p>
+            <h6 className="drop-title">Search By Character</h6>
+            <select className="drop character-drop" name="character" onChange={handleSearch}>
                 <option value=''>All Characters</option>
                 {characterDropDown.length > 0 &&
                     characterDropDown.map((char, idx) => {
                         return <option key={idx} value={char}>{char}</option>
                     })}
             </select>
-
         </>
     )
 }
