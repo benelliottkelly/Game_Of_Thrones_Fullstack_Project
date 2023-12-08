@@ -27,6 +27,7 @@ import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singl
 
 // Actions
 import { loginUser, registerUser } from './utils/actions/auth.js'
+import { createCharacter } from './utils/actions/character.js';
 
 // Browser Router
 const router = createBrowserRouter([
@@ -78,19 +79,17 @@ const router = createBrowserRouter([
       {
         path: '/characters/create',
         element: <CreateCharacter />,
-        // Add action for create
+        action: async ({ request }) => createCharacter(request)
       },
       {
         path: '/register',
         element: <Register />,
-        action: async ({ request }) => registerUser(request),
-        // Add action
+        action: async ({ request }) => registerUser(request)
       },
       {
         path: '/login',
         element: <Login />,
         action: async ({ request }) => loginUser(request)
-        // Add action
       }
     ]
   }
