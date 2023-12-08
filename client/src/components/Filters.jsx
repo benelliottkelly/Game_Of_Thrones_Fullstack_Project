@@ -7,6 +7,10 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
         search: ''
     })
 
+    const [housesDropDown, setHousesDropDown] = useState([])
+    const [placesDropDown, setPlacesDropDown] = useState([])
+    const [characterDropDown, setCharacterDropDown] = useState([])
+
     function handleSearch(e) {
         const newObj = {
             ...filters,
@@ -20,10 +24,44 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
         let filteredArray
         if (places) {
             filteredArray = places.filter(place => {
-                console.log(place.occupiedBy)
-                return pattern.test(place.name) || pattern.test(place.occupiedBy)
+
+
+                if (place.charactersInPlace.length === 0) {
+                    return pattern.test(place.name) || pattern.test(place.occupiedBy)
+                }
+
+                else if (place.charactersInPlace.length > 0) {
+                    const filtArr = place.charactersInPlace.filter(char => {
+                        console.log(char.firstName)
+                    return pattern.test(char.firstName) || pattern.test(char.lastName) || pattern.test(`${char.firstName} ${char.lastName}`)
+                })
+                console.log(filtArr)
+                return pattern.test(place.name) || pattern.test(place.occupiedBy) || filtArr.length
+                }
+                
             })
             setFilteredPlaces(filteredArray)
+
+            // Create Houses DropDown for Places
+            if (places.length > 0 && housesDropDown.length === 0) {
+                const uniqueOccupants = Array.from(new Set(places.flatMap(place => place.occupiedBy)));
+                setHousesDropDown(uniqueOccupants);
+            }
+
+            // Create Places DropDown for Places
+            if (places.length > 0 && placesDropDown.length === 0) {
+                const placeArray = [...new Set(places.map(place => place.name))]
+                setPlacesDropDown(placeArray)
+            }
+
+            // Create Character DropDown for Places
+            if (places.length > 0 && placesDropDown.length === 0) {
+                const uniqueCharacters = Array.from(new Set(places.flatMap(place => {
+                    return place.charactersInPlace.map(char => `${char.firstName} ${char.lastName}`);
+                })));
+                setCharacterDropDown(uniqueCharacters);
+            }
+
 
 
         } else if (houses) {
@@ -40,7 +78,7 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                     return pattern.test(abode.houseName) || filtArr.length
                 }
 
-               else if (abode.characters.length > 0 && abode.places.length === 0) {
+                else if (abode.characters.length > 0 && abode.places.length === 0) {
                     const filtArr = abode.characters.filter(char => {
                         return pattern.test(char.firstName)
                             || pattern.test(char.lastName) || pattern.test(`${char.firstName} ${char.lastName}`)
@@ -49,7 +87,7 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                         || filtArr.length
                 }
 
-              else if (abode.characters.length > 0 && abode.places.length > 0) {
+                else if (abode.characters.length > 0 && abode.places.length > 0) {
                     const filtArr = abode.places.filter(place => {
                         return pattern.test(place.name)
                     })
@@ -69,23 +107,99 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
             })
             setfilteredHouses(filteredArray)
 
+            // Create Houses DropDown for House Index
+            if (houses.length > 0 && housesDropDown.length === 0) {
+                const houseArray = [...new Set(houses.map(house => house.houseName))]
+                setHousesDropDown(houseArray)
+            }
+
+            // Create Places DropDown for House Index
+            if (houses.length > 0 && placesDropDown.length === 0) {
+                const uniquePlaces = Array.from(new Set(houses.flatMap(house => {
+                    return house.places.map(place => place.name);
+                })));
+                setPlacesDropDown(uniquePlaces);
+            }
+
+            // Create Character DropDown for House Index
+            if (houses.length > 0 && characterDropDown.length === 0) {
+                const uniqueCharacters = Array.from(new Set(houses.flatMap(house => {
+                    return house.characters.map(char => `${char.firstName} ${char.lastName}`);
+                })));
+                setCharacterDropDown(uniqueCharacters);
+            }
+
+
         } else if (characters) {
             filteredArray = characters.filter(char => {
                 if (char.associatedHouse[0]) {
                     console.log(char.associatedHouse[0].houseName)
                     return pattern.test(char.firstName) ||
                         pattern.test(char.lastName) ||
-                        pattern.test(char.associatedHouse[0].houseName)
+                        pattern.test(char.associatedHouse[0].houseName) ||
+                        pattern.test(`${char.firstName} ${char.lastName}`) ||
+                        pattern.test(char.hometown)
                 }
             })
             setFilteredCharacters(filteredArray)
+
+            // Create Houses DropDown for Character Index
+            if (characters.length > 0 && housesDropDown.length === 0) {
+                const houseArray = [...new Set(characters.map(char => char.house))]
+                setHousesDropDown(houseArray)
+            }
+
+            // Create Places DropDown for Character Index
+            if (characters.length > 0 && placesDropDown.length === 0) {
+                const placeArray = [...new Set(characters.map(char => char.hometown))]
+                setPlacesDropDown(placeArray)
+            }
+
+            // Create Character DropDown for Character Index
+            if (characters.length > 0 && characterDropDown.length === 0) {
+                const charArray = [...new Set(characters.map(char => { return (`${char.firstName} ${char.lastName}`) }))]
+                setCharacterDropDown(charArray)
+            }
+
         }
-    }, [filters, places, setFilteredPlaces, houses, setfilteredHouses, characters, setFilteredCharacters])
+
+
+    }, [filters, places, setFilteredPlaces, houses, setfilteredHouses, characters, setFilteredCharacters, housesDropDown, placesDropDown, characterDropDown])
 
     return (
         <>
             <h3>Filters</h3>
             <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+
+            {/* Houses DropDown */}
+            <select name="house" onChange={handleSearch}>
+                <option value=''>All Houses</option>
+                {housesDropDown.length > 0 &&
+                    housesDropDown.map((house, idx) => {
+                        return <option key={idx} value={house}>{house}</option>
+                    })
+                }
+            </select>
+
+            {/* Places DropDown */}
+            <select name="place" onChange={handleSearch}>
+                <option value=''>All Places</option>
+                {placesDropDown.length > 0 &&
+                    placesDropDown.map((place, idx) => {
+                        return <option key={idx} value={place}>{place}</option>
+                    })}
+            </select>
+
+            {/* Characters DropDown */}
+            <select name="character" onChange={handleSearch}>
+                <p>Search for House By Character</p>
+                <option value=''>All Characters</option>
+                {characterDropDown.length > 0 &&
+                    characterDropDown.map((char, idx) => {
+                        return <option key={idx} value={char}>{char}</option>
+                    })}
+            </select>
+
         </>
     )
 }
