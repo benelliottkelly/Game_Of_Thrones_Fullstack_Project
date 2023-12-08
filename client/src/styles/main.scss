@@ -4,16 +4,11 @@
 @import './global/forms.scss';
 @import './global/variables.scss';
 @import './components/Filter.scss';
+@import './fonts/fonts.scss';
 
-// Fonts
-@font-face {
-  font-family: 'Game of Thrones';
-  src: './fonts/GameofThrones.woff' format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+h4{
+  font-family: Emperialisme;
 }
-
 
 * {
     // background-color: rgb(221, 221, 107);

@@ -19,16 +19,27 @@ export default function SingleCharacter() {
             <div className="pictureFrame">
               <img className='picture-single' src={image} alt={`Image of ${firstName} ${lastName}`} />
             </div>
-            <img className='crest-single p-1' src={crest} alt={`${house} family crest`} />
+            <div className="banner-container">
+              <img className='crest-single' src={crest} alt={`${house} family crest`} />
+            </div>
           </Col>
           <Col className="column column-right" xs={12} md={6} lg={6}>
             <div className="character-text">
               <h2>{firstName} {lastName}</h2>
               <h3>House {house}</h3>
+              <h4>Home: {hometown}</h4>
               <article className="description">
                 <h3>Bio:</h3>
                 <h4>{biography}</h4>
               </article>
+            </div>
+            <div className="character-text">
+              <h3>Key Battles</h3>
+              <ul>
+                {battles.length > 0 && battles.map((battle, idx) => {
+                  return <li key={idx}>{battle}</li>
+                })}
+              </ul>
             </div>
           </Col>
         </Row>
