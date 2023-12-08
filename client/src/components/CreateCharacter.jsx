@@ -22,7 +22,7 @@ export default function CreateCharacter(){
 
   useEffect(() => {
     console.log(res)
-    if (res.status == 201) {
+    if (res?.status == 201) {
       navigate(`/characters/${res.data._id}`)
     }
   })
