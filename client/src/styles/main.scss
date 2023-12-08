@@ -2,6 +2,7 @@
 @import './components/Nav.scss';
 @import './components/SingleCharacter.scss';
 @import './global/forms.scss';
+@import './global/variables.scss';
 
 // Fonts
 @font-face {
@@ -14,11 +15,15 @@
 
 
 * {
-    background-color: rgb(221, 221, 107);
+    // background-color: rgb(221, 221, 107);
+    box-sizing: border-box;
 }
 
 body{
   margin: 0;
+  background-image: url('../images/embers.gif');
+  @include background-image;
+  color: rgba(245, 245, 255, 0.8);
 }
 
 #root {

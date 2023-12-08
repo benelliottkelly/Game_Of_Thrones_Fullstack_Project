@@ -16,7 +16,9 @@ export default function SingleCharacter() {
       <Container fluid>
         <Row className="split-page" xs={12} md={12} lg={12}>
           <Col className="column" xs={12} md={6} lg={6}>
-            <img className='picture-single' src={image} alt={`Image of ${firstName} ${lastName}`} />
+            <div className="pictureFrame">
+              <img className='picture-single' src={image} alt={`Image of ${firstName} ${lastName}`} />
+            </div>
             <img className='crest-single p-1' src={crest} alt={`${house} family crest`} />
           </Col>
           <Col className="column column-right" xs={12} md={6} lg={6}>

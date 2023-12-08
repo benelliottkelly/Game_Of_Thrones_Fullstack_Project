@@ -3,12 +3,22 @@
 
 
 .split-page {
-  .picture-single{
-    width: 80%;
-    padding: 2em;
-  };
+  color: rgba(245, 245, 255, 0.8);
+  .pictureFrame{
+    background-image: url("../images/picture-frame.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 1;
+    @include flex-center(column);
+    .picture-single{
+      width: 66%;
+      aspect-ratio: 0.85;
+      margin: 5em;
+    };
+  }
   .crest-single{
-    width: 60%;
+    width: 50%;
     margin: 1em;
   };
   @include flex-top(row);
@@ -20,10 +30,11 @@
     @include flex-center(column);
     height: 100%;
   }
-  .throne-background{
-    background-image: url("../images/throne.png");
-    @include background-image;
-    height: 100%;
-    min-height: 100vh;
-  }
+  // .throne-background{
+  //   background-image: url("../images/throne.png");
+  //   @include background-image;
+  //   height: 100%;
+  //   min-height: 100vh;
+  // }
 }
+
