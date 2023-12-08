@@ -13,7 +13,8 @@ export default function CreateCharacter(){
     image: '',
     battles: [],
     biography: '',
-    hometown: ''
+    hometown: '',
+    house: '',
     })
 
     function handleChange(e){
@@ -21,22 +22,23 @@ export default function CreateCharacter(){
     }
 
   useEffect(() => {
-    console.log(res)
-    if (res.status == 201) {
+    if (res?.status == 201) {
       navigate(`/characters/${res.data._id}`)
     }
-  })
+  }, [res, navigate])
 
   console.log(`Hit create character`)
   return(
     <>
-      <h1 className="text-center bold display-3 mb-4">Create A Character</h1>
+      <h1 className="text-center bold display-3 mb-4" >Create A Character</h1>
       <Form className="form" method="POST">
-        <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} />
-        <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName}  />
-        <ImageUploadField setFormData={setFormData} formData={formData} />
-        <input type="text"  name="biography" placeholder="Bio" value={formData.biography}  />
-        <input type="text" name="hometown" placeholder="Hometown"  value={formData.hometown} />
+        <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} />
+        <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
+        <ImageUploadField name="image" setFormData={setFormData} formData={formData} />
+        <label htmlFor="image">Image Upload</label>
+        <input type="text"  name="biography" placeholder="Bio" value={formData.biography} onChange={handleChange} />
+        <input type="text" name="hometown" placeholder="Hometown"  value={formData.hometown} onChange={handleChange} />
+        <input type="text" name="house" placeholder="House" value={formData.house} onChange={handleChange} />
         <input type="submit" value="Create Character" />
       </Form>
     </>
