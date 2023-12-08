@@ -27,7 +27,8 @@ export default function AllCharacters() {
                     <Col
                         xs={4}
                         md={3}
-                        lg={3}><Filter characters={characters} setFilteredCharacters={setFilteredCharacters} /></Col>
+                        lg={3} 
+                        className="filter"><Filter characters={characters} setFilteredCharacters={setFilteredCharacters} /></Col>
                     <Col>
                         <section className="card-layout">
                             {filteredCharacters.map(character => {

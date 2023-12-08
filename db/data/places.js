@@ -79,7 +79,7 @@ export default [
         name: "Dorne",
         description: "A diverse and arid region in the southernmost part of Westeros, Dorne is known for its spicy cuisine, exotic culture, and formidable castles like Sunspear, home to House Martell.",
         region: "Dorne",
-        image: "https://awoiaf.westeros.org/images/thumb/9/93/Locator_map_Dorne_in_Westeros.svg/389px-Locator_map_Dorne_in_Westeros.svg.png",
+        image: "https://awoiaf.westeros.org/images/9/93/Ted_Nasmith_A_Song_of_Ice_and_Fire_Sunspear.jpg",
         occupiedBy: [
             "Martell"
         ]
@@ -151,7 +151,7 @@ export default [
         name: "Volantis",
         description: "One of the Free Cities of Essos, Volantis is a bustling metropolis known for its bustling markets, ancient landmarks, and its political importance in the region.",
         region: "Essos",
-        image: "https://awoiaf.westeros.org/images/a/a3/Free_Cities.png",
+        image: "https://qph.fs.quoracdn.net/main-qimg-5ba98e9c92fb45911b9786abe95af12c.webp",
         occupiedBy: [
             "Various Entities"
         ]
