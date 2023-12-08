@@ -346,5 +346,21 @@ export default [
         bannermen: [
             "No formal bannermen (The Free Folk are composed of various clans and groups)"
         ]
+    },
+    {
+        houseName: "Tarly",
+        motto: "First in Battle",
+        crest: "https://awoiaf.westeros.org/images/thumb/c/cc/House_Tarly.svg/545px-House_Tarly.svg.png",
+        description: "House Tarly of Horn Hill is esteemed for their martial valor, led by the stern and disciplined Randyll Tarly. Renowned for their military prowess and possession of the Valyrian steel sword, Heartsbane, their heir, Samwell Tarly, contrasts the family's warrior tradition with his scholarly nature, causing internal strife.",
+        notableBattles: [
+            "Battle of Ashford",
+            "Battle of the Blackwater",
+            "Battle of Winterfell"
+        ],
+        bannermen: [
+            "House Ball",
+            "House Florent",
+            "House Peake"
+        ]
     }
 ]
