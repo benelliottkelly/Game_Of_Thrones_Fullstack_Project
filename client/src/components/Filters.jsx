@@ -28,24 +28,46 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
         } else if (houses) {
             filteredArray = houses.filter(abode => {
-                    if (abode.characters.length === 0) {
-                        return pattern.test(abode.houseName) 
-                    } else if (abode.characters.length > 0) {
-                        let filtArr = abode.characters.filter(char => {
-                            console.log(char.firstName)
-                           return char === 0
-                        })
-                        
-                        console.log(filtArr)
-                        
-                        return pattern.test(abode.houseName) 
-                        || pattern.test(filtArr)
 
-                    }
-            
+                if (abode.places.length === 0 && abode.characters.length === 0) {
+                    return pattern.test(abode.houseName)
+                }
+
+                else if (abode.places.length > 0 && abode.characters.length === 0) {
+                    const filtArr = abode.places.filter(place => {
+                        return pattern.test(place.name)
+                    })
+                    return pattern.test(abode.houseName) || filtArr.length
+                }
+
+               else if (abode.characters.length > 0 && abode.places.length === 0) {
+                    const filtArr = abode.characters.filter(char => {
+                        return pattern.test(char.firstName)
+                            || pattern.test(char.lastName) || pattern.test(`${char.firstName} ${char.lastName}`)
+                    })
+                    return pattern.test(abode.houseName)
+                        || filtArr.length
+                }
+
+              else if (abode.characters.length > 0 && abode.places.length > 0) {
+                    const filtArr = abode.places.filter(place => {
+                        return pattern.test(place.name)
+                    })
+                    const filtArr2 = abode.characters.filter(char => {
+                        return pattern.test(char.firstName)
+                            || pattern.test(char.lastName) || pattern.test(`${char.firstName} ${char.lastName}`)
+                    })
+                    return pattern.test(abode.houseName) || filtArr.length || filtArr2.length
+
+                }
+                else if (abode.characters.length === 0) {
+                    return pattern.test(abode.houseName)
+                }
+                else if (abode.places.length === 0) {
+                    return pattern.test(abode.houseName)
+                }
             })
             setfilteredHouses(filteredArray)
-
 
         } else if (characters) {
             filteredArray = characters.filter(char => {
@@ -62,8 +84,31 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
     return (
         <>
-            <h1>Filter</h1>
-            <input name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+            <h3>Filters</h3>
+            <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
         </>
     )
 }
+
+
+// if (abode.places.length === 0) {
+//     return pattern.test(abode.houseName)
+// } else if (abode.places.length > 0) {
+//     console.log(abode.places)
+//     const filtArr = abode.places.filter(place => {
+//         return pattern.test(place.name)
+//     })
+//     return pattern.test(abode.houseName) || filtArr.length
+// }
+
+
+// if (abode.characters.length === 0) {
+//     return pattern.test(abode.houseName)
+// } else if (abode.characters.length > 0) {
+//     const filtArr = abode.characters.filter(char => {
+//         return pattern.test(char.firstName)
+//             || pattern.test(char.lastName)
+//     })
+//     return pattern.test(abode.houseName)
+//         || filtArr.length
+// }
