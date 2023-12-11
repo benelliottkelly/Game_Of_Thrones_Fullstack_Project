@@ -7,7 +7,7 @@ export const getAllPlaces = async (req, res) => {
 export const getSinglePlace = async (req, res) => {
     try {
         const { placeId } = req.params
-        const place = await Place.findById(placeId).populate('charactersInPlace')
+        const place = await Place.findById(placeId).populate('charactersInPlace').populate('occupyingHouses')
         if (!place) {
             return res.status(404).json({ message: 'Place not found' })
         }

@@ -1,22 +1,69 @@
-import { useEffect, useState } from "react"
-import axios from 'axios'
+import { useLoaderData, Link } from "react-router-dom"
+
+// Bootstrap components
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export default function SinglePlace(){
-  const [ place, setPlace ] = useState({})
-
-  useEffect(() => {
-    async function getPlaceSingle() {
-      try {
-        const place = useLoaderData()
-        console.log(place)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getPlaceSingle()
-  })
+  
+  const loadedData = useLoaderData()
+  console.log(loadedData)
+  const { charactersInPlace, description, image, name, occupyingHouses, region } = loadedData
 
   return (
-    <h2>Single Place</h2>
+    <Container fluid className="region-container">
+      <Row className="split-page" xs={12} md={12} lg={12}>
+        <h2> {name}</h2>
+        <h3>({region})</h3>
+      </Row>
+      <Row className="split-page" xs={12} md={12} lg={12}>
+        <p>{description}</p>
+      </Row>
+      <Row className="split-page" xs={12} md={12} lg={12}>
+        <img className='region-single' src={image} alt={`Image of ${name}`} />
+      </Row>
+      <Row className="p-5" xs={12} md={12} lg={12}>
+          <Col>
+            {occupyingHouses.length > 0 &&
+              <div className="occupying-house">
+                <h3>{name} has been occupied by {occupyingHouses.length} {occupyingHouses.length < 2 ? "house" : "houses"}:</h3>
+                <div className="occupier">
+                  {occupyingHouses.map((house, idx) => {
+                    return <Link className="house-link" key={idx} to={`/houses/${house.id}`}>
+                      <div>
+                        <div className="individual-houses">
+                          <h2 className="house-picture-link" style={ {backgroundImage: `url(${house.crest})`} }>{`${house.houseName}`}</h2>
+                        </div>
+                      </div>
+                    </Link>
+                  })}
+                </div>
+              </div>
+            }
+          </Col>
+        </Row>
+        <Row className="p-5" xs={12} md={12} lg={12}>
+          <Col>
+            {charactersInPlace.length > 0 &&
+              <div className="character-text">
+                <h3>Related Characters</h3>
+                <div className="charactersInPlace-container">
+                  {charactersInPlace.map((character, idx) => {
+                    return <Link className="character" key={idx} to={`/characters/${character.id}`}>
+                      <div>
+                        <div className="individual-charactersInPlace">
+                          <h2>{`${character.firstName} ${character.lastName}`}</h2>
+                          <img className='character-picture' src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
+                        </div>
+                      </div>
+                    </Link>
+                  })}
+                </div>
+              </div>
+            }
+          </Col>
+        </Row>
+    </Container>
   )
 }

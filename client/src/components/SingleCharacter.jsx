@@ -12,6 +12,7 @@ export default function SingleCharacter() {
   const { firstName, lastName, battles, biography, house, hometown, image, associatedHouse } = singleCharacter
   const { crest } = associatedHouse[0]
   const relationships = []
+  console.log(loadedData)
 
   function findHouse() {
     const results = allCharacters.filter((character) => {
@@ -21,7 +22,6 @@ export default function SingleCharacter() {
     })
   }
   findHouse()
-  console.log(relationships)
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function SingleCharacter() {
               <h4>Home: {hometown}</h4>
               <article className="description">
                 <h3>Bio:</h3>
-                <h4>{biography}</h4>
+                <p>{biography}</p>
               </article>
             </div>
           </Col>
@@ -68,9 +68,8 @@ export default function SingleCharacter() {
                 <h3>House Members</h3>
                 <div className="relationships-container">
                   {relationships.map((relationship, idx) => {
-                    console.log(relationship.id)
-                    return <Link className="relationship" to={`/characters/${relationship.id}`}>
-                      <div key={idx}>
+                    return <Link className="relationship" key={idx} to={`/characters/${relationship.id}`}>
+                      <div>
                         <div className="individual-relationships">
                           <h2>{`${relationship.firstName} ${relationship.lastName}`}</h2>
                           <img className='relationship-picture' src={relationship.image} alt={`Image of ${relationship.firstName} ${relationship.lastName}`} />

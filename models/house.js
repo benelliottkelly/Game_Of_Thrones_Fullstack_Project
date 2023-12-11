@@ -13,7 +13,6 @@ housesSchema.set('toJSON', {
   virtuals: true
 })
 
-
 housesSchema
 	.virtual('characters', {
 		ref: 'Character',
@@ -27,6 +26,5 @@ housesSchema
     localField: 'houseName',
     foreignField: 'occupiedBy'
 })
-
 
 export default mongoose.model('House', housesSchema)

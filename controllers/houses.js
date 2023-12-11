@@ -9,7 +9,7 @@ export const getAllHouses = async (req, res) => {
 export const getSingleHouse = async (req, res) => {
   try {
     const { houseId } = req.params
-    const house = await House.findById(houseId)
+    const house = await House.findById(houseId).populate('characters').populate('places')
     if (!house) {
       return res.ststus(404).json({ message: 'There is no house of this name.'})
     }
