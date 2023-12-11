@@ -1,0 +1,75 @@
+.home {
+    background-color: goldenrod;
+    height: 140vh;
+    margin: 0;
+
+    .hero {
+        min-height: 92vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url('https://j.gifs.com/NLgqyK.gif');
+        background: url('../assets/gotbackground.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        justify-content: flex-end;
+
+        .title {
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-size: 100px;
+                color: gold;
+                font-family: Emperialisme;
+            }
+
+            h5 {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+
+        }
+
+        .home-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 100px;
+            margin-top: 0;
+            background-color: white;
+            height: 8vh;
+
+            .link {
+                color: goldenrod;
+                text-decoration: none;
+                font-weight: bold;
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.info {
+    padding: 0;
+    h2 {
+        background-color: white;
+        color: rgb(99, 99, 99);
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+    .info-block {
+        padding: 0 20px 0 20px;
+        h4 {
+            font-size: 40px;
+        }
+    }
+}

@@ -240,7 +240,7 @@ export default [
             "Battle of King's Landing"
         ],
         biography: "Gendry, an illegitimate son of King Robert Baratheon, grows up unaware of his noble heritage. Skilled in smithing, he is sought after for his royal bloodline, eventually aiding in the battle against the forces of King's Landing.",
-        hometown: "Flea Bottom (King's Landing)",
+        hometown: "King's Landing",
         house: "Baratheon"
     }
 ]

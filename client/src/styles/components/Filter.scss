@@ -1,29 +1,42 @@
 .filter {
+    border: 5px solid black;
+    height: 100%;
+    width: 290px;
+    margin: 0 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.filter-container {
     background: url('https://b.kisscc0.com/20180920/iaw/kisscc0-picture-frames-medieval-ornament-950-illustration-frame-1-5ba36645213e39.2758425615374352051362.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border: 5px solid black;
     height: 40vh;
-    width: 290px;
-    margin: 0 5px 0 5px;
-}
-
-.filter-container {
     button {
         margin: 5px 0 5px 30px;
     }
 }
 
-.main-title {
-margin: 40px 0 0 30px;
+.vert-banner {
+    margin-top: 50px;
+    height: 300vh;
+    width: 100%;
+    background:url('../assets/lattice.png');
+    background-position: center;
 }
 
+.main-title {
+    margin: 40px 0 0 30px;
+}
 
 .search-bar {
     background-color: white;
     margin: 10px 0 10px 30px;
     width: 180px;
+
     &:hover {
         background-color: yellow;
     }
@@ -33,14 +46,14 @@ margin: 40px 0 0 30px;
     margin: 5px 0 5px 30px;
     width: 180px;
     border-radius: 5px;
+
     &:hover {
         background-color: yellow;
         cursor: pointer;
     }
 }
 
-.drop-title{
+.drop-title {
     color: white;
     margin: 0 0 0 30px;
 }
-
