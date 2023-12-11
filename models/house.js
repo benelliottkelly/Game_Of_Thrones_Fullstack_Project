@@ -28,4 +28,5 @@ housesSchema
     foreignField: 'occupiedBy'
 })
 
+
 export default mongoose.model('House', housesSchema)

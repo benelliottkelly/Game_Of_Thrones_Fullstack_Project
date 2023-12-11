@@ -1,7 +1,10 @@
 @import '../global/variables.scss';
 @import '../fonts/fonts.scss';
 
-
+.container{
+  display: flex;
+  align-items: center;
+}
 
 .split-page {
   color: rgba(245, 245, 255, 0.8);
@@ -11,7 +14,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     aspect-ratio: 1;
-    margin-top: 7em;
     @include flex-center(column);
     .picture-single{
       width: 66%;
@@ -20,61 +22,97 @@
     };
   }
 
-  @include flex-top(row);
-
+  @include flex-center(row);
+  .row{
+    padding: 5em;
+  }
   .column{
     @include flex-center(column);
     height: 100%;
   }
   .column-right{
-    padding: 2em;
+    padding: 6em 5em;
   }
 }
 
 @mixin houseColours($primary, $secondary, $tertiary ){
   .banner-container{
-    margin-top: 3em;
     @include flex-center(column);
     border: none;
     border-radius: 50%;
     background-image: radial-gradient($secondary 0%, rgba(255, 255, 255, 0) 55%, rgba(255,255,255,0) 100%);
     .crest-single{
-      width: 50%;
+      width: 25%;
       margin: 1em;
     };
   }
   h2 {
     font-family: 'GameOfThrones';
     font-size: 3em;
+    box-shadow: 0 4px 30px $tertiary;
   }
   .character-text{
+    @include flex-center(column);
     box-shadow: 0 4px 40px $secondary;
     backdrop-filter: blur(5px);
     width: 100%;
     background-image: linear-gradient(200deg, $primary 20%, rgba(255, 255, 255, 0.5) 30%, $primary 50%);
     opacity: 0.75;
     color: $secondary;
-    margin: 2em;
     border: 1em double $tertiary;
+    border-radius: 5px;
     padding: 1em 2em;
-    // text-shadow: 2px 2px 5px $tertiary;
     h3{
       font-family: 'Grogoth';
       font-size: 3em;
       opacity: 1;
+      box-shadow: 0 4px 30px $tertiary;
     }
     h4{
       font-family: 'Emperialisme';
       font-size: 2em;
       opacity: 1;
+      box-shadow: 0 4px 30px $tertiary;
     }
     ul{
+      display: flex;
+      flex-wrap: wrap;
       padding: 0;
     }
     li{
       font-family: 'BlackCastle';
       list-style: none;
       opacity: 1;
+      padding: 0 1em;
+      box-shadow: 0 4px 30px $tertiary;
+    }
+  }
+  .relationships-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 30px $tertiary;
+    width: 90%;
+    .relationship{
+      @include flex-wrap();
+      width: 30%;
+      border: 0.5em inset $tertiary;
+      border-radius: 5px;
+      text-decoration: none;
+      color: $secondary;
+      padding: 1em;
+      .individual-relationships{
+        @include flex-center(column);
+        h2{
+          font-size: 1em;
+        };
+        img{
+          width: 100%;
+          border: 0.2em outset $tertiary;
+          border-radius: 5px;
+          box-shadow: 0 4px 20px $secondary;
+        }
+      }
     }
   }
 }
