@@ -24,3 +24,7 @@
   background-repeat: no-repeat;
 }
 
+@mixin flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}

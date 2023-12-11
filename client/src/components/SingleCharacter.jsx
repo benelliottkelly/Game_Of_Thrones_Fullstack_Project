@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, Link } from "react-router-dom"
 
 // Bootstrap components
 import Container from 'react-bootstrap/Container'
@@ -7,23 +7,32 @@ import Col from 'react-bootstrap/Col'
 
 export default function SingleCharacter() {
 
-  const character = useLoaderData()
-  const { firstName, lastName, battles, biography, house, hometown, image, associatedHouse } = character
+  const loadedData = useLoaderData()
+  const { singleCharacter, allCharacters } = loadedData
+  const { firstName, lastName, battles, biography, house, hometown, image, associatedHouse } = singleCharacter
   const { crest } = associatedHouse[0]
+  const relationships = []
+
+  function findHouse() {
+    const results = allCharacters.filter((character) => {
+      if ((character.firstName !== firstName) && (character.house === house)) {
+        relationships.push(character)
+      }
+    })
+  }
+  findHouse()
+  console.log(relationships)
 
   return (
     <>
       <Container fluid className={`${house}-character-container`}>
         <Row className="split-page" xs={12} md={12} lg={12}>
-          <Col className="column" xs={12} md={6} lg={6}>
+          <Col className="column" xs={12} md={4} lg={4}>
             <div className="pictureFrame">
               <img className='picture-single' src={image} alt={`Image of ${firstName} ${lastName}`} />
             </div>
-            <div className="banner-container">
-              <img className='crest-single' src={crest} alt={`${house} family crest`} />
-            </div>
           </Col>
-          <Col className="column column-right" xs={12} md={6} lg={6}>
+          <Col className="column column-right" xs={12} md={8} lg={8}>
             <div className="character-text">
               <h2>{firstName} {lastName}</h2>
               <h3>House {house}</h3>
@@ -33,14 +42,45 @@ export default function SingleCharacter() {
                 <h4>{biography}</h4>
               </article>
             </div>
-            <div className="character-text">
-              <h3>Key Battles</h3>
-              <ul>
-                {battles.length > 0 && battles.map((battle, idx) => {
-                  return <li key={idx}>{battle}</li>
-                })}
-              </ul>
-            </div>
+          </Col>
+        </Row>
+        <Row xs={12} md={12} lg={12}>
+          <Col xs={12} md={12} lg={12}>
+              <Link className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
+                <img className='crest-single' src={crest} alt={`${house} family crest`} />
+              </Link>
+          </Col>
+        </Row>
+        <Row className="p-5" xs={12} md={12} lg={12}>
+          <div className="character-text">
+            <h3>Key Battles</h3>
+            <ul>
+              {battles.length > 0 && battles.map((battle, idx) => {
+                return <li key={idx}>{battle}</li>
+              })}
+            </ul>
+          </div>
+        </Row>
+        <Row className="p-5" xs={12} md={12} lg={12}>
+          <Col>
+            {relationships.length > 0 &&
+              <div className="character-text">
+                <h3>House Members</h3>
+                <div className="relationships-container">
+                  {relationships.map((relationship, idx) => {
+                    console.log(relationship.id)
+                    return <Link className="relationship" to={`/characters/${relationship.id}`}>
+                      <div key={idx}>
+                        <div className="individual-relationships">
+                          <h2>{`${relationship.firstName} ${relationship.lastName}`}</h2>
+                          <img className='relationship-picture' src={relationship.image} alt={`Image of ${relationship.firstName} ${relationship.lastName}`} />
+                        </div>
+                      </div>
+                    </Link>
+                  })}
+                </div>
+              </div>
+            }
           </Col>
         </Row>
       </Container>
