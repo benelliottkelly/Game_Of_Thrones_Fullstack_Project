@@ -2,10 +2,17 @@ import express from 'express'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 import router from './config/routes.js'
+import cors from 'cors'
 
 const app = express()
-
 app.use(express.json())
+
+// allows same origin requests for search bar.
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: 'GET,POST', // Add other methods as needed
+  credentials: true,    // Enable credentials if your API uses cookies, sessions, or authentication
+}))
 
 
 app.use((req, res, next) => {
