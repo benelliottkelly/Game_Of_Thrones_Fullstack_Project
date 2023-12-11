@@ -1,4 +1,5 @@
 @import '../global/variables.scss';
+@import '../fonts/fonts.scss';
 
 
 
@@ -10,6 +11,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     aspect-ratio: 1;
+    margin-top: 7em;
     @include flex-center(column);
     .picture-single{
       width: 66%;
@@ -17,103 +19,150 @@
       margin: 5em;
     };
   }
-  .crest-single{
-    width: 50%;
-    margin: 1em;
-  };
+
   @include flex-top(row);
-  h2 {
-    font-family: 'Game of Thrones';
-    font-weight: bold;
-  }
+
   .column{
     @include flex-center(column);
     height: 100%;
   }
+  .column-right{
+    padding: 2em;
+  }
 }
 
-.Stark-character-container{
-  @include houseColours(#818181, #F1F1F1, #E19797)
+@mixin houseColours($primary, $secondary, $tertiary ){
+  .banner-container{
+    margin-top: 3em;
+    @include flex-center(column);
+    border: none;
+    border-radius: 50%;
+    background-image: radial-gradient($secondary 0%, rgba(255, 255, 255, 0) 55%, rgba(255,255,255,0) 100%);
+    .crest-single{
+      width: 50%;
+      margin: 1em;
+    };
+  }
+  h2 {
+    font-family: 'GameOfThrones';
+    font-size: 3em;
+  }
+  .character-text{
+    box-shadow: 0 4px 40px $secondary;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    background-image: linear-gradient(200deg, $primary 20%, rgba(255, 255, 255, 0.5) 30%, $primary 50%);
+    opacity: 0.75;
+    color: $secondary;
+    margin: 2em;
+    border: 1em double $tertiary;
+    padding: 1em 2em;
+    // text-shadow: 2px 2px 5px $tertiary;
+    h3{
+      font-family: 'Grogoth';
+      font-size: 3em;
+      opacity: 1;
+    }
+    h4{
+      font-family: 'Emperialisme';
+      font-size: 2em;
+      opacity: 1;
+    }
+    ul{
+      padding: 0;
+    }
+    li{
+      font-family: 'BlackCastle';
+      list-style: none;
+      opacity: 1;
+    }
+  }
 }
 
-.Lannister-character-container{
-  @include houseColours(#86090A, #C2AD77, #000000)
+.Arryn-character-container{
+  @include houseColours(#0f86e1, #FCFCFC, #1c517c)
 }
 
 .Baratheon-character-container{
   @include houseColours(#F4D71B, #313131, #D63232)
 }
 
-.Greyjoy-character-container{
-  @include houseColours(#191919, #F2C615, #F7F7F7)
-}
-
-.Targaryen-character-container{
-  @include houseColours(#0B0B0B, #B62B2B, #F8F6F6)
-}
-
-.Martell-character-container{
-  @include houseColours(#E37D17, #D32D2D, #FBFB52)
-}
-
-.Tyrell-character-container{
-  @include houseColours(#1A8E1A, #FFE646, #A4580C)
-}
-
-.Arryn-character-container{
-  @include houseColours(#0F87E1, #FCFCFC, #1c517c)
-}
-
-.Tully-character-container{
-  @include houseColours(#0E0EB4, #9C1919, #D0D0D0)
-}
-
-.Reed-character-container{
-  @include houseColours(#81A688, #0B0B0B, #567E5E)
-}
-
-.Karstark-character-container{
-  @include houseColours(#201C1D, #F9F9F9, #403D3E)
-}
-
-.Tarth-character-container{
-  @include houseColours(#34355C, #A14432, #DFD548)
-}
-
-.Mormont-character-container{
-  @include houseColours(#047C04, #94E494, #1D1D1D)
-}
-
 .Blackwood-character-container{
   @include houseColours(#971818, #E8E6E6, #1D1C1C)
-}
-
-.Clegane-character-container{
-  @include houseColours(#E4BB07, #444141, #C4C4C4)
-}
-
-.Umber-character-container{
-  @include houseColours(#982023, #C3C2C2, #B14245)
-}
-
-// ! Add free folk (name needs to take out spaces)
-
-.Dayne-character-container{
-  @include houseColours(#0C5891, #FEFEFE, #6E7A7C)
-}
-
-.Hightower-character-container{
-  @include houseColours(#475351, #55B357, #CDCABE)
-}
-
-.Tarly-character-container{
-  @include houseColours(#5C6421, #C53B31, #8A9159)
 }
 
 .Bolton-character-container{
   @include houseColours(#E58B8B, #A62929, #EA7070)
 }
 
+.Clegane-character-container{
+  @include houseColours(#E4BB07, #444141, #C4C4C4)
+}
+
+.Dayne-character-container{
+  @include houseColours(#0C5891, #FEFEFE, #6E7A7C)
+}
+
+.Free.Folk-character-container{
+  @include houseColours(#0C5891, #927330, #6E7A7C)
+}
+
 .Frey-character-container{
   @include houseColours(#1F1F3D, #C3C1B2, #7F7F7F)
+}
+
+.Greyjoy-character-container{
+  @include houseColours(#191919, #F2C615, #F7F7F7)
+}
+
+.Hightower-character-container{
+  @include houseColours(#475351, #55B357, #CDCABE)
+}
+
+.Karstark-character-container{
+  @include houseColours(#201C1D, #F9F9F9, #403D3E)
+}
+
+.Lannister-character-container{
+  @include houseColours(#86090A, #C2AD77, #000000)
+}
+
+.Martell-character-container{
+  @include houseColours(#E37D17, #D32D2D, #FBFB52)
+}
+
+.Mormont-character-container{
+  @include houseColours(#047C04, #94E494, #1D1D1D)
+}
+
+.Tarly-character-container{
+  @include houseColours(#047C04, #C30F0F, #8A9159)
+}
+
+.Reed-character-container{
+  @include houseColours(#81A688, #0B0B0B, #567E5E)
+}
+
+.Stark-character-container{
+  @include houseColours(#818181, #F1F1F1, #E19797)
+}
+
+.Targaryen-character-container{
+  @include houseColours(#0B0B0B, #B62B2B, #F8F6F6)
+}
+
+.Tarth-character-container{
+  @include houseColours(#34355C, #A14432, #DFD548)
+}
+
+.Tully-character-container{
+  @include houseColours(#0E0EB4, #9C1919, #D0D0D0)
+}
+
+.Tyrell-character-container{
+  @include houseColours(#1A8E1A, #FFE646, #A4580C)
+}
+
+.Umber-character-container{
+  @include houseColours(#982023, #C3C2C2, #B14245)
 }

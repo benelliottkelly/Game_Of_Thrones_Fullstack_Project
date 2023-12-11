@@ -24,9 +24,3 @@
   background-repeat: no-repeat;
 }
 
-@mixin houseColours($primary, $secondary, $tertiary ){
-  .character-text{
-    background-color: $primary;
-    color: $secondary;
-  }
-}
