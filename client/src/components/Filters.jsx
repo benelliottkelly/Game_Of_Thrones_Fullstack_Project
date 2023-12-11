@@ -20,7 +20,12 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
         }
         setFilters(newObj)
         // e.target.textContent = 'All'
+        let ex = document.getElementById('house-id').selectedOptions[0].value
+        ex.innerText = 'All Houses'
+        console.log('LOG ---', ex)
     }
+
+
 
     useEffect(() => {
         const pattern = new RegExp(filters.search, 'i')
@@ -168,38 +173,40 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
     return (
         <>
-            <h5 className="main-title">Filters</h5>
-            <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+            <article className="filter-container">
+                <h5 className="main-title">Filters</h5>
+                <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
 
-            {/* Houses DropDown */}
-            <h6 className="drop-title">Search By House</h6>
-            <select className="drop house-drop" name="house" onChange={handleSearch}>
-                <option value=''>All Houses</option>
-                {housesDropDown.length > 0 &&
-                    housesDropDown.map((house, idx) => {
-                        return <option key={idx} value={house}>{house}</option>
-                    })}
-            </select>
+                {/* Houses DropDown */}
+                <h6 className="drop-title">Search By House</h6>
+                <select className="drop house-drop"  id="house-id" name="house" onChange={handleSearch}>
+                    <option value=''>All Houses</option>
+                    {housesDropDown.length > 0 &&
+                        housesDropDown.map((house, idx) => {
+                            return <option key={idx} value={house}>{house}</option>
+                        })}
+                </select>
 
-            {/* Places DropDown */}
-            <h6 className="drop-title">Search By Place</h6>
-            <select className="drop place-drop" name="place" onChange={handleSearch}>
-                <option value=''>All Places</option>
-                {placesDropDown.length > 0 &&
-                    placesDropDown.map((place, idx) => {
-                        return <option key={idx} value={place}>{place}</option>
-                    })}
-            </select>
+                {/* Places DropDown */}
+                <h6 className="drop-title">Search By Place</h6>
+                <select className="drop place-drop" name="place" onChange={handleSearch}>
+                    <option value=''>All Places</option>
+                    {placesDropDown.length > 0 &&
+                        placesDropDown.map((place, idx) => {
+                            return <option key={idx} value={place}>{place}</option>
+                        })}
+                </select>
 
-            {/* Characters DropDown */}
-            <h6 className="drop-title">Search By Character</h6>
-            <select className="drop character-drop" name="character" onChange={handleSearch}>
-                <option value=''>All Characters</option>
-                {characterDropDown.length > 0 &&
-                    characterDropDown.map((char, idx) => {
-                        return <option key={idx} value={char}>{char}</option>
-                    })}
-            </select>
+                {/* Characters DropDown */}
+                <h6 className="drop-title">Search By Character</h6>
+                <select className="drop character-drop" name="character" onChange={handleSearch}>
+                    <option value=''>All Characters</option>
+                    {characterDropDown.length > 0 &&
+                        characterDropDown.map((char, idx) => {
+                            return <option key={idx} value={char}>{char}</option>
+                        })}
+                </select>
+            </article>
         </>
     )
 }
