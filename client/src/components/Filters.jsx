@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 
+
 export default function Filter({ places, setFilteredPlaces, setfilteredHouses, houses, characters, setFilteredCharacters }) {
+
+
+
 
     const [filters, setFilters] = useState({
         // houseF: '',
@@ -13,21 +17,47 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
     const [placesDropDown, setPlacesDropDown] = useState([])
     const [characterDropDown, setCharacterDropDown] = useState([])
 
+    const [selectedPlace, setSelectedPlace] = useState('')
+    const [selectedHouse, setSelectedHouse] = useState('')
+    const [selectedCharacter, setSelectedCharacter] = useState('')
+
+
+
     function handleSearch(e) {
         const newObj = {
             ...filters,
             'search': e.target.value
         }
         setFilters(newObj)
-        // e.target.textContent = 'All'
-        let ex = document.getElementById('house-id').selectedOptions[0].value
-        ex.innerText = 'All Houses'
-        console.log('LOG ---', ex)
     }
 
+    function resetFilters() {
+        setFilters({ search: '' })
+        setPlacesDropDown([])
+        setCharacterDropDown([])
+        setHousesDropDown([])
+        setSelectedPlace('')
+        setSelectedHouse('')
+        setSelectedCharacter('')
+    }
 
+    function clearHouse() {
+        setSelectedHouse('')
+        setHousesDropDown([])
+    }
+
+    function clearPlace() {
+        setSelectedPlace('')
+        setPlacesDropDown([])
+    }
+
+    function clearCharacter() {
+        setSelectedCharacter('')
+        setCharacterDropDown([])
+    }
 
     useEffect(() => {
+
         const pattern = new RegExp(filters.search, 'i')
         let filteredArray
         if (places) {
@@ -45,13 +75,8 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                 }
 
             })
-            setFilteredPlaces(filteredArray)
 
-            // Create Houses DropDown for Places
-            if (places.length > 0 && housesDropDown.length === 0) {
-                const uniqueOccupants = Array.from(new Set(places.flatMap(place => place.occupiedBy)));
-                setHousesDropDown(uniqueOccupants);
-            }
+            setFilteredPlaces(filteredArray)
 
             // Create Places DropDown for Places
             if (places.length > 0 && placesDropDown.length === 0) {
@@ -59,18 +84,16 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                 setPlacesDropDown(placeArray)
             }
 
-            // Create Character DropDown for Places
-            if (places.length > 0 && placesDropDown.length === 0) {
-                const uniqueCharacters = Array.from(new Set(places.flatMap(place => {
-                    return place.charactersInPlace.map(char => `${char.firstName} ${char.lastName}`);
-                })));
-                setCharacterDropDown(uniqueCharacters);
+            // Create Houses DropDown for Places
+            if (places.length > 0 && housesDropDown.length === 0) {
+                const uniqueOccupants = Array.from(new Set(places.flatMap(place => place.occupiedBy)));
+                setHousesDropDown(uniqueOccupants)
             }
 
 
-
         } else if (houses) {
-            filteredArray = houses.filter(abode => {
+            let filteredHouses = []
+            filteredHouses = houses.filter(abode => {
 
                 if (abode.places.length === 0 && abode.characters.length === 0) {
                     return pattern.test(abode.houseName)
@@ -110,7 +133,7 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                     return pattern.test(abode.houseName)
                 }
             })
-            setfilteredHouses(filteredArray)
+            setfilteredHouses(filteredHouses)
 
             // Create Houses DropDown for House Index
             if (houses.length > 0 && housesDropDown.length === 0) {
@@ -138,7 +161,6 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
         } else if (characters) {
             filteredArray = characters.filter(char => {
                 if (char.associatedHouse[0]) {
-                    console.log(char.associatedHouse[0].houseName)
                     return pattern.test(char.firstName) ||
                         pattern.test(char.lastName) ||
                         pattern.test(char.associatedHouse[0].houseName) ||
@@ -166,47 +188,146 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                 setCharacterDropDown(charArray)
             }
 
+
+
         }
 
 
     }, [filters, places, setFilteredPlaces, houses, setfilteredHouses, characters, setFilteredCharacters, housesDropDown, placesDropDown, characterDropDown])
 
+    // const Dropdown = ({ title, options, onChange }) => {
+    //     return (
+    //         <>
+    //             <h6 className="drop-title">{title}</h6>
+    //             <select className={`drop ${title.toLowerCase()}-drop`} name={title.toLowerCase()} onChange={onChange}>
+    //                 <option value=''>All {title}</option>
+    //                 {options.length > 0 &&
+    //                     options.map((option, idx) => {
+    //                         return <option key={idx} value={option}>{option}</option>;
+    //                     })}
+    //             </select>
+    //         </>
+    //     );
+    // };
+
     return (
         <>
-            <article className="filter-container">
-                <h5 className="main-title">Filters</h5>
-                <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+            {places && (
+                <article className="filter-container">
+                    <h5 className="main-title">Filters</h5>
+                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+                    {/* Places DropDown */}
+                    <h6 className="drop-title">Search By Place</h6>
+                    <select className="drop place-drop" name="place" onChange={(e) => {
+                        setSelectedPlace(e.target.value)
+                        handleSearch(e)
+                        clearHouse()
+                    }}
+                        value={selectedPlace}>
+                        <option value=''>All Places</option>
+                        {placesDropDown.length > 0 &&
+                            placesDropDown.map((place, idx) => {
+                                return <option key={idx} value={place}>{place}</option>
+                            })}
+                    </select>
+                    {/* Houses DropDown */}
+                    <h6 className="drop-title">Search By House</h6>
+                    <select className="drop house-drop" id="house-id" name="house" onChange={(e) => {
+                        setSelectedHouse(e.target.value)
+                        handleSearch(e)
+                        clearPlace()
+                    }}
+                        value={selectedHouse}>
+                        <option value=''>All Houses</option>
+                        {housesDropDown.length > 0 &&
+                            housesDropDown.map((house, idx) => {
+                                return <option key={idx} value={house}>{house}</option>
+                            })}
+                    </select>
 
-                {/* Houses DropDown */}
-                <h6 className="drop-title">Search By House</h6>
-                <select className="drop house-drop"  id="house-id" name="house" onChange={handleSearch}>
-                    <option value=''>All Houses</option>
-                    {housesDropDown.length > 0 &&
-                        housesDropDown.map((house, idx) => {
-                            return <option key={idx} value={house}>{house}</option>
-                        })}
-                </select>
+                    <button onClick={resetFilters}>Clear</button>
+                </article>
+            )}
+            {houses && (
+                <article className="filter-container">
+                    <h5 className="main-title">Filters</h5>
+                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
 
-                {/* Places DropDown */}
-                <h6 className="drop-title">Search By Place</h6>
-                <select className="drop place-drop" name="place" onChange={handleSearch}>
-                    <option value=''>All Places</option>
-                    {placesDropDown.length > 0 &&
-                        placesDropDown.map((place, idx) => {
-                            return <option key={idx} value={place}>{place}</option>
-                        })}
-                </select>
+                    {/* Houses DropDown */}
+                    <h6 className="drop-title">Search By House</h6>
+                    <select className="drop house-drop" id="house-id" name="house" onChange={(e) => {
+                        setSelectedHouse(e.target.value)
+                        handleSearch(e)
+                        clearPlace()
+                    }}
+                        value={selectedHouse}>
+                        <option value=''>All Houses</option>
+                        {housesDropDown.length > 0 &&
+                            housesDropDown.map((house, idx) => {
+                                return <option key={idx} value={house}>{house}</option>
+                            })}
+                    </select>
 
-                {/* Characters DropDown */}
-                <h6 className="drop-title">Search By Character</h6>
-                <select className="drop character-drop" name="character" onChange={handleSearch}>
-                    <option value=''>All Characters</option>
-                    {characterDropDown.length > 0 &&
-                        characterDropDown.map((char, idx) => {
-                            return <option key={idx} value={char}>{char}</option>
-                        })}
-                </select>
-            </article>
+                    {/* Places DropDown */}
+                    <h6 className="drop-title">Search By Place</h6>
+                    <select className="drop place-drop" name="place" onChange={(e) => {
+                        setSelectedPlace(e.target.value)
+                        handleSearch(e)
+                        clearHouse()
+                    }}
+                        value={selectedPlace}>
+                        <option value=''>All Places</option>
+                        {placesDropDown.length > 0 &&
+                            placesDropDown.map((place, idx) => {
+                                return <option key={idx} value={place}>{place}</option>
+                            })}
+                    </select>
+
+                    <button onClick={resetFilters}>Clear</button>
+                </article>
+            )}
+
+            {characters && (
+                <article className="filter-container">
+                    <h5 className="main-title">Filters</h5>
+                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+
+                    {/* Characters DropDown */}
+                    <h6 className="drop-title">Search By Character</h6>
+                    <select className="drop character-drop" name="character" onChange={(e) => {
+                        setSelectedCharacter(e.target.value)
+                        handleSearch(e)
+                        clearPlace()
+                    }}
+                        value={selectedCharacter}>
+                        <option value=''>All Characters</option>
+                        {characterDropDown.length > 0 &&
+                            characterDropDown.map((char, idx) => {
+                                return <option key={idx} value={char}>{char}</option>
+                            })}
+                    </select>
+
+                    {/* Places DropDown */}
+                    <h6 className="drop-title">Search By Place</h6>
+                    <select className="drop place-drop" name="place" onChange={(e) => {
+                        setSelectedPlace(e.target.value)
+                        handleSearch(e)
+                        clearCharacter()
+                    }}
+                        value={selectedPlace}>
+                        <option value=''>All Places</option>
+                        {placesDropDown.length > 0 &&
+                            placesDropDown.map((place, idx) => {
+                                return <option key={idx} value={place}>{place}</option>
+                            })}
+                    </select>
+
+                    <button className="reset-button" onClick={resetFilters}>Clear</button>
+
+                </article>
+            )}
+
+
         </>
     )
 }
