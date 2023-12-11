@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
+import NavBarSearch from './NavbarSearch';
 
 // bootstrap components
 import Button from 'react-bootstrap/Button';
@@ -58,15 +59,7 @@ export default function NavbarFunction(){
                   </>
                   }
                 </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
+                <NavBarSearch />
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
