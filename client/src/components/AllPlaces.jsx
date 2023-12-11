@@ -29,14 +29,12 @@ export default function AllPlaces() {
             <h1>All Places</h1>
            
             <Container fluid>
-        
                 <Row>
                     <Col
                         xs={4}
                         md={3}
                         lg={3}
                         className="filter">
-                            
                             <Filter places={places} setFilteredPlaces={setFilteredPlaces} />
                            
                             </Col>
