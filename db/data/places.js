@@ -189,7 +189,201 @@ export default [
     region: "The North",
     image: "https://awoiaf.westeros.org/images/6/6d/Paolo_Puggioni_molestown.jpg",
     occupiedBy: [
-      "The Night's Watch"
+      "Night's Watch"
+    ]
+  },
+  {
+    name: "Sunspear",
+    description: "The ancestral seat of House Martell, Sunspear is a palace complex in Dorne characterized by its distinctive spear-shaped towers and its connections to Dornish culture and history.",
+    region: "Dorne",
+    image: "https://awoiaf.westeros.org/images/thumb/0/08/Towerofthesuncbarquet.jpg/600px-Towerofthesuncbarquet.jpg",
+    occupiedBy: [
+      "Martell"
+    ]
+  },
+  {
+    name: "The Twins",
+    description: "A pair of castles strategically placed at the crossing of the Green Fork and the Trident, The Twins are the seat of House Frey and are known for their infamous role in Westerosi history, notably the Red Wedding.",
+    region: "Riverlands",
+    image: "https://awoiaf.westeros.org/images/thumb/0/0c/Thetwins_loganfeliciano.jpg/540px-Thetwins_loganfeliciano.jpg",
+    occupiedBy: [
+      "Frey"
+    ]
+  },
+  {
+    name: "Asshai",
+    description: "A mysterious and ancient city in the far east of Essos, Asshai is shrouded in darkness and secrecy, known for its association with dark magic and shadowbinders.",
+    region: "Essos",
+    image: "https://awoiaf.westeros.org/images/6/66/Asshai_REN%C3%89_AIGNER.png",
+    occupiedBy: [
+      "Various Entities"
+    ]
+  },
+  {
+    name: "Castle Black",
+    description: "Located at the northern end of the Wall, Castle Black serves as the primary fortress and headquarters of the Night's Watch, tasked with defending Westeros from threats beyond the Wall.",
+    region: "Beyond the Seven Kingdoms",
+    image: "https://awoiaf.westeros.org/images/thumb/3/33/Castle_Black_and_The_Wall%2C_Ted_Nasmith.jpg/450px-Castle_Black_and_The_Wall%2C_Ted_Nasmith.jpg",
+    occupiedBy: [
+      "Night's Watch"
+    ]
+  },
+  {
+    name: "Old Valyria",
+    description: "The ancient and once-mighty capital of the Valyrian Freehold, Old Valyria was destroyed in a cataclysmic event known as the Doom. Its ruins are haunted by mystery, magic, and remnants of Valyrian culture.",
+    region: "Essos",
+    image: "https://awoiaf.westeros.org/images/thumb/0/02/Fourteen_Flames.jpg/432px-Fourteen_Flames.jpg",
+    occupiedBy: [
+      "Abandoned"
+    ]
+  },
+  {
+    name: "Vaes Dothrak",
+    description: "The sacred city of the Dothraki people, Vaes Dothrak is a vast Dothraki city comprised mainly of temporary structures. It serves as the only permanent city of the nomadic Dothraki and is the site of the Great Dothraki Sea.",
+    region: "Essos",
+    image: "https://awoiaf.westeros.org/images/thumb/6/6a/Matthew_Cowdery_Vaes_Dothrak.jpg/540px-Matthew_Cowdery_Vaes_Dothrak.jpg",
+    occupiedBy: [
+      "Dothraki"
+    ]
+  },
+  {
+    name: "The Red Keep",
+    description: "Situated within King's Landing, the Red Keep is the royal palace and residence of the ruler of the Seven Kingdoms. It houses the Iron Throne and is a symbol of power in Westeros.",
+    region: "Crownlands",
+    image: "https://awoiaf.westeros.org/images/thumb/a/a1/Red_Keep_at_Kings_Landing%2C_Ted_Nasmith.jpg/450px-Red_Keep_at_Kings_Landing%2C_Ted_Nasmith.jpg",
+    occupiedBy: [
+      "Baratheon",
+      "Lannister",
+      "Stark",
+      "Targaryen"
+    ]
+  },
+  {
+    name: "The Dothraki Sea",
+    description: "A vast expanse of open grassland east of the Free Cities, the Dothraki Sea is the ancestral homeland of the nomadic Dothraki horse lords. It's known for its horse-riding warriors and sprawling plains.",
+    region: "Essos",
+    image: "https://awoiaf.westeros.org/images/thumb/2/26/Dothraki_sea_grassland.jpg/800px-Dothraki_sea_grassland.jpg",
+    occupiedBy: [
+      "Dothraki"
+    ]
+  },
+  {
+    name: "The Summer Isles",
+    description: "A cluster of lush and exotic islands located to the south of Westeros, the Summer Isles are known for their warm climate, vibrant culture, and skilled archers. They are governed by a collection of independent city-states.",
+    region: "Essos",
+    image: "https://awoiaf.westeros.org/images/thumb/5/53/Marc_Simonetti_Temple_Of_Love.jpg/800px-Marc_Simonetti_Temple_Of_Love.jpg",
+    occupiedBy: [
+      "Various Entities"
+    ]
+  },
+  {
+    name: "Dragonpit",
+    description: "Once a grand structure in King's Landing, the Dragonpit was a colossal dome used to house the Targaryen dragons. It fell into ruin after the dragons died out and has remained a shadow of its former glory.",
+    region: "Crownlands",
+    image: "https://awoiaf.westeros.org/images/4/44/Rhaenys%27s_hill.jpg",
+    occupiedBy: [
+      "Targaryen",
+      "Baratheon",
+      "Lannister"
+    ]
+  },
+  {
+    name: "Starfall",
+    description: "An ancient castle in Dorne, Starfall is the seat of House Dayne and is known for its storied history and the legendary sword Dawn, wielded by the Sword of the Morning.",
+    region: "Dorne",
+    image: "https://awoiaf.westeros.org/images/thumb/7/73/Starfall_by_Hector_Ortiz.png/800px-Starfall_by_Hector_Ortiz.png",
+    occupiedBy: [
+      "Dayne"
+    ]
+  },
+  {
+    name: "Greywater Watch",
+    description: "An elusive castle in the swamps of the Neck, Greywater Watch moves its location, making it nearly impossible to locate. It's the seat of House Reed, loyal bannermen to House Stark.",
+    region: "The North",
+    image: "https://awoiaf.westeros.org/images/thumb/d/d8/Greywater_Watch.jpg/790px-Greywater_Watch.jpg",
+    occupiedBy: [
+      "Reed"
+    ]
+  },
+  {
+    name: "White Harbor",
+    description: "The primary port city in the North, White Harbor is a bustling trade hub known for its strategic importance and economic significance. It's ruled by House Manderly.",
+    region: "The North",
+    image: "https://awoiaf.westeros.org/images/thumb/8/86/Juan_Carlos_Barquet_White_Habor.jpg/540px-Juan_Carlos_Barquet_White_Habor.jpg",
+    occupiedBy: [
+      "Manderly"
+    ]
+  },
+  {
+    name: "Seagard",
+    description: "A coastal stronghold in the Riverlands, Seagard is the seat of House Mallister and is strategically positioned for maritime defense along the Sunset Sea.",
+    region: "Riverlands",
+    image: "https://awoiaf.westeros.org/images/5/54/Thomas_DenmarkSeagard.png",
+    occupiedBy: [
+      "Mallister"
+    ]
+  },
+  {
+    name: "The Crag",
+    description: "A coastal castle in the Westerlands, The Crag is the seat of House Westerling. It overlooks the Sunset Sea and boasts a strategic position for maritime trade.",
+    region: "Westerlands",
+    image: "https://static.wikia.nocookie.net/gameofthrones/images/5/5d/701_BtS_The_Crag.png",
+    occupiedBy: [
+      "Westerling"
+    ]
+  },
+  {
+    name: "Deepwood Motte",
+    description: "A stout fortress in the North, Deepwood Motte is the stronghold of House Glover and is located in the thick of the Wolfswood.",
+    region: "The North",
+    image: "https://awoiaf.westeros.org/images/3/39/Deepwood_MotteYoann_BoissonnetII.png",
+    occupiedBy: [
+      "Glover"
+    ]
+  },
+  {
+    name: "Runestone",
+    description: "A castle nestled in the Vale, Runestone is the seat of House Royce and is known for its ancient and storied lineage.",
+    region: "Vale of Arryn",
+    image: "https://static.wikia.nocookie.net/gameofthrones/images/8/81/Runestone_Official_Guide.jpg",
+    occupiedBy: [
+      "Royce"
+    ]
+  },
+  {
+    name: "Hornvale",
+    description: "A castle in the Westerlands, Hornvale is the seat of House Brax and is situated near the Golden Tooth, a crucial pass through the mountains.",
+    region: "Westerlands",
+    image: "https://awoiaf.westeros.org/images/d/d7/Hornvale.jpg",
+    occupiedBy: [
+      "Brax"
+    ]
+  },
+  {
+    name: "Summerhall",
+    description: "A castle in the Stormlands, Summerhall was the Targaryen royal residence before it was destroyed in a tragic fire. It holds significance in Targaryen history.",
+    region: "Stormlands",
+    image: "https://awoiaf.westeros.org/images/thumb/1/1c/Marc_Simonetti_The_fire_at_the_summer_palaceIII.jpg/800px-Marc_Simonetti_The_fire_at_the_summer_palaceIII.jpg",
+    occupiedBy: [
+      "Targaryen"
+    ]
+  },
+  {
+    name: "Barrowton",
+    description: "A town in the North, Barrowton is the seat of House Dustin. It's known for its proximity to the ancient barrowlands and the crypts of the First Men.",
+    region: "The North",
+    image: "https://static.wikia.nocookie.net/awoiaf-com/images/3/3a/Barrowton.jpg",
+    occupiedBy: [
+      "Dustin"
+    ]
+  },
+  {
+    name: "Blackhaven",
+    description: "A formidable castle in the Stormlands, Blackhaven is the seat of House Dondarrion. It's situated near the Red Mountains and holds strategic importance.",
+    region: "Stormlands",
+    image: "https://static.wikia.nocookie.net/gameofthrones/images/d/dc/Blackhaven.jpg",
+    occupiedBy: [
+      "Dondarrion"
     ]
   }
 ]
