@@ -23,13 +23,27 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
 
 
+
+
     function handleSearch(e) {
+        const searchValue = e.target.value
+        const cleanSearch = searchValue.replace(/[^\w\s]/gi, '')
         const newObj = {
             ...filters,
-            'search': e.target.value
+            'search': cleanSearch
         }
         setFilters(newObj)
     }
+
+    // useEffect(() => {
+    //     if (filters.search !== prevSearchValue) {
+    //         clearHouse()
+    //         clearPlace()
+    //         clearCharacter()
+    //         setPrevSearchValue(filters.search)
+    //     }
+
+    // }, [filters.search, prevSearchValue])
 
     function resetFilters() {
         setFilters({ search: '' })
@@ -160,13 +174,16 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
         } else if (characters) {
             filteredArray = characters.filter(char => {
-                if (char.associatedHouse[0]) {
-                    return pattern.test(char.firstName) ||
-                        pattern.test(char.lastName) ||
-                        pattern.test(char.associatedHouse[0].houseName) ||
-                        pattern.test(`${char.firstName} ${char.lastName}`) ||
-                        pattern.test(char.hometown)
+                if (char.hometown) {
+                    if (char.associatedHouse[0]) {
+                        return pattern.test(char.firstName) ||
+                            pattern.test(char.lastName) ||
+                            pattern.test(char.associatedHouse[0].houseName) ||
+                            pattern.test(`${char.firstName} ${char.lastName}`) ||
+                            pattern.test(char.hometown)
+                    }
                 }
+
             })
             setFilteredCharacters(filteredArray)
 
@@ -195,27 +212,18 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
     }, [filters, places, setFilteredPlaces, houses, setfilteredHouses, characters, setFilteredCharacters, housesDropDown, placesDropDown, characterDropDown])
 
-    // const Dropdown = ({ title, options, onChange }) => {
-    //     return (
-    //         <>
-    //             <h6 className="drop-title">{title}</h6>
-    //             <select className={`drop ${title.toLowerCase()}-drop`} name={title.toLowerCase()} onChange={onChange}>
-    //                 <option value=''>All {title}</option>
-    //                 {options.length > 0 &&
-    //                     options.map((option, idx) => {
-    //                         return <option key={idx} value={option}>{option}</option>;
-    //                     })}
-    //             </select>
-    //         </>
-    //     );
-    // };
-
     return (
         <>
             {places && (
                 <article className="filter-container">
                     <h5 className="main-title">Filters</h5>
-                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={(e) => {
+                        console.log('clack')
+                        handleSearch(e)
+                        clearCharacter()
+                        clearHouse()
+                        clearPlace()
+                    }} />
                     {/* Places DropDown */}
                     <h6 className="drop-title">Search By Place</h6>
                     <select className="drop place-drop" name="place" onChange={(e) => {
@@ -290,7 +298,13 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
             {characters && (
                 <article className="filter-container">
                     <h5 className="main-title">Filters</h5>
-                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={handleSearch} />
+                    <input className="search-bar" name="search" placeholder="Search..." value={filters.search} onChange={(e) => {
+                        console.log('clack')
+                        handleSearch(e)
+                        clearCharacter()
+                        clearHouse()
+                        clearPlace()
+                    }} />
 
                     {/* Characters DropDown */}
                     <h6 className="drop-title">Search By Character</h6>
