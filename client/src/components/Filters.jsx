@@ -233,3 +233,5 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 //     return pattern.test(abode.houseName)
 //         || filtArr.length
 // }
+
+//document.querySelector(select).map( selectBar => { selectBar.ID != e.target.ID  && selectBar.value == “All Places”})
