@@ -4,7 +4,7 @@ export default function Profile(){
   console.log('Hit profile route')
 
   const data = useLoaderData
-  const {  }
+
 
 
   return
