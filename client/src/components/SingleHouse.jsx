@@ -19,6 +19,10 @@ export default function SingleHouse() {
 
   }
 
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+
   return (
     <Container fluid>
       <h2>{`House ${houseName}`}</h2>
@@ -45,7 +49,7 @@ export default function SingleHouse() {
                 <h3>House Members</h3>
                 <div className="house-member-container">
                   {characters.map((character, idx) => {
-                    return <Link className="house-member" key={idx} to={`/characters/${character.id}`}>
+                    return <Link onClick={scrollUp} className="house-member" key={idx} to={`/characters/${character.id}`}>
                       <div>
                         <div className="individual-relationships">
                           <h2>{`${character.firstName} ${character.lastName}`}</h2>

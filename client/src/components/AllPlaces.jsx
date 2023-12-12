@@ -33,6 +33,7 @@ export default function AllPlaces() {
                         lg={3}
                         className="filter">
                             <Filter places={places} setFilteredPlaces={setFilteredPlaces} filteredPlaces={filteredPlaces} />
+                            <div className="vert-banner"></div>
                            
                             </Col>
                     <Col>

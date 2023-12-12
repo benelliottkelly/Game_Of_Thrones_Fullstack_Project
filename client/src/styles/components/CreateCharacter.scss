@@ -1,0 +1,30 @@
+.create-drop {
+    width: 75%;
+    height: 40px;
+    margin: 10px 0 5px 0;
+    border-radius: 5px;
+}
+
+.create-submit {
+    &:hover {
+        background-color: gold;
+        font-weight: bold;
+        transform: scale(1.05);
+    }
+}
+
+
+
+.form {
+    input {
+        border: 3px solid transparent;
+    }
+}
+
+.valid {
+    background-color: rgb(248, 227, 105);
+}
+
+.empty {
+    background-color: red;
+}

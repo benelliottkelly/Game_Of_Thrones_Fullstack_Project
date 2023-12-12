@@ -11,6 +11,10 @@ export default function SinglePlace(){
   console.log(loadedData)
   const { charactersInPlace, description, image, name, occupyingHouses, region } = loadedData
 
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+
   return (
     <Container fluid className="region-container">
       <Row className="split-page" xs={12} md={12} lg={12}>
@@ -30,7 +34,7 @@ export default function SinglePlace(){
                 <h3>{name} has been occupied by {occupyingHouses.length} {occupyingHouses.length < 2 ? "house" : "houses"}:</h3>
                 <div className="occupier">
                   {occupyingHouses.map((house, idx) => {
-                    return <Link className="house-link" key={idx} to={`/houses/${house.id}`}>
+                    return <Link onClick={scrollUp} className="house-link" key={idx} to={`/houses/${house.id}`}>
                       <div>
                         <div className="individual-houses">
                           <h2 className="house-picture-link" style={ {backgroundImage: `url(${house.crest})`} }>{`${house.houseName}`}</h2>
@@ -50,7 +54,7 @@ export default function SinglePlace(){
                 <h3>Related Characters</h3>
                 <div className="charactersInPlace-container">
                   {charactersInPlace.map((character, idx) => {
-                    return <Link className="character" key={idx} to={`/characters/${character.id}`}>
+                    return <Link onClick={scrollUp} className="character" key={idx} to={`/characters/${character.id}`}>
                       <div>
                         <div className="individual-charactersInPlace">
                           <h2>{`${character.firstName} ${character.lastName}`}</h2>

@@ -14,6 +14,11 @@ export default function SingleCharacter() {
   const relationships = []
   console.log(loadedData)
 
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+
+
   function findHouse() {
     const results = allCharacters.filter((character) => {
       if ((character.firstName !== firstName) && (character.house === house)) {
@@ -68,7 +73,7 @@ export default function SingleCharacter() {
                 <h3>House Members</h3>
                 <div className="relationships-container">
                   {relationships.map((relationship, idx) => {
-                    return <Link className="relationship" key={idx} to={`/characters/${relationship.id}`}>
+                    return <Link onClick={scrollUp} className="relationship" key={idx} to={`/characters/${relationship.id}`}>
                       <div>
                         <div className="individual-relationships">
                           <h2>{`${relationship.firstName} ${relationship.lastName}`}</h2>
