@@ -53,7 +53,7 @@ export default function SingleCharacter() {
         </Row>
         <Row xs={12} md={12} lg={12}>
           <Col xs={12} md={12} lg={12}>
-              <Link className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
+              <Link onClick={scrollUp} className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
                 <img className='crest-single' src={crest} alt={`${house} family crest`} />
               </Link>
           </Col>
