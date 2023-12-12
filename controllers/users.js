@@ -1,6 +1,7 @@
 import User from '../models/user.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import mongoose from 'mongoose'
 
 export const register = async (req, res) => {
     try {
@@ -41,11 +42,21 @@ export const login = async (req, res) => {
 }
 
 export const getProfile = async (req, res) => {
-    try {
-        const profile = await User.findById(req.currentUser._id).populate('characterCreated')
-        return res.json(profile)
-    } catch (error) {
-        console.log(error)
-        return res.status(500).json(error)
-    }
-}
+  try {
+      const userId = req.params.userId // Get the user ID from request params
+      if (!mongoose.Types.ObjectId.isValid(userId)) {
+          return res.status(400).json({ message: 'Invalid user ID format' })
+      }
+
+      const profile = await User.findById(userId).populate('characterCreated')
+      if (!profile) {
+          return res.status(404).json({ message: 'User profile not found' })
+      }
+      
+      console.log(profile)
+      return res.json(profile)
+  } catch (error) {
+      console.log(error)
+      return res.status(500).json(error)
+  }
+};

@@ -18,7 +18,7 @@ import {
   getSinglePlace
 } from '../controllers/places.js'
 
-import { register, login } from '../controllers/users.js'
+import { register, login, getProfile } from '../controllers/users.js'
 
 import secureRoute from './secureRoute.js'
 
@@ -51,5 +51,8 @@ router.route('/login')
 
 router.route('/register')
   .post(register)
+
+router.route('/users/:userId')
+  .get(getProfile)
 
 export default router
