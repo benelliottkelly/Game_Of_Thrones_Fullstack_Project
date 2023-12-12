@@ -53,6 +53,6 @@ router.route('/register')
   .post(register)
 
 router.route('/users/:userId')
-  .get(secureRoute, getProfile)
+  .get(getProfile)
 
 export default router
