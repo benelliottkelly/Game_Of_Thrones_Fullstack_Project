@@ -12,7 +12,6 @@ export default function ImageUploadField ({ formData, setFormData }) {
     const data = new FormData()
     data.append('file', file)
     data.append('upload_preset', preset)
-    console.log(data)
 
     //  data: {secure_url} } 
 

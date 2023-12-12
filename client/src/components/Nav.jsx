@@ -47,7 +47,7 @@ export default function NavbarFunction(){
                   <Nav.Link href="/places">Places</Nav.Link>
                   {activeUser() ? 
                   <>
-                  <Nav.Link href="/profile">Profile Page</Nav.Link>
+                  <Nav.Link to="/profile" >Profile Page</Nav.Link>
                   <Nav.Link href="/characters/create">Create A Character</Nav.Link>
                   <span onClick={handleLogOut}>Log Out</span>
                   </>

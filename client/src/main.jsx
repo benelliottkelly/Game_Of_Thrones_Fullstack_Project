@@ -20,10 +20,11 @@ import EditCharacter from './components/CharacterEdit.jsx'
 import CreateCharacter from './components/CreateCharacter.jsx'
 import Register from './components/Register.jsx'
 import Login from './components/Login.jsx'
+import Profile from './components/Profile.jsx';
 
 
 // Loaders
-import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singleHouseLoader, singlePlaceLoader } from './utils/loaders.js'
+import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singleHouseLoader, singlePlaceLoader, profileLoader } from './utils/loaders.js'
 
 // Actions
 import { loginUser, registerUser } from './utils/actions/auth.js'
@@ -90,6 +91,12 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />,
         action: async ({ request }) => loginUser(request)
+      },
+      {
+        path: '/users/:userId',
+        element: <Profile />,
+        loader: async ({ params }) => profileLoader(params.userId)
+        // Add action for edit character
       }
     ]
   }

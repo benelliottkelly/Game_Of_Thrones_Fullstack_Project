@@ -4,7 +4,7 @@ import User from '../models/user.js'
 export default async function secureRoute(req, res, next) {
     try {
         // 1. Ensure Authorization header was passed with the request
-        if (!req.headers.authorization) throw new Error('Mssing headers')
+        if (!req.headers.authorization) throw new Error('Missing headers')
 
         // 2. Extract token from the header, removing 'Bearer '
         const token = req.headers.authorization.replace('Bearer ', '')
@@ -12,6 +12,7 @@ export default async function secureRoute(req, res, next) {
         // 3. Use verify method to check if token is valid
         // If so this means the secret matched our sever secret, and the expiry is in date
         const payload = jwt.verify(token, process.env.SECRET)
+        console.log(payload)
 
         // 4. Ensure the user identified by the sub still exists in our database
         const userToVerify = await User.findById(payload.sub)
