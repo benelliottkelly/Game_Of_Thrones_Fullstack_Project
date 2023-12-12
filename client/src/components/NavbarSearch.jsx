@@ -36,7 +36,8 @@ export default function NavBarSearch(){
         (item) =>
           value &&
           (item.firstName.toLowerCase().includes(value.toLowerCase()) ||
-            item.lastName.toLowerCase().includes(value.toLowerCase()))
+            item.lastName.toLowerCase().includes(value.toLowerCase()) || 
+            (`${item.firstName.toLowerCase()} ${item.lastName.toLowerCase()}`).includes(value.toLowerCase()))
       )
     }
     

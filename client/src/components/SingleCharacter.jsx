@@ -15,6 +15,11 @@ export default function SingleCharacter() {
   const relationships = []
   console.log(loadedData)
 
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
+
+
   function findHouse() {
     const results = allCharacters.filter((character) => {
       if ((character.firstName !== firstName) && (character.house === house)) {
@@ -48,7 +53,7 @@ export default function SingleCharacter() {
         </Row>
         <Row xs={12} md={12} lg={12}>
           <Col xs={12} md={12} lg={12}>
-              <Link className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
+              <Link onClick={scrollUp} className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
                 <img className='crest-single' src={crest} alt={`${house} family crest`} />
               </Link>
           </Col>
@@ -70,7 +75,7 @@ export default function SingleCharacter() {
                 <h3>House Members</h3>
                 <div className="house-member-container">
                   {relationships.map((relationship, idx) => {
-                    return <Link className="house-member" key={idx} to={`/characters/${relationship.id}`}>
+                    return <Link onClick={scrollUp} className="house-member" key={idx} to={`/characters/${relationship.id}`}>
                       <div>
                         <div className="individual">
                           <h2>{`${relationship.firstName} ${relationship.lastName}`}</h2>

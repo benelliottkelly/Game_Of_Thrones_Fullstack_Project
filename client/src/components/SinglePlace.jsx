@@ -11,6 +11,10 @@ export default function SinglePlace() {
   const loadedData = useLoaderData()
   console.log(loadedData)
   const { charactersInPlace, description, image, name, occupyingHouses, region } = loadedData
+
+  function scrollUp() {
+    document.documentElement.scrollTop = 0
+  }
   const { houseName } = occupyingHouses[0]
 
   return (
@@ -35,46 +39,46 @@ export default function SinglePlace() {
         </Col>
       </Row>
       <Row className="p-5" xs={12} md={12} lg={12}>
-        <Col>
-          {occupyingHouses.length > 0 &&
-            <div className="occupying-house">
-              <h3>{name} has been occupied by {occupyingHouses.length} {occupyingHouses.length < 2 ? "house" : "houses"}:</h3>
-              <div className="occupier">
-                {occupyingHouses.map((house, idx) => {
-                  return <Link className="house-link" key={idx} to={`/houses/${house.id}`}>
-                    <div>
-                      <div className="individual-houses">
-                        <h2 className="house-picture-link" style={{ backgroundImage: `url(${house.crest})` }}>{`${house.houseName}`}</h2>
+          <Col>
+            {occupyingHouses.length > 0 &&
+              <div className="occupying-house">
+                <h3>{name} has been occupied by {occupyingHouses.length} {occupyingHouses.length < 2 ? "house" : "houses"}:</h3>
+                <div className="occupier">
+                  {occupyingHouses.map((house, idx) => {
+                    return <Link onClick={scrollUp} className="house-link" key={idx} to={`/houses/${house.id}`}>
+                      <div>
+                        <div className="individual-houses">
+                          <h2 className="house-picture-link" style={ {backgroundImage: `url(${house.crest})`} }>{`${house.houseName}`}</h2>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                })}
+                    </Link>
+                  })}
+                </div>
               </div>
-            </div>
-          }
-        </Col>
-      </Row>
-      <Row className="p-5" xs={12} md={12} lg={12}>
-        <Col>
-          {charactersInPlace.length > 0 &&
-            <div className="stained-glass">
-              <h3>Related Characters</h3>
-              <div className="house-member-container">
-                {charactersInPlace.map((character, idx) => {
-                  return <Link className="house-member" key={idx} to={`/characters/${character.id}`}>
-                    <div>
-                      <div className="individual">
-                        <h2>{`${character.firstName} ${character.lastName}`}</h2>
-                        <img className="individual-picture" src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
+            }
+          </Col>
+        </Row>
+        <Row className="p-5" xs={12} md={12} lg={12}>
+          <Col>
+            {charactersInPlace.length > 0 &&
+              <div className="character-text">
+                <h3>Related Characters</h3>
+                <div className="charactersInPlace-container">
+                  {charactersInPlace.map((character, idx) => {
+                    return <Link onClick={scrollUp} className="character" key={idx} to={`/characters/${character.id}`}>
+                      <div>
+                        <div className="individual-charactersInPlace">
+                          <h2>{`${character.firstName} ${character.lastName}`}</h2>
+                          <img className='character-picture' src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                })}
+                    </Link>
+                  })}
+                </div>
               </div>
-            </div>
-          }
-        </Col>
-      </Row>
+            }
+          </Col>
+        </Row>
     </Container>
   )
 }
