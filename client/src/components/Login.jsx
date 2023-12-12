@@ -19,7 +19,7 @@ export default function Login(){
       <Form className='form' id="loginForm" method="POST">
         <input type="email" name="email" placeholder=' Email' />
         <input type="password" name="password" placeholder=" Password" />
-        <button className='btn btn-pink' type="submit">Login</button>
+        <button className='btn btn-warning' type="submit">Login</button>
         {res && <p className='danger'>{res.data.message}</p>}
       </Form>
     </>

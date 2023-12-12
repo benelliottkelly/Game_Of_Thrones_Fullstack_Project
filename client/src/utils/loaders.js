@@ -13,9 +13,21 @@ export async function placeLoader() {
     return res.json()
 }
 
+export async function createLoader() {
+    const res1 = await fetch('/api/houses')
+    const houses = await res1.json()
+    const res2 = await fetch('/api/characters')
+    const characters = await res2.json()
+    return { houses, characters }
+}
+
 export async function singleCharacterLoader(characterId) {
    const res = await fetch(`/api/characters/${characterId}`)
-    return res.json()
+    const singleCharacter = await res.json()
+   const all = await fetch(`/api/characters`)
+    const allCharacters = await all.json()
+  return { singleCharacter, allCharacters }
+
 }
 
 export async function singleHouseLoader(houseId) {

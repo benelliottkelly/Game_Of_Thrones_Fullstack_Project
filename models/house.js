@@ -13,7 +13,6 @@ housesSchema.set('toJSON', {
   virtuals: true
 })
 
-
 housesSchema
 	.virtual('characters', {
 		ref: 'Character',

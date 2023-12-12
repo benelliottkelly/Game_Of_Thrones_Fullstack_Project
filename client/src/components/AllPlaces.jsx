@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigation, Link } from 'react-router-dom'
+import { useLoaderData, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -11,13 +11,10 @@ import Filter from './Filters'
 
 export default function AllPlaces() {
 
-    const [ isOpen, setIsOpen ] = useState(false)
-    const toggleOpen = () => setIsOpen(!isOpen)
-
     const [places, setPlaces] = useState([])
     const [filteredPlaces, setFilteredPlaces] = useState([])
 
-    const navigation = useNavigation()
+
     const location = useLoaderData()
 
     useEffect(() => {
@@ -29,13 +26,14 @@ export default function AllPlaces() {
             <h1>All Places</h1>
            
             <Container fluid>
-                <Row>
+            <Row className="filter-row">
                     <Col
-                        xs={4}
-                        md={3}
+                        xs={12}
+                        md={6}
                         lg={3}
                         className="filter">
-                            <Filter places={places} setFilteredPlaces={setFilteredPlaces} />
+                            <Filter places={places} setFilteredPlaces={setFilteredPlaces} filteredPlaces={filteredPlaces} />
+                            <div className="vert-banner"></div>
                            
                             </Col>
                     <Col>
@@ -43,11 +41,11 @@ export default function AllPlaces() {
                             {filteredPlaces.map(place => {
                                 return (
                                     <>
-                                        <Link to={`/places/${place.id}`} style={{
+                                        <Link  key={place.id} to={`/places/${place.id}`} style={{
                                             textDecoration: 'none',
                                             color: 'black'
                                         }}>
-                                            <Card className="card" key={place.id}>
+                                            <Card className="card">
                                                 <Card.Img variant="top" className="card-img-top" src={place.image} alt="Crest Image" />
                                                 <Card.Body className="card-body">
                                                     <Card.Title className="card-title">{place.name}</Card.Title>

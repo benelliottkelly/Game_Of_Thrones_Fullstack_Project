@@ -24,7 +24,7 @@ import Profile from './components/Profile.jsx';
 
 
 // Loaders
-import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singleHouseLoader, singlePlaceLoader, profileLoader } from './utils/loaders.js'
+import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singleHouseLoader, singlePlaceLoader, profileLoader, createLoader } from './utils/loaders.js'
 
 // Actions
 import { loginUser, registerUser } from './utils/actions/auth.js'
@@ -80,7 +80,8 @@ const router = createBrowserRouter([
       {
         path: '/characters/create',
         element: <CreateCharacter />,
-        action: async ({ request }) => createCharacter(request)
+        action: async ({ request }) => createCharacter(request),
+        loader: createLoader
       },
       {
         path: '/register',

@@ -37,7 +37,7 @@ export const login = async (req, res) => {
 
     } catch (error) {
         console.log(error)
-        return res.status(401).json({ message: "You may not access the database" })
+        return res.status(401).json({ message: "Password or Email is incorrect, please check again" })
     }
 }
 

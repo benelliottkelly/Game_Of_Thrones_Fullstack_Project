@@ -14,7 +14,9 @@ export default [
             "House Karstark",
             "House Bolton",
             "House Reed",
-            "House Glover"
+            "House Glover",
+            "House Dustin",
+            "House Manderly"
         ]
     },
     {
@@ -68,7 +70,8 @@ export default [
             "House Seaworth",
             "House Caron",
             "House Estermont",
-            "House Swann"
+            "House Swann",
+            "House Dondarrion"
         ]
     },
     {
@@ -199,7 +202,7 @@ export default [
     },
     {
         houseName: "Reed",
-        motto: "We Remember",
+        motto: "Within Our Sight",
         crest: "https://awoiaf.westeros.org/images/thumb/b/b6/House_Reed.svg/545px-House_Reed.svg.png",
         description: "House Reed is a small but ancient house located in the swamps of the Neck, fiercely loyal to House Stark.",
         notableBattles: [
@@ -351,7 +354,7 @@ export default [
         houseName: "Tarly",
         motto: "First in Battle",
         crest: "https://awoiaf.westeros.org/images/thumb/c/cc/House_Tarly.svg/545px-House_Tarly.svg.png",
-        description: "House Tarly of Horn Hill is esteemed for their martial valor, led by the stern and disciplined Randyll Tarly. Renowned for their military prowess and possession of the Valyrian steel sword, Heartsbane, their heir, Samwell Tarly, contrasts the family's warrior tradition with his scholarly nature, causing internal strife.",
+        description: "Esteemed for their martial valor and led by the stern and disciplined Randyll Tarly. Renowned for their military prowess and possession of the Valyrian steel sword, Heartsbane, their heir, Samwell Tarly, contrasts the family's warrior tradition with his scholarly nature, causing internal strife.",
         notableBattles: [
             "Battle of Ashford",
             "Battle of the Blackwater",
@@ -362,5 +365,138 @@ export default [
             "House Florent",
             "House Peake"
         ]
-    }
+    },
+    {
+        houseName: "Brax",
+        motto: "First in Battle",
+        crest: "https://awoiaf.westeros.org/images/thumb/5/54/House_Brax.svg/545px-House_Brax.svg.png",
+        description: "House Brax is a noble house in the Westerlands, known for its loyalty to House Lannister. They hold Hornvale as their seat, strategically positioned near the Golden Tooth pass. Renowned for their martial prowess and wealth, the Braxes have a longstanding history tied to the power dynamics within the region.",
+        notableBattles: [
+            "Battle of the Golden Tooth",
+            "Battle of the Blackwater",
+            "War of the Five Kings"
+        ],
+        bannermen: [
+            "No noteable bannermen, House Brax is loyal to House Lannister"
+        ]
+    },
+    {
+        houseName: "Royce",
+        motto: "We Remember",
+        crest: "https://awoiaf.westeros.org/images/thumb/c/cf/House_Royce.svg/545px-House_Royce.svg.png",
+        description: "A respected noble house from the Vale of Arryn, recognized for their ancient lineage and martial prowess. Seated at Runestone, they boast a storied history, and their members often hold positions of honor in the Vale. Their sigil, the bronze-colored Yore, signifies their enduring strength and traditions.",
+        notableBattles: [
+            "Battle of the Seven Stars",
+            "Battle of the Whispering Wood",
+            "War of the Five Kings"
+        ],
+        bannermen: [
+            "No noteable bannermen, House Royce is loyal to House Arryn"
+        ]
+    },
+    {
+        houseName: "Night's Watch",
+        motto: "We Remember",
+        crest: "https://awoiaf.westeros.org/images/thumb/f/f3/Night%27s_Watch.svg/545px-Night%27s_Watch.svg.png",
+        description: "The Night's Watch is a sworn brotherhood tasked with guarding the realm from threats beyond the Wall, such as Wildlings and supernatural dangers. Composed of men who forsake family names, they vow to defend Westeros, manning the Wall and its castles, notably Castle Black. Their duty is perpetual, defending the realms of men against the terrors of the far North.",
+        notableBattles: [
+            "Battle of Castle Black",
+            "Battle at the Fist of the First Men",
+            "Raid on Craster's Keep"
+        ],
+        bannermen: [
+            "No bannermen, The Night's Watch serve the realm of men"
+        ]
+    },
+    {
+        houseName: "Dothraki",
+        motto: "We Remember",
+        crest: "https://awoiaf.westeros.org/images/0/00/Niten_Braided_Screamers.JPG",
+        description: "This nomadic warrior culture hails from the vast grasslands of Essos, known as the Dothraki Sea. Renowned for their exceptional horsemanship and fearsome reputation in battle, they live by a code centered on strength and honor. Led by khals, their society is organized into clans called khalasars, and they traverse the open plains, valuing freedom and valiance above all else.",
+        notableBattles: [
+            "Threat to Westeros",
+            "Skirmishes across Essos",
+            "Invasion of the Lhazareen"
+        ],
+        bannermen: [
+            "No bannermen, though a large hoard of Dothraki did serve under Daenerys Targaryen"
+        ]
+    },
+    {
+        houseName: "Manderly",
+        motto: "Steadfast Through the Tides",
+        crest: "https://awoiaf.westeros.org/images/thumb/c/c9/House_Manderly.svg/545px-House_Manderly.svg.png",
+        description: "Settled in the port city of White Harbor, House Manderly is renowned for their maritime strength and commerce. Despite their humble beginnings as exiles from the Reach, they've established themselves as influential and steadfast supporters of the North",
+        notableBattles: [
+            "War of the Five Kings",
+            "Battle of Winterfell",
+        ],
+        bannermen: [
+            "No noteable bannermen, House Manderly is loyal to House Stark"
+        ]
+    },
+    {
+        houseName: "Mallister",
+        motto: "Above the Rest",
+        crest: "https://awoiaf.westeros.org/images/thumb/7/75/House_Mallister.svg/545px-House_Mallister.svg.png",
+        description: "A noble house from the Riverlands, known for their loyalty to House Tully of Riverrun. Seated at Seagard, their strategic coastal stronghold, they boast a storied history as respected vassals. Renowned for their naval strength and valor, they have a notable reputation for defending the Riverlands.",
+        notableBattles: [
+            "Battle of the Trident",
+            "War of the Five Kings",
+        ],
+        bannermen: [
+            "No noteable bannermen, House Mallister is loyal to House Tully"
+        ]
+    },
+    {
+        houseName: "Westerling",
+        motto: "Honor, Not Honors",
+        crest: "https://awoiaf.westeros.org/images/thumb/f/f3/House_Westerling.svg/545px-House_Westerling.svg.png",
+        description: "A noble house seated in the Westerlands, known for its ancestral seat, the Crag. Though once a prominent house with a long history, they have since declined in status. Despite their noble heritage, they experienced a reduction in wealth and influence, yet they maintain their loyalty to House Lannister.",
+        notableBattles: [
+            "No noteable battles",
+        ],
+        bannermen: [
+            "No noteable bannermen, House Mallister is loyal to House Lannister"
+        ]
+    },
+    {
+        houseName: "Glover",
+        motto: "With an Iron Fist",
+        crest: "https://awoiaf.westeros.org/images/thumb/4/41/House_Glover.svg/545px-House_Glover.svg.png",
+        description: "Seated at Deepwood Motte, they hold strategic significance in the Wolfswood region. Renowned for their fierce dedication to House Stark, they are stalwart supporters of the North, often contributing skilled warriors to defend the realm from external threats.",
+        notableBattles: [
+            "War of the Five Kings",
+            "Battle of the Bastards"
+        ],
+        bannermen: [
+            "No noteable bannermen, House Glover is loyal to House Stark"
+        ]
+    },
+    {
+        houseName: "Dustin",
+        motto: "Our Word Yet Lives",
+        crest: "https://awoiaf.westeros.org/images/thumb/d/d5/House_Dustin.svg/545px-House_Dustin.svg.png",
+        description: "Seated at Barrowton, they hold influence in the Barrowlands, overseeing the ancient crypts and burial grounds of the First Men. Renowned for their loyalty and martial prowess, they have stood as staunch supporters of the Starks throughout history, contributing skilled warriors to defend the North.",
+        notableBattles: [
+            "War of the Five Kings",
+            "Battle of the Bastards"
+        ],
+        bannermen: [
+            "No noteable bannermen, House Dustin is loyal to House Stark"
+        ]
+    },
+    {
+        houseName: "Dondarrion",
+        motto: "Our Word Yet Lives",
+        crest: "https://awoiaf.westeros.org/images/thumb/a/ad/House_Dondarrion.svg/545px-House_Dondarrion.svg.png",
+        description: "Seated at Blackhaven, they are renowned for their resilience and unwavering dedication, they uphold a strong sense of duty and honor. House Dondarrion boasts a storied history, and they are remembered for their valor and commitment to justice. Notably, they are associated with the title of the 'Lightning Lord' due to their sigil, a forked purple lightning bolt on a black field.",
+        notableBattles: [
+            "War of the Five Kings",
+            "Robert's Rebellion"
+        ],
+        bannermen: [
+            "No noteable bannermen, House Dondarrion is loyal to House Baratheon"
+        ]
+    },
 ]
