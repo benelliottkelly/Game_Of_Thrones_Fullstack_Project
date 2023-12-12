@@ -12,22 +12,29 @@ export default function ImageUploadField ({ formData, setFormData }) {
     const data = new FormData()
     data.append('file', file)
     data.append('upload_preset', preset)
-    console.log(data)
 
-    //  data: {secure_url} } 
 
-    const { data: {secure_url} }   = await axios.post(endpoint, data)
-
-    setFormData({ ...formData, image: secure_url })
+    try {
+      const { data: { secure_url } }   = await axios.post(endpoint, data)
+      setFormData(prevFormData => ({
+        ...prevFormData,
+        image: secure_url
+      }))
     
+    } catch(error) {
+      console.error('Error uploading image:', error)
+    }
   }
 
   return (
     <>
     {formData.image ?
+    <>
         <img src={formData.image} alt="Poster" style={{ maxWidth: "300px" }} />
+        <input type="hidden" value={formData.image} name="image" />
+    </>  
         :
-        <input type="file" name="poster" onChange={handleImageUpload} />
+        <input type="file" name="image" onChange={handleImageUpload} />
       }
     </>
 

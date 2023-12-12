@@ -39,3 +39,8 @@ export async function singlePlaceLoader(placeId) {
    const res = await fetch(`/api/places/${placeId}`)
     return res.json()
 }
+
+export async function profileLoader(userId) {
+  const res = await fetch(`/api/users/${userId}`)
+  return res.json()
+}
