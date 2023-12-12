@@ -22,6 +22,41 @@
 }
 
 @mixin houseColours($primary, $secondary, $tertiary ){
+  h2 {
+    font-family: 'GameOfThrones';
+    font-size: 3em;
+    text-align: center;
+    box-shadow: 0 4px 30px $tertiary;
+    padding: 0.1em;
+    margin: 0.5em;
+  }
+  h3{
+    font-family: 'Grogoth';
+    font-size: 3em;
+    text-align: center;
+    box-shadow: 0 4px 30px $tertiary;
+    padding: 0.1em;
+    margin: 0.5em;
+  }
+  p{
+    font-family: 'Emperialisme';
+    font-size: 2em;
+    box-shadow: 0 4px 30px $tertiary;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  li{
+    font-size: 1.5em;
+    font-family: 'BlackCastle';
+    list-style: none;
+    padding: 0 1em;
+    box-shadow: 0 4px 30px $tertiary;
+  }
   .stained-glass{
     @include flex-center(column);
     box-shadow: 0 4px 40px $secondary;
@@ -33,43 +68,35 @@
     border: 1em double $tertiary;
     border-radius: 5px;
     padding: 1em 2em;
-    h3{
-      font-family: 'Grogoth';
-      font-size: 3em;
-      opacity: 1;
-      box-shadow: 0 4px 30px $tertiary;
-    }
-    p{
-      font-family: 'Emperialisme';
-      font-size: 2em;
-      opacity: 1;
-      box-shadow: 0 4px 30px $tertiary;
-    }
-    ul{
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0;
-    }
-    li{
-      font-family: 'BlackCastle';
-      list-style: none;
-      opacity: 1;
-      padding: 0 1em;
-      box-shadow: 0 4px 30px $tertiary;
-    }
   }
   .index-return{
+    color: $primary;
     font-size: 2em;
-    
+    float: right;
+    margin: 0 0.5em;
   }
-  .main-image{
-    @include flex-center(column);
+  .index-return:hover{
+    animation: spin linear 2s infinite;
+  }
+  .main-image-container{
+    padding: 1em 5em;
+    @include radial-background($primary);
+    .main-image{
+      @include flex-center(column);
+      padding: 1em 5em;
+      img{
+        display: inline-block;
+        height: 55vh;
+        max-height: 500px;
+        border: 1em double $tertiary;
+        border-radius: 5px;
+        box-shadow: 0 4px 30px $primary;
+      }
+    }
   }
   .pictureFrame{
     background-image: url("../images/picture-frame.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include background-image(contain);
     aspect-ratio: 1;
     @include flex-center(column);
     .picture-single{
@@ -80,20 +107,43 @@
   }
   .banner-container{
     @include flex-center(column);
-    border: none;
-    border-radius: 50%;
-    background-image: radial-gradient($secondary 0%, rgba(255, 255, 255, 0) 55%, rgba(255,255,255,0) 100%);
+    @include radial-background($secondary);
     .crest-single{
       width: 25%;
       margin: 1em;
-    };
+    }
+    .crest-single:hover{
+      animation: tilt-shaking linear 1s infinite;
+    }
   }
-  h2 {
-    font-family: 'GameOfThrones';
-    font-size: 3em;
-    text-align: center;
-    box-shadow: 0 4px 30px $tertiary;
-  };
+  .family-home{
+    color: $primary;
+    text-decoration: none;
+  }
+  .family-home:hover {
+    color: $secondary;
+    box-shadow: inset 0 3em 0 0 $primary;
+  }
+  .occupying-house{
+    @include flex-center(column);
+    .occupier{
+      @include flex-wrap();
+      .house-link{
+        width: 33%;
+        text-decoration: none; 
+        .house-picture-link{
+          @include background-image(cover);
+          font-size: 2em;
+          padding: 1em;
+          color: rgba(245, 245, 255, 0.8);
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+      }
+    }
+  }
+  .house-link:hover{
+    animation: tilt-shaking linear 1s infinite;
+  }
   .house-member-container{
     display: flex;
     flex-direction: row;
@@ -124,6 +174,9 @@
         }
       }
     }
+  }
+  .house-member:hover{
+    animation: tilt-shaking linear 1s infinite;
   }
 }
 
@@ -213,4 +266,21 @@
 
 .Umber-container{
   @include houseColours(#982023, #C3C2C2, #B14245)
+}
+
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(360deg); }
+  25% { transform: rotate(270deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(90deg); }
+  100% { transform: rotate(0deg); }
 }

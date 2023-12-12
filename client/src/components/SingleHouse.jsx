@@ -21,7 +21,7 @@ export default function SingleHouse() {
     <Container fluid className={`${houseName}-container`}>
       <Link className="index-return" to={`/houses`}><GiCrossedSwords /></Link>
       <h2>{`House ${houseName}`}</h2>
-      <Row xs={12} md={12} lg={12}>
+      <Row className="main-image-container" xs={12} md={12} lg={12}>
         <Col xs={12} md={12} lg={12}>
           <div className="main-image">
             <img className="crest" src={crest} alt={`Image of the ${houseName} family crest`} />
@@ -33,7 +33,7 @@ export default function SingleHouse() {
           <h2>{motto}</h2>
         </Col>
         <Col className="column" xs={12} md={6} lg={6}>
-          {places.length > 0 && <h3>Family home: {<Link to={`/places/${places[0].id}`}>{ places[0].name }</Link>} </h3>}
+          {places.length > 0 && <h3>Family home: {<Link className="family-home" to={`/places/${places[0].id}`}>{ places[0].name }</Link>} </h3>}
           <p>{description}</p>
         </Col>
       </Row>
@@ -59,7 +59,7 @@ export default function SingleHouse() {
           </Col>
         </Row>
         <Row className="p-5" xs={12} md={12} lg={12}>
-          <div className="character-text">
+          <div className="stained-glass">
             <h3>Bannermen</h3>
             <ul>
               {bannermen.length > 0 && bannermen.map((banner, idx) => {

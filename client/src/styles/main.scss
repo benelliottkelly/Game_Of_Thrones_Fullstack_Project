@@ -20,7 +20,7 @@ h4{
 body{
   margin: 0;
   background-image: url('../images/embers.gif');
-  @include background-image;
+  @include background-image(cover);
   color: rgba(245, 245, 255, 0.8);
 }
 
