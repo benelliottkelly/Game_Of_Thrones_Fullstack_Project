@@ -1,4 +1,5 @@
 import { useLoaderData, Link } from "react-router-dom"
+import { GiCrossedSwords } from "react-icons/gi"
 
 // Bootstrap components
 import Container from 'react-bootstrap/Container'
@@ -25,7 +26,8 @@ export default function SingleCharacter() {
 
   return (
     <>
-      <Container fluid className={`${house}-character-container`}>
+      <Container fluid className={`${house}-container`}>
+        <Link className="index-return" to={`/characters`}><GiCrossedSwords /></Link>
         <Row className="split-page" xs={12} md={12} lg={12}>
           <Col className="column" xs={12} md={4} lg={4}>
             <div className="pictureFrame">
@@ -33,7 +35,7 @@ export default function SingleCharacter() {
             </div>
           </Col>
           <Col className="column column-right" xs={12} md={8} lg={8}>
-            <div className="character-text">
+            <div className="stained-glass">
               <h2>{firstName} {lastName}</h2>
               <h3>House {house}</h3>
               <h4>Home: {hometown}</h4>
@@ -52,7 +54,7 @@ export default function SingleCharacter() {
           </Col>
         </Row>
         <Row className="p-5" xs={12} md={12} lg={12}>
-          <div className="character-text">
+          <div className="stained-glass">
             <h3>Key Battles</h3>
             <ul>
               {battles.length > 0 && battles.map((battle, idx) => {
@@ -64,15 +66,15 @@ export default function SingleCharacter() {
         <Row className="p-5" xs={12} md={12} lg={12}>
           <Col>
             {relationships.length > 0 &&
-              <div className="character-text">
+              <div className="stained-glass">
                 <h3>House Members</h3>
-                <div className="relationships-container">
+                <div className="house-member-container">
                   {relationships.map((relationship, idx) => {
-                    return <Link className="relationship" key={idx} to={`/characters/${relationship.id}`}>
+                    return <Link className="house-member" key={idx} to={`/characters/${relationship.id}`}>
                       <div>
-                        <div className="individual-relationships">
+                        <div className="individual">
                           <h2>{`${relationship.firstName} ${relationship.lastName}`}</h2>
-                          <img className='relationship-picture' src={relationship.image} alt={`Image of ${relationship.firstName} ${relationship.lastName}`} />
+                          <img className="individual-picture" src={relationship.image} alt={`Image of ${relationship.firstName} ${relationship.lastName}`} />
                         </div>
                       </div>
                     </Link>
