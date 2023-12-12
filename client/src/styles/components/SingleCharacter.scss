@@ -8,20 +8,6 @@
 
 .split-page {
   color: rgba(245, 245, 255, 0.8);
-  .pictureFrame{
-    background-image: url("../images/picture-frame.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    aspect-ratio: 1;
-    @include flex-center(column);
-    .picture-single{
-      width: 66%;
-      aspect-ratio: 0.85;
-      margin: 5em;
-    };
-  }
-
   @include flex-center(row);
   .row{
     padding: 5em;
@@ -31,27 +17,12 @@
     height: 100%;
   }
   .column-right{
-    padding: 6em 5em;
+    padding: 2em 5em;
   }
 }
 
 @mixin houseColours($primary, $secondary, $tertiary ){
-  .banner-container{
-    @include flex-center(column);
-    border: none;
-    border-radius: 50%;
-    background-image: radial-gradient($secondary 0%, rgba(255, 255, 255, 0) 55%, rgba(255,255,255,0) 100%);
-    .crest-single{
-      width: 25%;
-      margin: 1em;
-    };
-  }
-  h2 {
-    font-family: 'GameOfThrones';
-    font-size: 3em;
-    box-shadow: 0 4px 30px $tertiary;
-  }
-  .character-text{
+  .stained-glass{
     @include flex-center(column);
     box-shadow: 0 4px 40px $secondary;
     backdrop-filter: blur(5px);
@@ -87,21 +58,59 @@
       box-shadow: 0 4px 30px $tertiary;
     }
   }
-  .relationships-container{
+  .index-return{
+    font-size: 2em;
+    
+  }
+  .main-image{
+    @include flex-center(column);
+  }
+  .pictureFrame{
+    background-image: url("../images/picture-frame.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 1;
+    @include flex-center(column);
+    .picture-single{
+      width: 66%;
+      aspect-ratio: 0.85;
+      margin: 5em;
+    };
+  }
+  .banner-container{
+    @include flex-center(column);
+    border: none;
+    border-radius: 50%;
+    background-image: radial-gradient($secondary 0%, rgba(255, 255, 255, 0) 55%, rgba(255,255,255,0) 100%);
+    .crest-single{
+      width: 25%;
+      margin: 1em;
+    };
+  }
+  h2 {
+    font-family: 'GameOfThrones';
+    font-size: 3em;
+    text-align: center;
+    box-shadow: 0 4px 30px $tertiary;
+  };
+  .house-member-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
     box-shadow: 0 4px 30px $tertiary;
     width: 90%;
-    .relationship{
+    .house-member{
       @include flex-wrap();
-      width: 30%;
+      width: 29%;
       border: 0.5em inset $tertiary;
       border-radius: 5px;
       text-decoration: none;
       color: $secondary;
       padding: 1em;
-      .individual-relationships{
+      margin: 1em;
+      .individual{
         @include flex-center(column);
         h2{
           font-size: 1em;
@@ -111,96 +120,97 @@
           border: 0.2em outset $tertiary;
           border-radius: 5px;
           box-shadow: 0 4px 20px $secondary;
+          aspect-ratio: 1 / 1.2;
         }
       }
     }
   }
 }
 
-.Arryn-character-container{
+.Arryn-container{
   @include houseColours(#0f86e1, #FCFCFC, #1c517c)
 }
 
-.Baratheon-character-container{
+.Baratheon-container{
   @include houseColours(#F4D71B, #313131, #D63232)
 }
 
-.Blackwood-character-container{
+.Blackwood-container{
   @include houseColours(#971818, #E8E6E6, #1D1C1C)
 }
 
-.Bolton-character-container{
+.Bolton-container{
   @include houseColours(#E58B8B, #A62929, #EA7070)
 }
 
-.Clegane-character-container{
+.Clegane-container{
   @include houseColours(#E4BB07, #444141, #C4C4C4)
 }
 
-.Dayne-character-container{
+.Dayne-container{
   @include houseColours(#0C5891, #FEFEFE, #6E7A7C)
 }
 
-.Free.Folk-character-container{
+.Free.Folk-container{
   @include houseColours(#0C5891, #927330, #6E7A7C)
 }
 
-.Frey-character-container{
+.Frey-container{
   @include houseColours(#1F1F3D, #C3C1B2, #7F7F7F)
 }
 
-.Greyjoy-character-container{
+.Greyjoy-container{
   @include houseColours(#191919, #F2C615, #F7F7F7)
 }
 
-.Hightower-character-container{
+.Hightower-container{
   @include houseColours(#475351, #55B357, #CDCABE)
 }
 
-.Karstark-character-container{
+.Karstark-container{
   @include houseColours(#201C1D, #F9F9F9, #403D3E)
 }
 
-.Lannister-character-container{
+.Lannister-container{
   @include houseColours(#86090A, #C2AD77, #000000)
 }
 
-.Martell-character-container{
+.Martell-container{
   @include houseColours(#E37D17, #D32D2D, #FBFB52)
 }
 
-.Mormont-character-container{
+.Mormont-container{
   @include houseColours(#047C04, #94E494, #1D1D1D)
 }
 
-.Tarly-character-container{
+.Tarly-container{
   @include houseColours(#047C04, #C30F0F, #8A9159)
 }
 
-.Reed-character-container{
+.Reed-container{
   @include houseColours(#81A688, #0B0B0B, #567E5E)
 }
 
-.Stark-character-container{
+.Stark-container{
   @include houseColours(#818181, #F1F1F1, #E19797)
 }
 
-.Targaryen-character-container{
+.Targaryen-container{
   @include houseColours(#0B0B0B, #B62B2B, #F8F6F6)
 }
 
-.Tarth-character-container{
+.Tarth-container{
   @include houseColours(#34355C, #A14432, #DFD548)
 }
 
-.Tully-character-container{
+.Tully-container{
   @include houseColours(#0E0EB4, #9C1919, #D0D0D0)
 }
 
-.Tyrell-character-container{
+.Tyrell-container{
   @include houseColours(#1A8E1A, #FFE646, #A4580C)
 }
 
-.Umber-character-container{
+.Umber-container{
   @include houseColours(#982023, #C3C2C2, #B14245)
 }

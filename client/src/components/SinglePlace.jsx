@@ -1,12 +1,13 @@
 import { useLoaderData, Link } from "react-router-dom"
+import { GiCrossedSwords } from "react-icons/gi"
 
 // Bootstrap components
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export default function SinglePlace(){
-  
+export default function SinglePlace() {
+
   const loadedData = useLoaderData()
   console.log(loadedData)
   const { charactersInPlace, description, image, name, occupyingHouses, region } = loadedData
@@ -14,9 +15,11 @@ export default function SinglePlace(){
   function scrollUp() {
     document.documentElement.scrollTop = 0
   }
+  const { houseName } = occupyingHouses[0]
 
   return (
-    <Container fluid className="region-container">
+    <Container fluid className={`${houseName}-container`}>
+      <Link className="index-return" to={`/places`}><GiCrossedSwords /></Link>
       <Row className="split-page" xs={12} md={12} lg={12}>
         <h2> {name}</h2>
         <h3>({region})</h3>
@@ -24,8 +27,12 @@ export default function SinglePlace(){
       <Row className="split-page" xs={12} md={12} lg={12}>
         <p>{description}</p>
       </Row>
-      <Row className="split-page" xs={12} md={12} lg={12}>
-        <img className='region-single' src={image} alt={`Image of ${name}`} />
+      <Row xs={12} md={12} lg={12}>
+        <Col xs={12} md={12} lg={12}>
+          <div className="main-image">
+            <img className='region-single' src={image} alt={`Image of ${name}`} />
+          </div>
+        </Col>
       </Row>
       <Row className="p-5" xs={12} md={12} lg={12}>
           <Col>
