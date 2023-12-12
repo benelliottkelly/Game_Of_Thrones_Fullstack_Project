@@ -20,14 +20,18 @@ export default function SinglePlace() {
   return (
     <Container fluid className={`${houseName}-container`}>
       <Link className="index-return" to={`/places`}><GiCrossedSwords /></Link>
-      <Row className="split-page" xs={12} md={12} lg={12}>
+      <Row xs={12} md={12} lg={12}>
+        <Col>
         <h2> {name}</h2>
         <h3>({region})</h3>
-      </Row>
-      <Row className="split-page" xs={12} md={12} lg={12}>
-        <p>{description}</p>
+        </Col>
       </Row>
       <Row xs={12} md={12} lg={12}>
+        <Col>
+        <p>{description}</p>
+        </Col>
+      </Row>
+      <Row className="main-image-container" xs={12} md={12} lg={12}>
         <Col xs={12} md={12} lg={12}>
           <div className="main-image">
             <img className='region-single' src={image} alt={`Image of ${name}`} />
