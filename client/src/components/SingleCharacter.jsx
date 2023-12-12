@@ -32,7 +32,10 @@ export default function SingleCharacter() {
   return (
     <>
       <Container fluid className={`${house}-container`}>
+        <div className="link-container">
         <Link className="index-return" to={`/characters`}><GiCrossedSwords /></Link>
+        <Link className="edit-button" to={`/characters/${singleCharacter.id}/edit`}>Edit</Link>
+        </div>
         <Row className="split-page" xs={12} md={12} lg={12}>
           <Col className="column" xs={12} md={4} lg={4}>
             <div className="pictureFrame">
@@ -53,7 +56,7 @@ export default function SingleCharacter() {
         </Row>
         <Row xs={12} md={12} lg={12}>
           <Col xs={12} md={12} lg={12}>
-              <Link className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
+              <Link onClick={scrollUp} className="banner-container" to={`/houses/${associatedHouse[0].id}`}>
                 <img className='crest-single' src={crest} alt={`${house} family crest`} />
               </Link>
           </Col>
