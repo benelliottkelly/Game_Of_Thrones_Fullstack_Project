@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react"
 import { Form, useActionData, useNavigate, useLoaderData } from 'react-router-dom'
 import ImageUploadField from "./ImageUploadField"
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import character from "../../../models/character";
 export default function EditCharacter(){
 
   const res = useActionData()
@@ -56,15 +53,7 @@ export default function EditCharacter(){
     }
   }
 
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-
-  function deleteCharacter() {
-    console.log('Bye bYE')
-  }
 
 
   useEffect(() => {
@@ -81,30 +70,7 @@ export default function EditCharacter(){
   return(
     <>
     <h1 className="text-center bold display-3 mb-4" >Edit Character</h1>
-    {/* <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title className="log-out-title">Hello</Modal.Title>
-        </Modal.Header>
-        <Modal.Body><span className="log-out-text">Are you sure you want to log out?</span>
-          
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Remain logged in
-          </Button>
-          <Button variant="danger" onClick={() => {
-            handleClose()
-            deleteCharacter()
-          }}>Log Out</Button>
-        </Modal.Footer>
-      </Modal> */}
-      {/* <button onClick={handleShow}>Delete</button> */}
-    <Form className="form" method="PUT">
+    <Form className="form" method="POST">
       <input id="firstName" type="text" name="firstName" placeholder="First Name" defaultValue={formData.firstName} onChange={handleChange} />
       <input id="lastName" type="text" name="lastName" placeholder="Last Name" defaultValue={formData.lastName} onChange={handleChange} />
     

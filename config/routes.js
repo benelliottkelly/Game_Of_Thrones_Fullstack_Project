@@ -37,8 +37,6 @@ router.route('/characters')
 
 router.route('/characters/:characterId')
   .get(showSingleCharacter)
-
-router.route('/characters/:characterId')
   .put(secureRoute, updateCharacter)
   .delete(secureRoute, deleteCharacter)
 
