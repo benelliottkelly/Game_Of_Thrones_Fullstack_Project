@@ -29,7 +29,7 @@ router.route('/houses')
 
 router.route('/houses/:houseId')
   .get(getSingleHouse)
-  
+
 // characters
 router.route('/characters')
   .get(getAllCharacters)
