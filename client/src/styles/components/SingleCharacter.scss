@@ -74,6 +74,9 @@
     font-size: 2em;
     float: right;
     margin: 0 0.5em;
+    svg{
+      @include radial-background($secondary);
+    }
   }
   .index-return:hover{
     animation: spin linear 2s infinite;
@@ -126,10 +129,12 @@
   }
   .occupying-house{
     @include flex-center(column);
+    width: 100%;
     .occupier{
       @include flex-wrap();
+      width: 100%;
       .house-link{
-        width: 33%;
+        width: 30%;
         text-decoration: none; 
         .house-picture-link{
           @include background-image(cover);
@@ -196,6 +201,10 @@
   @include houseColours(#E58B8B, #A62929, #EA7070)
 }
 
+.Brax-container{
+  @include houseColours(#991399, #E0E0E0, #751E75)
+}
+
 .Clegane-container{
   @include houseColours(#E4BB07, #444141, #C4C4C4)
 }
@@ -204,12 +213,28 @@
   @include houseColours(#0C5891, #FEFEFE, #6E7A7C)
 }
 
+.Dondarrion-container{
+  @include houseColours(#050505, #AC1CAC, #FFFFFF)
+}
+
+.Dothraki{
+  @include houseColours(#E69B1C, #71472F, #D67A13)
+}
+
+.Dustin-container{
+  @include houseColours(#ECEC08, #A0A0A0, #9E6045)
+}
+
 .Free.Folk-container{
   @include houseColours(#0C5891, #927330, #6E7A7C)
 }
 
 .Frey-container{
   @include houseColours(#1F1F3D, #C3C1B2, #7F7F7F)
+}
+
+.Glover-container{
+  @include houseColours(#F13F12, #ACACAC, #E12F02)
 }
 
 .Greyjoy-container{
@@ -228,6 +253,14 @@
   @include houseColours(#86090A, #C2AD77, #000000)
 }
 
+.Mallister-container{
+  @include houseColours(#440274, #E4E4E4, #C91C1C)
+}
+
+.Manderly-container{
+  @include houseColours(#108080, #118111, #FFFFFF)
+}
+
 .Martell-container{
   @include houseColours(#E37D17, #D32D2D, #FBFB52)
 }
@@ -236,12 +269,16 @@
   @include houseColours(#047C04, #94E494, #1D1D1D)
 }
 
-.Tarly-container{
-  @include houseColours(#047C04, #C30F0F, #8A9159)
+.Watch-container{
+  @include houseColours(#3900a3, #000000, #6d00b6)
 }
 
 .Reed-container{
   @include houseColours(#81A688, #0B0B0B, #567E5E)
+}
+
+.Royce-container{
+  @include houseColours(#CA8846, #353535, #4C341C)
 }
 
 .Stark-container{
@@ -250,6 +287,10 @@
 
 .Targaryen-container{
   @include houseColours(#0B0B0B, #B62B2B, #F8F6F6)
+}
+
+.Tarly-container{
+  @include houseColours(#047C04, #C30F0F, #8A9159)
 }
 
 .Tarth-container{
@@ -268,6 +309,13 @@
   @include houseColours(#982023, #C3C2C2, #B14245)
 }
 
+.Westerling-container{
+  @include houseColours(#D4B96A, #C8C8C8, #FFFFFF)
+}
+
+.general-container{
+  @include houseColours(#ffd900, #0004ff, #ff9900)
+}
 
 @keyframes tilt-shaking {
   0% { transform: rotate(0deg); }
