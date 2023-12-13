@@ -32,8 +32,10 @@ export default function Profile(){
             <div className="character-list">
               {characterCreated.map((character) => (
                 <div key={character._id} className="character-item">
+                  <Link to={`/characters/${character._id}`} rel="noreferrer">
                   <img src={character.image} alt={`${character.firstName} ${character.lastName}`} style={{ maxWidth: "100px", maxHeight: "100px"}} />
                   <p>{`${character.firstName} ${character.lastName}`}</p>
+                  </Link>
                 </div>
               ))}
             </div>

@@ -1,7 +1,10 @@
 @import '../global/variables.scss';
 
 .profile-container {
-  height: 100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 80vh;
 }
 
 .account-info {
@@ -27,6 +30,9 @@
     img {
       height: 100px;
       width: 100px;
+    }
+    p {
+      text-decoration: none;
     }
   }
 }
