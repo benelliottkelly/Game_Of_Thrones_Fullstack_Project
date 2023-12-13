@@ -58,6 +58,25 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
         setCharacterDropDown([])
     }
 
+    function alphabetiseDropDown(arrayName) {
+        const alphabet = [...arrayName].sort((a, b) => {
+            const nameA = a.toUpperCase()
+            const nameB = b.toUpperCase()
+            return nameA.localeCompare(nameB)
+        })
+        return alphabet
+    }
+
+    function alphabetiseIndex(arrayName, fieldName) {
+        const alphabet = [...arrayName].sort((a, b) => {
+            const nameA = a[fieldName].toUpperCase()
+
+            const nameB = b[fieldName].toUpperCase()
+            return nameA.localeCompare(nameB)
+        })
+        return alphabet
+    }
+
     useEffect(() => {
 
         const pattern = new RegExp(filters.search, 'i')
@@ -78,18 +97,20 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
 
             })
 
-            setFilteredPlaces(filteredArray)
+            setFilteredPlaces(alphabetiseIndex(filteredArray, 'name'))
 
             // Create Places DropDown for Places
             if (places.length > 0 && placesDropDown.length === 0) {
                 const placeArray = [...new Set(places.map(place => place.name))]
-                setPlacesDropDown(placeArray)
+
+                setPlacesDropDown(alphabetiseDropDown(placeArray))
             }
 
             // Create Houses DropDown for Places
             if (places.length > 0 && housesDropDown.length === 0) {
                 const uniqueOccupants = Array.from(new Set(places.flatMap(place => place.occupiedBy)));
-                setHousesDropDown(uniqueOccupants)
+
+                setHousesDropDown(alphabetiseDropDown(uniqueOccupants))
             }
 
 
@@ -135,12 +156,15 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                     return pattern.test(abode.houseName)
                 }
             })
-            setfilteredHouses(filteredHouses)
+
+            // Aplhabetise house index
+            setfilteredHouses(alphabetiseIndex(filteredHouses, 'houseName'))
 
             // Create Houses DropDown for House Index
             if (houses.length > 0 && housesDropDown.length === 0) {
                 const houseArray = [...new Set(houses.map(house => house.houseName))]
-                setHousesDropDown(houseArray)
+
+                setHousesDropDown(alphabetiseDropDown(houseArray))
             }
 
             // Create Places DropDown for House Index
@@ -148,15 +172,8 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                 const uniquePlaces = Array.from(new Set(houses.flatMap(house => {
                     return house.places.map(place => place.name);
                 })));
-                setPlacesDropDown(uniquePlaces);
-            }
 
-            // Create Character DropDown for House Index
-            if (houses.length > 0 && characterDropDown.length === 0) {
-                const uniqueCharacters = Array.from(new Set(houses.flatMap(house => {
-                    return house.characters.map(char => `${char.firstName} ${char.lastName}`);
-                })));
-                setCharacterDropDown(uniqueCharacters);
+                setPlacesDropDown(alphabetiseDropDown(uniquePlaces));
             }
 
 
@@ -173,28 +190,22 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                 }
 
             })
-            setFilteredCharacters(filteredArray)
-
-            // Create Houses DropDown for Character Index
-            if (characters.length > 0 && housesDropDown.length === 0) {
-                const houseArray = [...new Set(characters.map(char => char.house))]
-                setHousesDropDown(houseArray)
-            }
+            // alphabetiseDropDown characters index
+            setFilteredCharacters(alphabetiseIndex(filteredArray, 'lastName'))
 
             // Create Places DropDown for Character Index
             if (characters.length > 0 && placesDropDown.length === 0) {
                 const placeArray = [...new Set(characters.map(char => char.hometown))]
-                setPlacesDropDown(placeArray)
+
+                setPlacesDropDown(alphabetiseDropDown(placeArray))
             }
 
             // Create Character DropDown for Character Index
             if (characters.length > 0 && characterDropDown.length === 0) {
                 const charArray = [...new Set(characters.map(char => { return (`${char.firstName} ${char.lastName}`) }))]
-                setCharacterDropDown(charArray)
+
+                setCharacterDropDown(alphabetiseDropDown(charArray))
             }
-
-
-
         }
 
 

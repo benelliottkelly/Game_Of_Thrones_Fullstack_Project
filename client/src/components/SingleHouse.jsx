@@ -37,7 +37,7 @@ export default function SingleHouse() {
           <h2>{motto}</h2>
         </Col>
         <Col className="column" xs={12} md={6} lg={6}>
-          {places.length > 0 && <h3>Family home: {<Link className="family-home" to={`/places/${places[0].id}`}>{ places[0].name }</Link>} </h3>}
+          {places.length > 0 && <h3>Family home: {<Link onClick={scrollUp} className="family-home" to={`/places/${places[0].id}`}>{ places[0].name }</Link>} </h3>}
           <p>{description}</p>
         </Col>
       </Row>
