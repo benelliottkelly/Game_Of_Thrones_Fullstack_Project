@@ -21,6 +21,7 @@ export default function Map() {
 
   return (
     <svg
+    className="map"
     width="100%"
     viewBox="0 0 747.71252 487.36249"
     version="1.1"

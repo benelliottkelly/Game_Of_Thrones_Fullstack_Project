@@ -31,18 +31,18 @@ export default function AllPlaces() {
         <h1>All Places</h1>
 
         <Container fluid>
-          <Row className="filter-row">
-            <Col
+            <Col>
+              <Row>
+                <div className="map-filt">
+                <Col
               xs={12}
               md={6}
               lg={3}
               className="filter">
               <Filter places={places} setFilteredPlaces={setFilteredPlaces} filteredPlaces={filteredPlaces} />
-              <div className="vert-banner"></div>
             </Col>
-            <Col>
-              <Row>
-                <Map />
+            <Map />
+            </div>
               </Row>
               <Row>
                 <section className="card-layout">
@@ -57,7 +57,7 @@ export default function AllPlaces() {
                             <Card.Img variant="top" className="card-img-top" src={place.image} alt="Crest Image" />
                             <Card.Body className="card-body">
                               <Card.Title className="card-title">{place.name}</Card.Title>
-                              <Card.Text className="card-text">{place.region}<br />{place.description}</Card.Text >
+                              <Card.Text className="card-text"><h6>{place.region}</h6>{place.description}</Card.Text >
                             </Card.Body>
                           </Card>
                         </Link>
@@ -68,7 +68,6 @@ export default function AllPlaces() {
                 </section>
               </Row>
             </Col>
-          </Row>
         </Container>
       </div>
     </>

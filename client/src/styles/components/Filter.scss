@@ -1,26 +1,19 @@
-.filter {
-    border: 5px solid black;
-    height: 100%;
-    width: 290px;
-    margin: 0 5px 0 0;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-}
-
-
-
 .filter-container {
     background: url('https://b.kisscc0.com/20180920/iaw/kisscc0-picture-frames-medieval-ornament-950-illustration-frame-1-5ba36645213e39.2758425615374352051362.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 40vh;
+    width: 30vh;
+    margin: 20px 10px 20px 10px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
     button {
-        margin: 0px 0 5px 30px;
+        margin: 0px 0 5px 40px;
         background-color: gold;
         border-radius: 5px;
-        box-shadow: 5px 5px white ;
+        box-shadow: 5px 5px black ;
         width: 80px;
         color: black;
         margin-bottom: 10px;
@@ -33,40 +26,33 @@
     }
 }
 
-.vert-banner {
-    margin-top: 50px;
-    height: 300vh;
-    width: 100%;
-    background:url('../assets/lattice.png');
-    background-position: center;
-}
-
 .main-title {
-    margin: 40px 0 0 30px;
+    margin: 40px 0 0 40px;
+    color: black;
 }
 
 .search-bar {
     background-color: white;
-    margin: 10px 0 20px 30px;
+    margin: 10px 0 20px 40px;
     width: 180px;
 
     &:hover {
-        background-color: yellow;
+        background-color: gold;
     }
 }
 
 .drop {
-    margin: 3px 0 20px 30px;
+    margin: 3px 0 20px 40px;
     width: 180px;
     border-radius: 5px;
 
     &:hover {
-        background-color: yellow;
+        background-color: gold;
         cursor: pointer;
     }
 }
 
 .drop-title {
-    color: white;
-    margin: 0 0 0 30px;
+    color: black;
+    margin: 0 0 0 40px;
 }

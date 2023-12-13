@@ -1,4 +1,4 @@
-$house-card-color: goldenrod;
+$house-card-color: transparent;
 $border-radius: 10px;
 $card-color: rgb(248, 248, 255);
 
@@ -8,11 +8,11 @@ $card-color: rgb(248, 248, 255);
     flex-wrap: wrap;
     margin: 0;
     background-color: transparent;
+    justify-content: center;
 
     .card {
         margin: 10px;
         border-radius: $border-radius;
-
         width: 230px;
         height: 370px;
         box-shadow: 1px 1px 1px 1px;
@@ -20,27 +20,29 @@ $card-color: rgb(248, 248, 255);
         &:hover {
             transform: scale(1.05);
             cursor: pointer;
-
-
             box-shadow: none;
             transform: scale(1.05);
-            ;
-
         }
 
         .card-img-top {
             height: 200px;
-            width: 219px;
-            padding: 5px 0 5px 0;
+            width: 218px;
+            margin: 5px 0 5px 0;
             border-radius: $border-radius;
             align-self: center;
-
-
+      
+            border: 2px solid goldenrod;
         }
 
         .card-body {
             background-color: $card-color;
             border-radius: $border-radius;
+            padding-top: 7px;
+            border: 2px solid goldenrod;
+            margin: 5px 0 5px 0;
+            width: 218px;
+            align-self: center;
+        
 
             .card-title {
                 text-align: center;
@@ -53,13 +55,18 @@ $card-color: rgb(248, 248, 255);
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 4;
-                text-align: center;
                 margin: 0;
                 padding-bottom: 0.5em;
                 background-color: $card-color;
                 height: 100px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                h6 {
+                    text-align: center;
+                    margin-top: 7px;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -70,6 +77,7 @@ $card-color: rgb(248, 248, 255);
     flex-wrap: wrap;
     margin: 0;
     background-color: transparent;
+    width: 100%;
 
     .card {
         margin: 15px 15px 15px 15px;
@@ -85,28 +93,26 @@ $card-color: rgb(248, 248, 255);
         &:hover {
             transform: scale(1.05);
             cursor: pointer;
-
-
             box-shadow: none;
             transform: scale(1.05);
-            ;
-
         }
 
         .card-img-top {
-            height: 200px;
+            height: 170px;
             width: 220px;
             padding: 8px 0 5px 0;
             border-radius: $border-radius;
-
-
-
         }
 
         .card-body {
-            background-color: $house-card-color;
+            background: url('https://i.pinimg.com/originals/2f/9a/98/2f9a98ceaae39ffc206ae26f7bdf9e36.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: $border-radius;
             width: 230px;
+            color: black;
+
 
 
             .card-title {
@@ -114,13 +120,23 @@ $card-color: rgb(248, 248, 255);
                 text-decoration: none;
                 margin: 0 0 0 0;
                 background-color: $house-card-color;
+                margin-bottom: 5px;
             }
 
             .card-text {
                 text-align: center;
                 margin: 0;
-                padding-bottom: 0.5em;
                 background-color: $house-card-color;
+                font-weight: bold;
+
+                h6 {
+                    text-align: center;
+                    margin-top: 15px;
+                    font-weight: bold;
+                    padding: 0 30px 0 30px;
+                    text-decoration: underline;
+                    text-decoration-thickness: 2px;
+                }
             }
         }
     }
@@ -134,21 +150,23 @@ $card-color: rgb(248, 248, 255);
     // transform: skew(-10deg, -10deg);
 
     .card {
-        margin: 10px;
+        margin: 10px 10px 0px 10px;
         border-radius: $border-radius;
-        width: 230px;
-        height: 80px;
+        width: 228px;
+        height: 100px;
         box-shadow: 1px 1px 1px 1px;
         // transform: skew(-4deg, -10deg);
 
         &:hover {
             cursor: pointer;
             box-shadow: none;
-            transform: translateY(-170px);
+            transform: translateY(-140px);
+         
+   
         }
 
         .card-img-top {
-            height: 200px;
+            height: 150px;
             width: 228px;
             padding: 5px 0 5px 0;
             border-top-right-radius: $border-radius;
@@ -158,22 +176,40 @@ $card-color: rgb(248, 248, 255);
         }
 
         .card-body {
-            background-color: $house-card-color;
+            background: url('https://i.pinimg.com/originals/2f/9a/98/2f9a98ceaae39ffc206ae26f7bdf9e36.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-bottom-right-radius: $border-radius;
             border-bottom-left-radius: $border-radius;
+            width: 230px;
+            color: black;
+            align-self: center;
+
+
 
             .card-title {
                 text-align: center;
                 text-decoration: none;
                 margin: 0 0 0 0;
                 background-color: $house-card-color;
+                margin-bottom: 5px;
             }
 
             .card-text {
                 text-align: center;
                 margin: 0;
-                padding-bottom: 0.5em;
                 background-color: $house-card-color;
+                font-weight: bold;
+
+                h6 {
+                    text-align: center;
+                    margin-top: 15px;
+                    font-weight: bold;
+                    padding: 0 30px 0 30px;
+                    text-decoration: underline;
+                    text-decoration-thickness: 2px;
+                }
             }
         }
     }
