@@ -1,5 +1,9 @@
 @import '../global/variables.scss';
 
+.profile-container {
+  height: 100vh;
+}
+
 .account-info {
   display: flex;
   flex-direction: column;
@@ -8,8 +12,21 @@
   flex-wrap: wrap;
 }
 
-.character-list {
+.character-list-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
 }

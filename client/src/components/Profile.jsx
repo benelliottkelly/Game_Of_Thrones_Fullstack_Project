@@ -17,15 +17,13 @@ export default function Profile(){
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="profile-container">
         <Row>
           <Col sm="4">
             <div className="account-info">
               <h1>Account Info</h1>
-              <ul>
-              <li>{username}</li>
-              <li>{email}</li>
-              </ul>
+              <h2>Username: {username}</h2>
+              <h2>Email: {email}</h2>
               </div>
           </Col>
           <Col sm="8">
