@@ -327,7 +327,7 @@ export default function Filter({ places, setFilteredPlaces, setfilteredHouses, h
                             })}
                     </select>
 
-                    <button className="reset-button" onClick={resetFilters}>Clear</button>
+                    <button className="single-button" onClick={resetFilters}>Clear</button>
 
                 </article>
             )}

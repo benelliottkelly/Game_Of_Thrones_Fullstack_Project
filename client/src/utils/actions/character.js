@@ -25,11 +25,11 @@ export async function updateCharacter(request, id) {
 }
 
 export async function deleteCharacter(id) {
-    await axios.delete(`/api/characters/${id}`, {
+    const response = await axios.delete(`/api/characters/${id}`, {
         validateStatus: () => true,
         headers: {
             Authorization: `Bearer ${getToken()}`
         }
     })
-    return redirect('/characters')
+    return response
 }

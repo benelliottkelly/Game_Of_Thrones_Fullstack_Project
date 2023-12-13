@@ -14,6 +14,9 @@ export default function AllPlaces() {
     const [places, setPlaces] = useState([])
     const [filteredPlaces, setFilteredPlaces] = useState([])
 
+    function scrollUp() {
+        document.documentElement.scrollTop = 0
+      }
 
     const location = useLoaderData()
 
@@ -23,6 +26,7 @@ export default function AllPlaces() {
 
     return (
         <>
+        <div className='places-container'>
             <h1>All Places</h1>
            
             <Container fluid>
@@ -40,7 +44,7 @@ export default function AllPlaces() {
                             {filteredPlaces.map(place => {
                                 return (
                                     <>
-                                        <Link  key={place.id} to={`/places/${place.id}`} style={{
+                                        <Link onClick={scrollUp} key={place.id} to={`/places/${place.id}`} style={{
                                             textDecoration: 'none',
                                             color: 'black'
                                         }}>
@@ -48,7 +52,7 @@ export default function AllPlaces() {
                                                 <Card.Img variant="top" className="card-img-top" src={place.image} alt="Crest Image" />
                                                 <Card.Body className="card-body">
                                                     <Card.Title className="card-title">{place.name}</Card.Title>
-                                                    <Card.Text className="card-text">{place.region}</Card.Text >
+                                                    <Card.Text className="card-text">{place.region}<br/>{place.description}</Card.Text >
                                                 </Card.Body>
                                             </Card>
                                         </Link>
@@ -60,6 +64,8 @@ export default function AllPlaces() {
                     </Col>
                 </Row>
             </Container>
+           </div> 
         </>
+        
     )
 }
