@@ -1,14 +1,18 @@
-import { useLoaderData, Link } from "react-router-dom"
+import { useLoaderData, Link, Form, useActionData, useNavigate } from "react-router-dom"
 import { GiCrossedSwords } from "react-icons/gi"
+import { useState } from "react"
 
 // Bootstrap components
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 export default function SingleCharacter() {
 
   const loadedData = useLoaderData()
+  const deleteChar = useActionData()
   const { singleCharacter, allCharacters } = loadedData
   const { firstName, lastName, battles, biography, house, hometown, image, associatedHouse } = singleCharacter
   const { crest } = associatedHouse[0]
@@ -19,6 +23,7 @@ export default function SingleCharacter() {
     document.documentElement.scrollTop = 0
   }
 
+  const navigate = useNavigate()
 
   function findHouse() {
     const results = allCharacters.filter((character) => {
@@ -29,10 +34,49 @@ export default function SingleCharacter() {
   }
   findHouse()
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+  function deleteCharacter() {
+    console.log(deleteChar)
+    // navigate('/characters')
+  }
+ 
+  
+
   return (
     <>
+    <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title className="log-out-title">{`Delete ${firstName} ${lastName}?`}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><span className="log-out-text">{`Are you sure you want to execute ${firstName} ${lastName}?`}</span>
+          
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            {`Let ${firstName} Live`}
+          </Button>
+          <Button variant="danger" onClick={() => {
+            handleClose()
+            deleteCharacter()
+          }}>Swing the Axe</Button>
+        </Modal.Footer>
+      </Modal>
+      <button onClick={handleShow}>Execute</button>
       <Container fluid className={`${house}-container`}>
+        <div className="link-container">
         <Link className="index-return" to={`/characters`}><GiCrossedSwords /></Link>
+        <Link className="edit-button" to={`/characters/${singleCharacter.id}/edit`}>Edit</Link>
+        </div>
         <Row className="split-page" xs={12} md={12} lg={12}>
           <Col className="column" xs={12} md={4} lg={4}>
             <div className="pictureFrame">

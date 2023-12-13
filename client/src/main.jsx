@@ -28,7 +28,7 @@ import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singl
 
 // Actions
 import { loginUser, registerUser } from './utils/actions/auth.js'
-import { createCharacter } from './utils/actions/character.js';
+import { createCharacter, updateCharacter, deleteCharacter } from './utils/actions/character.js';
 
 // Browser Router
 const router = createBrowserRouter([
@@ -68,12 +68,14 @@ const router = createBrowserRouter([
       {
         path: '/characters/:characterId',
         element: <SingleCharacter />,
-        loader: async ({ params }) => singleCharacterLoader(params.characterId)
+        loader: async ({ params }) => singleCharacterLoader(params.characterId),
+        action: async ({ request, params }) => deleteCharacter(request, params.characterId)
         // Add action for delete character
       },
       {
         path: '/characters/:characterId/edit',
         element: <EditCharacter />,
+        action: async ({ request, params }) => updateCharacter(request, params.characterId),
         loader: async ({ params }) => singleCharacterLoader(params.characterId)
         // Add action for edit character
       },

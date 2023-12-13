@@ -21,22 +21,27 @@ export async function createLoader() {
     return { houses, characters }
 }
 
+
 export async function singleCharacterLoader(characterId) {
-   const res = await fetch(`/api/characters/${characterId}`)
+    const res = await fetch(`/api/characters/${characterId}`)
     const singleCharacter = await res.json()
-   const all = await fetch(`/api/characters`)
+
+    const res1 = await fetch('/api/houses')
+    const houses = await res1.json()
+
+    const all = await fetch(`/api/characters`)
     const allCharacters = await all.json()
-  return { singleCharacter, allCharacters }
+    return { singleCharacter, allCharacters, houses }
 
 }
 
 export async function singleHouseLoader(houseId) {
-   const res = await fetch(`/api/houses/${houseId}`)
+    const res = await fetch(`/api/houses/${houseId}`)
     return res.json()
 }
 
 export async function singlePlaceLoader(placeId) {
-   const res = await fetch(`/api/places/${placeId}`)
+    const res = await fetch(`/api/places/${placeId}`)
     return res.json()
 }
 

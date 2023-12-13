@@ -27,7 +27,10 @@ export default function AllHouses() {
                         xs={4}
                         md={3}
                         lg={3} 
-                        className="filter"><Filter houses={houses} setfilteredHouses={setfilteredHouses}/></Col>
+                        className="filter">
+                            <Filter houses={houses} setfilteredHouses={setfilteredHouses}/>
+                            <div className="vert-banner"></div>
+                            </Col>
                     <Col>
                         <section className="card-layout">
                             {filteredHouses.map(house => {
