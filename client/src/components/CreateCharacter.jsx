@@ -34,11 +34,11 @@ export default function CreateCharacter() {
 
 
   function checkFields() {
-  const firstName = document.getElementById('firstName')
-  const lastName = document.getElementById('lastName')
-  const hometown = document.getElementById('hometown')
-  const house = document.getElementById('house')
-    console.log(firstName.classList.length)
+    const firstName = document.getElementById('firstName')
+    const lastName = document.getElementById('lastName')
+    const hometown = document.getElementById('hometown')
+    const house = document.getElementById('house')
+
     if (!firstName.classList.contains('valid')) {
       firstName.classList.add('empty')
     }
@@ -55,6 +55,7 @@ export default function CreateCharacter() {
   }
 
   useEffect(() => {
+    console.log(res)
     if (res?.status == 201) {
       navigate(`/characters/${res.data._id}`)
     }
@@ -70,8 +71,10 @@ export default function CreateCharacter() {
       <Form className="form" method="POST">
         <input id="firstName" type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} />
         <input id="lastName" type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
+      
         <ImageUploadField name="image" setFormData={setFormData} formData={formData} />
         <label htmlFor="image">Image Upload</label>
+
         <input type="text" name="biography" placeholder="Bio" value={formData.biography} onChange={handleChange} />
 
         {/* <input type="text" name="hometown" placeholder="Hometown"  value={formData.hometown} onChange={handleChange} /> */}

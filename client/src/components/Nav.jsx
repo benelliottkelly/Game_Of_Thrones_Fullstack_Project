@@ -26,6 +26,8 @@ export default function NavbarFunction() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const userId = activeUser()
+
   const navigate = useNavigate()
 
   function handleLogOut() {
@@ -81,7 +83,7 @@ export default function NavbarFunction() {
                 <Nav.Link className="nav-option" href="/places">Places</Nav.Link>
                 {activeUser() ?
                   <>
-                    <Nav.Link className="nav-option" href="/profile">Profile Page</Nav.Link>
+                    <Nav.Link className="nav-option" href={`/users/${userId}`}> Profile Page</Nav.Link>
                     <Nav.Link className="nav-option" href="/characters/create">Create A Character</Nav.Link>
                     <span className="log-out-button" onClick={handleShow}>Log Out</span>
                   </>

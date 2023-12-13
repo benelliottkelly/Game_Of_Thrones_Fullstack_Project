@@ -21,6 +21,28 @@
   }
 }
 
+.edit-delete-container {
+  .single-button {
+    background-color: gold;
+    border-radius: 5px;
+    box-shadow: 5px 5px white ;
+    width: 80px;
+    color: black;
+    margin-bottom: 10px;
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: none;
+      transform: translate(5px, 5px);
+    }
+  }
+  .edit-button {
+    margin-right: 15px;
+  }
+  .delete-button {
+
+  }
+}
+
 @mixin houseColours($primary, $secondary, $tertiary ){
   h2 {
     font-family: 'GameOfThrones';

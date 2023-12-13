@@ -13,6 +13,10 @@ export default function AllCharacters() {
 
     const people = useLoaderData()
 
+    function scrollUp() {
+        document.documentElement.scrollTop = 0
+      }
+
     useEffect(() => {
         setCharacters(people)
         console.log(characters)
@@ -36,7 +40,7 @@ export default function AllCharacters() {
                             {filteredCharacters.map(character => {
                                 return (
                                     <>
-                                        <Link key={character.id} to={`/characters/${character.id}`} style={{
+                                        <Link onClick={scrollUp} key={character.id} to={`/characters/${character.id}`} style={{
                                             textDecoration: 'none',
                                             color: 'black'
                                         }}>

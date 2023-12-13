@@ -75,8 +75,10 @@ export const updateCharacter = async (req, res) => {
 // Path: /characters/:characterId
 
 export const deleteCharacter = async (req, res) => {
+  console.log('Hit Delete')
   try{
-    const character = await Character.findOneAndDelete({ _id: req.params.characterId })
+    const { characterId } = req.params
+    const character = await Character.findOneAndDelete({ _id: characterId, owner: req.currentUser._id })
 
   if(!character.owner.equals(req.currentUser._id)) {
     return res.status(401).json({ message: 'Unauthorized' })

@@ -8,9 +8,12 @@ import Card from 'react-bootstrap/Card'
 
 export default function AllHouses() {
 
-    const [ houses, setHouses ] = useState([])
-    const [ filteredHouses, setfilteredHouses ] = useState([])
+    const [houses, setHouses] = useState([])
+    const [filteredHouses, setfilteredHouses] = useState([])
 
+    function scrollUp() {
+        document.documentElement.scrollTop = 0
+    }
 
     const abode = useLoaderData()
 
@@ -18,44 +21,64 @@ export default function AllHouses() {
         setHouses(abode)
     }, [abode])
 
+    let toggle = false
+
+    function changeView() {
+        const view = document.getElementById('view')
+        toggle = !toggle
+        if (toggle) {
+            view.classList.remove('house-card-layout')
+            view.classList.add('squish-house-card-layout')
+        } else if (!toggle) {
+            view.classList.remove('squish-house-card-layout')
+            view.classList.add('house-card-layout')
+        }
+    }
+
     return (
         <>
-            <h1>All Houses</h1>
-            <Container fluid>
-            <Row className="filter-row">
-                    <Col
-                        xs={4}
-                        md={3}
-                        lg={3} 
-                        className="filter">
-                            <Filter houses={houses} setfilteredHouses={setfilteredHouses}/>
+            <div className='houses-container'>
+                <div className="header">
+                    <button onClick={changeView}>Change View</button>
+                    <h1>All Houses</h1>
+                </div>
+
+                <Container fluid>
+                    <Row className="filter-row">
+                        <Col
+                            xs={4}
+                            md={3}
+                            lg={3}
+                            className="filter">
+                            <Filter houses={houses} setfilteredHouses={setfilteredHouses} />
                             <div className="vert-banner"></div>
-                            </Col>
-                    <Col>
-                        <section className="card-layout">
-                            {filteredHouses.map(house => {
-                                return (
-                                    <>
-                                        <Link key={house.id} to={`/houses/${house.id}`} style={{
-                                            textDecoration: 'none',
-                                            color: 'black'
-                                        }}>
-                                            <Card className="card">
-                                                <Card.Img variant="top" className="card-img-top" src={house.crest} alt="Crest Image" />
-                                                <Card.Body className="card-body">
-                                                    <Card.Title className="card-title">{house.houseName}</Card.Title>
-                                                    <Card.Text className="card-text">{house.motto}</Card.Text >
-                                                </Card.Body>
-                                            </Card>
-                                        </Link>
-                                    </>
-                                )
-                            })
-                            }
-                        </section>
-                    </Col>
-                </Row>
-            </Container>
+                        </Col>
+                        <Col>
+                            <section className="house-card-layout" id="view">
+                                {filteredHouses.map(house => {
+                                    return (
+                                        <>
+                                            <Link onClick={scrollUp} key={house.id} to={`/houses/${house.id}`} style={{
+                                                textDecoration: 'none',
+                                                color: 'black'
+                                            }}>
+                                                <Card className="card" id="house-card">
+                                                    <Card.Img variant="top" className="card-img-top" src={house.crest} alt="Crest Image" />
+                                                    <Card.Body className="card-body">
+                                                        <Card.Title className="card-title">{house.houseName}</Card.Title>
+                                                        <Card.Text className="card-text">{house.motto}</Card.Text >
+                                                    </Card.Body>
+                                                </Card>
+                                            </Link>
+                                        </>
+                                    )
+                                })
+                                }
+                            </section>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </>
     )
 }
