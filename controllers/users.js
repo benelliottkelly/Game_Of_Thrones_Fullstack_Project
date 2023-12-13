@@ -45,7 +45,7 @@ export const getProfile = async (req, res) => {
   try {
       const userId = req.params.userId // Get the user ID from request params
       if (!mongoose.Types.ObjectId.isValid(userId)) {
-          return res.status(400).json({ message: 'Invalid user ID format' })
+        return res.status(400).json({ message: 'Invalid user ID format' })
       }
 
       const profile = await User.findById(userId).populate('characterCreated')
@@ -57,6 +57,25 @@ export const getProfile = async (req, res) => {
       return res.json(profile)
   } catch (error) {
       console.log(error)
-      return res.status(500).json(error)
+      return res.status(401).json(error)
   }
-};
+}
+
+export const updateUserImage = async (req, res) => {
+  try{
+    const userId = req.params.userId
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ message: 'Invalid user ID format' })
+  }
+    const { image } = req.body
+
+    const profile = await User.findByIdAndUpdate(userId, { image }, { new: true })
+    if (!profile) {
+    return res.status(404).json({ message: 'User profile not found' })
+}
+    console.log(profile)
+    return res.json(profile)
+  } catch(error) {
+      return res.status(401).json(error)
+  }
+}
