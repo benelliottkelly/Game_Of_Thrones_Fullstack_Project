@@ -20,6 +20,8 @@ export async function updateCharacter(request, id) {
             Authorization: `Bearer ${getToken()}`
         }
     })
+
+    
 }
 
 export async function deleteCharacter(id) {

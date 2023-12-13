@@ -34,7 +34,6 @@ export default function AllPlaces() {
                         className="filter">
                             <Filter places={places} setFilteredPlaces={setFilteredPlaces} filteredPlaces={filteredPlaces} />
                             <div className="vert-banner"></div>
-                           
                             </Col>
                     <Col>
                         <section className="card-layout">
