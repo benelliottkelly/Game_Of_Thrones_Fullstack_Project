@@ -13,7 +13,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 // helpers
-import { removeToken, activeUser } from '../utils/helpers/common'
+import { removeToken, activeUser, getToken } from '../utils/helpers/common'
 
 
 // Image
@@ -22,9 +22,13 @@ import wolf from '../images/wolf-logo.png'
 export default function NavbarFunction() {
 
   const [show, setShow] = useState(false);
+  const [showLog, setShowLog] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseLog = () => setShowLog(false)
+  const handleShowLog = () => setShowLog(true);
 
   const userId = activeUser()
 
@@ -35,6 +39,30 @@ export default function NavbarFunction() {
     navigate('/')
   }
 
+  function checkToken() {
+    console.log(userId)
+    if (userId) {
+      const token = getToken()
+      const b64 = token.split('.')[1]
+      const payload = JSON.parse(atob(b64))
+  
+      const now = Date.now() / 1000
+      const exp = payload.exp
+
+      if (exp > now) {
+        console.log('All good')
+      } else {
+        handleShowLog()
+      }
+    } else {
+      console.log('No active user')
+      handleShowLog()
+    }
+  }
+
+  function closeNav() {
+    document.querySelector('.offcanvas-header .btn-close').click()
+  }
 
 
   return (
@@ -45,11 +73,11 @@ export default function NavbarFunction() {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title className="log-out-title">Log Out?</Modal.Title>
         </Modal.Header>
         <Modal.Body><span className="log-out-text">Are you sure you want to log out?</span>
-          
+
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -62,6 +90,34 @@ export default function NavbarFunction() {
         </Modal.Footer>
       </Modal>
 
+      <Modal
+        show={showLog}
+        onHide={handleCloseLog}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header>
+          <Modal.Title className="log-out-title">Logged Out</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><span className="log-out-text">Your token has expired. Please log back in to regain access to advanced features</span>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => {
+            handleCloseLog()
+            closeNav()
+            navigate('/')
+            }}>
+            Continue Browsing
+          </Button>
+          <Button variant="success" onClick={() => {
+            handleCloseLog()
+            closeNav()
+            navigate('/login')
+          }}>Log In</Button>
+        </Modal.Footer>
+      </Modal>
+
       <Navbar key={false} expand={false} className="bg-body-tertiary mb-3">
         <Container fluid>
           <Link to="/"><img className='logo-icon' src={wolf} alt="Stark Wolf" /></Link>
@@ -71,7 +127,7 @@ export default function NavbarFunction() {
             aria-labelledby={`offcanvasNavbarLabel-expand-${false}`}
             placement="end"
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header closeButton >
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${false}`}>
                 Browse
               </Offcanvas.Title>
@@ -81,11 +137,25 @@ export default function NavbarFunction() {
                 <Nav.Link className="nav-option" href="/houses">Houses</Nav.Link>
                 <Nav.Link className="nav-option" href="/characters">Characters</Nav.Link>
                 <Nav.Link className="nav-option" href="/places">Places</Nav.Link>
-                {activeUser() ?
+                {userId ?
                   <>
-                    <Nav.Link className="nav-option" href={`/users/${userId}`}> Profile Page</Nav.Link>
-                    <Nav.Link className="nav-option" href="/characters/create">Create A Character</Nav.Link>
-                    <span className="log-out-button" onClick={handleShow}>Log Out</span>
+                    <Nav.Link onClick={() => {
+                      closeNav()
+                      checkToken()
+                      navigate(`/users/${userId}`)
+                    }} className="nav-option"> Profile Page</Nav.Link>
+                    <Nav.Link onClick={() => {
+                      checkToken()
+                      navigate('/characters/create')
+                      closeNav()
+                      }} className="nav-option">Create A Character</Nav.Link>
+                    <span className="log-out-button" onClick={() => {
+                      closeNav()
+                      handleShow()
+                      checkToken()
+                    }}
+
+                    >Log Out</span>
                   </>
                   :
                   <>

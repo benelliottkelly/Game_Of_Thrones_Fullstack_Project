@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { formToObj, getToken } from '../helpers/common'
-import { redirect } from 'react-router-dom'
 
 export async function createCharacter(request) {
     const data = await formToObj(request)
@@ -20,8 +19,6 @@ export async function updateCharacter(request, id) {
             Authorization: `Bearer ${getToken()}`
         }
     })
-
-    
 }
 
 export async function deleteCharacter(id) {

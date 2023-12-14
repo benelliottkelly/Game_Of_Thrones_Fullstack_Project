@@ -1,13 +1,18 @@
-.map-container{
+.map-container {
   position: relative;
-  .map-popup{
+  display: flex;
+  width: 100%;
+
+  .map-popup {
     position: absolute;
     z-index: 1;
     width: 20%;
-    h1{
+
+    h1 {
       width: 100%;
     }
-    img{
+
+    img {
       width: 100%;
       object-fit: cover;
     }
