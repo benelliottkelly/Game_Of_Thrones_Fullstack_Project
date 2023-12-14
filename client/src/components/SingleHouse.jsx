@@ -42,9 +42,23 @@ export default function SingleHouse() {
           <h2>{motto}</h2>
         </Col>
         <Col className="column" xs={12} md={6} lg={6}>
+
+
           {places.length > 0 && 
           <h3>Home: {<Link onClick={scrollUp} className="family-home" to={`/places/${places[0].id}`}>{places[0].name}</Link>} </h3>}
           <p>{description}</p>
+
+
+
+{/* 
+          {house === 'Unsullied' || house === 'Independent' || house === 'Dothraki' || house === "Night's Watch" || house === 'Free Folk' ? (
+        <h3>{house}</h3>
+      ) : (
+        <h3>{`House ${house}`}</h3>
+       )} */}
+
+
+
         </Col>
       </Row>
       <Row className="p-5" xs={12} md={12} lg={12}>

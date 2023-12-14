@@ -1,21 +1,20 @@
 export default [
   {
+    name: "Winterfell",
+    description: "A formidable castle nestled amidst snow-covered lands, Winterfell stands as a symbol of ancient Northern strength and resilience. The castle's grey walls and formidable towers overlook sprawling courtyards and the godswood.",
+    region: "The North",
+    image: "https://awoiaf.westeros.org/images/thumb/a/ac/Ted_Nasmith_A_Song_of_Ice_and_Fire_Winterfell.jpg/450px-Ted_Nasmith_A_Song_of_Ice_and_Fire_Winterfell.jpg",
+    occupiedBy: [
+      "Stark"
+    ]
+  },
+  {
     name: "Dreadfort",
     description: "The Dreadfort is the seat of House Bolton, located in the North of Westeros. It is known for its grim atmosphere and sinister history.",
     region: "The North",
     image: "https://awoiaf.westeros.org/images/thumb/3/39/Alfred_Khamidullindreadfort.jpg/450px-Alfred_Khamidullindreadfort.jpg",
     occupiedBy: [
       "Bolton"
-    ]
-  },
-  {
-    name: "Winterfell",
-    description: "A formidable castle nestled amidst snow-covered lands, Winterfell stands as a symbol of ancient Northern strength and resilience. The castle's grey walls and formidable towers overlook sprawling courtyards and the godswood.",
-    region: "The North",
-    image: "https://awoiaf.westeros.org/images/thumb/a/ac/Ted_Nasmith_A_Song_of_Ice_and_Fire_Winterfell.jpg/450px-Ted_Nasmith_A_Song_of_Ice_and_Fire_Winterfell.jpg",
-    occupiedBy: [
-      "Bolton",
-      "Stark"
     ]
   },
   {
