@@ -14,7 +14,7 @@ $card-color: rgb(248, 248, 255);
         margin: 10px;
         border-radius: $border-radius;
         width: 230px;
-        height: 370px;
+        height: 377px;
         box-shadow: 1px 1px 1px 1px;
 
         &:hover {
@@ -57,7 +57,7 @@ $card-color: rgb(248, 248, 255);
                 -webkit-line-clamp: 4;
                 padding-bottom: 5px;
                 background-color: $card-color;
-                height: 100px;
+                height: 105px;
                 overflow: hidden;
                 text-overflow: ellipsis;
 
@@ -82,7 +82,7 @@ $card-color: rgb(248, 248, 255);
         margin: 10px;
         border-radius: $border-radius;
         width: 230px;
-        height: 370px;
+        height: 377px;
         box-shadow: 1px 1px 1px 1px;
 
         &:hover {
@@ -126,7 +126,7 @@ $card-color: rgb(248, 248, 255);
                 margin: 0;
                 padding-bottom: 0.5em;
                 background-color: $card-color;
-                height: 100px;
+                height: 104px;
                 overflow: hidden;
                 text-overflow: ellipsis;
 
@@ -152,7 +152,7 @@ $card-color: rgb(248, 248, 255);
         margin: 15px 15px 15px 15px;
         border-radius: $border-radius;
         width: 230px;
-        height: 280px;
+        height: 300px;
         box-shadow: 1px 1px 1px 1px goldenrod;
         border: 2px solid goldenrod;
         display: flex;

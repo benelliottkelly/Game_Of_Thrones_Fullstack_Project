@@ -108,7 +108,15 @@ export default [
     region: "Riverlands",
     image: "https://awoiaf.westeros.org/images/2/2d/Lino_Drieghe_Harrenhal.jpg",
     occupiedBy: [
-      "Various Houses"
+      "Hoare",
+      "Qoherys",
+      "Harroway",
+      "Towers",
+      "Strong",
+      "Lothston",
+      "Whent",
+      "Slynt",
+      "Baelish"
     ]
   },
   {
@@ -135,7 +143,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/7/7b/Titan_of_Braavos.jpg",
     occupiedBy: [
-      "Various Entities"
+      "Independent"
     ]
   },
   {
@@ -144,7 +152,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/c/c5/Meereen_city.png",
     occupiedBy: [
-      "Various Entities"
+      "Slavers"
     ]
   },
   {
@@ -153,7 +161,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/4/40/Tom_Garden_Yunkai_II.png",
     occupiedBy: [
-      "Various Entities"
+      "Slavers"
     ]
   },
   {
@@ -162,7 +170,7 @@ export default [
     region: "Essos",
     image: "https://qph.fs.quoracdn.net/main-qimg-5ba98e9c92fb45911b9786abe95af12c.webp",
     occupiedBy: [
-      "Various Entities"
+      "Independent"
     ]
   },
   {
@@ -171,7 +179,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/a/ab/Qarth_HBO.jpg",
     occupiedBy: [
-      "Various Entities"
+      "Slavers"
     ]
   },
   {
@@ -180,7 +188,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/8/85/Marc_Simonetti_shipcity.jpg",
     occupiedBy: [
-      "Various Entities"
+      "Independent"
     ]
   },
   {
@@ -216,7 +224,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/6/66/Asshai_REN%C3%89_AIGNER.png",
     occupiedBy: [
-      "Various Entities"
+      "Independent"
     ]
   },
   {
@@ -273,7 +281,7 @@ export default [
     region: "Essos",
     image: "https://awoiaf.westeros.org/images/thumb/5/53/Marc_Simonetti_Temple_Of_Love.jpg/800px-Marc_Simonetti_Temple_Of_Love.jpg",
     occupiedBy: [
-      "Various Entities"
+      "Independent"
     ]
   },
   {

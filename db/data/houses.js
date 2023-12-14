@@ -339,7 +339,7 @@ export default [
     {
         houseName: "Free Folk",
         motto: "We do not kneel",
-        crest: '../client/src/assets/freefolkcrest.png',
+        crest: 'https://awoiaf.westeros.org/images/thumb/5/5f/Wildlings.jpg/800px-Wildlings.jpg',
         description: "The Free Folk, or Wildlings, are a diverse group of people living beyond the Wall, rejecting the authority of the Seven Kingdoms.",
         notableBattles: [
             "Battle of Castle Black",
@@ -410,7 +410,7 @@ export default [
     },
     {
         houseName: "Dothraki",
-        motto: "We Remember",
+        motto: " ",
         crest: "https://awoiaf.westeros.org/images/0/00/Niten_Braided_Screamers.JPG",
         description: "This nomadic warrior culture hails from the vast grasslands of Essos, known as the Dothraki Sea. Renowned for their exceptional horsemanship and fearsome reputation in battle, they live by a code centered on strength and honor. Led by khals, their society is organized into clans called khalasars, and they traverse the open plains, valuing freedom and valiance above all else.",
         notableBattles: [
@@ -499,4 +499,59 @@ export default [
             "No noteable bannermen, House Dondarrion is loyal to House Baratheon"
         ]
     },
+    {
+        houseName: "Independent",
+        motto: " ",
+        crest: "https://awoiaf.westeros.org/images/thumb/7/7b/Brotherhood_without_banners.svg/545px-Brotherhood_without_banners.svg.png",
+        description: "There are certain individuals in Game of Thrones whom do not serve any particular house, but rather other individuals, or the realm as a whole",
+        notableBattles: [
+            "No noteable battles"
+        ],
+        bannermen: [
+            "No noteable bannermen"
+        ]
+    },
+    {
+        houseName: "Stokeworth",
+        motto: "Proud to be Faithful",
+        crest: "https://awoiaf.westeros.org/images/thumb/3/37/House_Stokeworth.svg/545px-House_Stokeworth.svg.png",
+        description: "House Stokeworth, a noble house located near King's Landing, holds Stokeworth Castle. Known for their loyalty and traditional ties to the Crown, they are esteemed vassals. Their strategic position near the capital grants them political influence. Despite their smaller stature compared to other houses, they maintain a reputation for unwavering allegiance and diplomatic finesse.",
+        notableBattles: [
+            "No noteable battles"
+        ],
+        bannermen: [
+            "No noteable bannermen, House Stokeworth is loyal to House Lannister"
+        ]
+    },
+    {
+        houseName: "Baelish",
+        motto: "Chaos is a Ladder",
+        crest: "https://awoiaf.westeros.org/images/thumb/6/6a/House_Baelish_of_Harrenhal.svg/545px-House_Baelish_of_Harrenhal.svg.png",
+        description: "House Baelish, a house of modest origin, climbed the ranks through shrewd politics and strategic alliances. With ancestral roots traced to a small house in the Fingers, they gained influence through cunning manipulation and financial prowess.",
+        notableBattles: [
+            "No noteable battles"
+        ],
+        bannermen: [
+            "No noteable bannermen"
+        ]
+    },
+    {
+        houseName: "Unsullied",
+        motto: " ",
+        crest: "https://awoiaf.westeros.org/images/thumb/8/81/T_Jedruszek_GreyWormStrongest.jpg/800px-T_Jedruszek_GreyWormStrongest.jpg",
+        description: "The Unsullied are eunuch slave soldiers, trained from a young age in Astapor to unquestioning obedience and martial prowess. Sold by the century or the thousand, they are used as guards all over the Free Cities. They make excellent guards, do not loot, and will never pillage.",
+        notableBattles: [
+            "Battle of Astapor",
+            "Battle of Yunkai",
+            "Battle of Meereen",
+            "Battle of Slaver's Bay",
+            "Battle of Casterly Rock",
+            "Battle of King's Landing"
+        ],
+        bannermen: [
+            "No noteable bannermen, the Unsullied are loyal to Daenerys Targaryen"
+        ]
+    }
+
+    
 ]
