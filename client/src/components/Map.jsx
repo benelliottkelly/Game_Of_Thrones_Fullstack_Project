@@ -6,7 +6,6 @@ import mapImg from '../images/GoT-map.jpg'
 export default function Map() {
   const navigate = useNavigate()
   const places = useLoaderData()
-  console.log(places)
 
   const [xCoord, setXCoord] = useState()
   const [yCoord, setYCoord] = useState()
@@ -26,10 +25,16 @@ export default function Map() {
   }
 
   function showPopup(e) {
-    console.log(e.target.className.baseVal)
-    setXCoord(e.nativeEvent.offsetX)
-    setYCoord(e.nativeEvent.offsetY)
-    setDisplay("inline-block")
+    console.log(e)
+    console.log((e.nativeEvent.offsetX) + 10, (e.nativeEvent.offsetY) + 10)
+    setDisplay("flex")
+    if(e.target.className.baseVal === "qarth") {
+      setXCoord((e.nativeEvent.offsetX) *0.75)
+      setYCoord((e.nativeEvent.offsetY) *0.6)
+    } else {
+      setXCoord((e.nativeEvent.offsetX) + 10)
+      setYCoord((e.nativeEvent.offsetY) + 10)
+    }
     const markerClicked = e.target.className.baseVal
     const pattern = new RegExp(markerClicked, 'i')
     if (places) {
