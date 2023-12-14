@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { formToObj, getToken } from '../helpers/common'
-import { redirect } from 'react-router-dom'
 
 import { updateUserImage } from './user'
 
@@ -22,8 +21,6 @@ export async function updateCharacter(request, id) {
             Authorization: `Bearer ${getToken()}`
         }
     })
-
-    
 }
 
 export async function deleteCharacter(id) {

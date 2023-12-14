@@ -1,8 +1,43 @@
 import { useEffect, useState } from "react"
 import { Form, useActionData, useNavigate, useLoaderData } from 'react-router-dom'
 import ImageUploadField from "./ImageUploadField"
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+import { activeUser, getToken } from '../utils/helpers/common'
 
 export default function CreateCharacter() {
+
+  const [showLog, setShowLog] = useState(false);
+  const handleCloseLog = () => setShowLog(false)
+  const handleShowLog = () => setShowLog(true);
+
+  const userId = activeUser()
+
+  function closeNav() {
+    document.querySelector('.offcanvas-header .btn-close').click()
+  }
+
+  function checkToken() {
+    console.log(userId)
+    if (userId) {
+      const token = getToken()
+      const b64 = token.split('.')[1]
+      const payload = JSON.parse(atob(b64))
+  
+      const now = Date.now() / 1000
+      const exp = payload.exp
+
+      if (exp > now) {
+        console.log('All good')
+      } else {
+        handleShowLog()
+      }
+    } else {
+      console.log('No active user')
+      handleShowLog()
+    }
+  }
 
   const res = useActionData()
 
@@ -52,6 +87,9 @@ export default function CreateCharacter() {
     if (!house.classList.contains('valid')) {
       house.classList.add('empty')
     }
+
+
+
   }
 
   useEffect(() => {
@@ -67,17 +105,44 @@ export default function CreateCharacter() {
 
   return (
     <>
+
+      <Modal
+        show={showLog}
+        onHide={handleCloseLog}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header>
+          <Modal.Title className="log-out-title">Logged Out</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><span className="log-out-text">Your token has expired. Please log back in to regain access to advanced features</span>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => {
+            handleCloseLog()
+            closeNav()
+            navigate('/')
+          }}>
+            Continue Browsing
+          </Button>
+          <Button variant="success" onClick={() => {
+            handleCloseLog()
+            closeNav()
+            navigate('/login')
+          }}>Log In</Button>
+        </Modal.Footer>
+      </Modal>
+
       <h1 className="text-center bold display-3 mb-4" >Create A Character</h1>
       <Form className="form" method="POST">
         <input id="firstName" type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} />
         <input id="lastName" type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
-      
+
         <ImageUploadField name="image" setFormData={setFormData} formData={formData} />
         <label htmlFor="image">Image Upload</label>
 
         <input type="text" name="biography" placeholder="Bio" value={formData.biography} onChange={handleChange} />
-
-        {/* <input type="text" name="hometown" placeholder="Hometown"  value={formData.hometown} onChange={handleChange} /> */}
 
         <select id="hometown" className="create-drop" name="hometown" value={formData.hometown} onChange={handleChange}>
           <option value=''>Select Home Town</option>
@@ -86,8 +151,6 @@ export default function CreateCharacter() {
           ))}
         </select>
 
-        {/* <input type="text" name="house" placeholder="House" value={formData.house} onChange={handleChange} /> */}
-
         <select id="house" className="create-drop" name="house" value={formData.house} onChange={handleChange}>
           <option value=''>Select House</option>
           {houses.length > 0 &&
@@ -95,7 +158,10 @@ export default function CreateCharacter() {
               return <option key={house._id} value={house.houseName}>{house.houseName}</option>
             })}
         </select>
-        <input className="create-submit" type="submit" value="Create Character" onClick={checkFields} />
+        <input className="create-submit" type="submit" value="Create Character" onClick={() => {
+          checkToken()
+          checkFields()
+          }} />
       </Form>
     </>
   )
