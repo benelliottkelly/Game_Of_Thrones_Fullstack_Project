@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "GameOfThrones";
+  src: url("../styles/fonts/GameofThrones.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grogoth";
+  src: url("../styles/fonts/Grogoth.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Emperialisme";
+  src: url("../styles/fonts/Emperialisme.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Serkan";
+  src: url("../styles/fonts/Serkan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BlackCastle";
+  src: url("../styles/fonts/BlackCastle.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}/*# sourceMappingURL=fonts.css.map */

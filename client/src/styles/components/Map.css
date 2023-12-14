@@ -1,0 +1,16 @@
+.map-container {
+  position: relative;
+}
+.map-container .map-popup {
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+}
+.map-container .map-popup h1 {
+  width: 100%;
+}
+.map-container .map-popup img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Map.css.map */

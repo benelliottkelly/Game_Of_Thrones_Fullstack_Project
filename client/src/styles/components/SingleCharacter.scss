@@ -154,13 +154,17 @@
     width: 100%;
     .occupier{
       @include flex-wrap();
+      justify-content: center;
       width: 100%;
       .house-link{
         width: 30%;
-        text-decoration: none; 
+        text-decoration: none;
+        transition: box-shadow, linear, 1s, infinite;
+        margin: 1% 2%;
         .house-picture-link{
+          margin: 0 auto;
           @include background-image(cover);
-          font-size: 2em;
+          font-size: 2vw;
           padding: 1em;
           color: rgba(245, 245, 255, 0.8);
           text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -169,7 +173,7 @@
     }
   }
   .house-link:hover{
-    animation: tilt-shaking linear 1s infinite;
+    box-shadow: 0 0 20px 20px $secondary;
   }
   .house-member-container{
     display: flex;
@@ -187,6 +191,7 @@
       color: $secondary;
       padding: 1em;
       margin: 1em;
+      transition: box-shadow, linear, 1s, infinite;
       .individual{
         @include flex-center(column);
         h2{
@@ -203,7 +208,7 @@
     }
   }
   .house-member:hover{
-    animation: tilt-shaking linear 1s infinite;
+    box-shadow: 0 0 20px 20px $secondary;
   }
 }
 
@@ -355,3 +360,14 @@
     transform: scale(1.2);
   }
 }
+
+// @mixin shadow($colour){
+//   @keyframes shadow-grow-secondary {
+//     from {
+//       box-shadow: 0 0 20px 0px $colour;
+//     }
+//     to {
+//       box-shadow: 0 0 20px 10px $colour;
+//     }
+//   }
+// }

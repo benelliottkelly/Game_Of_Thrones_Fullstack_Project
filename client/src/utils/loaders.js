@@ -1,3 +1,6 @@
+import { getToken } from "./helpers/common"
+import axios from "axios"
+
 export async function characterLoader() {
     const res = await fetch(`/api/characters`)
     return res.json()
@@ -45,7 +48,12 @@ export async function singlePlaceLoader(placeId) {
     return res.json()
 }
 
-export async function profileLoader(userId) {
-  const res = await fetch(`/api/users/${userId}`)
-  return res.json()
+export async function profileLoader() {
+  const res = await axios.get(`/api/users`, {
+    validateStatus: () => true,
+    headers: {
+        Authorization: `Bearer ${getToken()}`
+    }
+}) 
+  return res.data
 }
