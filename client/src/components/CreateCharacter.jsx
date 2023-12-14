@@ -24,7 +24,7 @@ export default function CreateCharacter() {
       const token = getToken()
       const b64 = token.split('.')[1]
       const payload = JSON.parse(atob(b64))
-  
+
       const now = Date.now() / 1000
       const exp = payload.exp
 
@@ -102,7 +102,6 @@ export default function CreateCharacter() {
     }
   }, [res, navigate])
 
-
   return (
     <>
 
@@ -146,22 +145,27 @@ export default function CreateCharacter() {
 
         <select id="hometown" className="create-drop" name="hometown" value={formData.hometown} onChange={handleChange}>
           <option value=''>Select Home Town</option>
-          {characters.length > 0 && Array.from(new Set(characters.map(char => char.hometown))).map((hometown, index) => (
-            <option key={index} value={hometown}>{hometown}</option>
-          ))}
+
+          {characters.length > 0 && Array.from(new Set(characters.map(char => char.hometown)))
+            .sort((a, b) => a.localeCompare(b))
+            .map((hometown, index) => (
+              <option key={index} value={hometown}>{hometown}</option>
+            ))}
         </select>
 
         <select id="house" className="create-drop" name="house" value={formData.house} onChange={handleChange}>
           <option value=''>Select House</option>
           {houses.length > 0 &&
-            houses.map(house => {
-              return <option key={house._id} value={house.houseName}>{house.houseName}</option>
-            })}
+            houses.sort((a, b) => a.houseName.localeCompare(b.houseName))
+              .map(house => (
+                <option key={house._id} value={house.houseName}>{house.houseName}</option>
+              ))
+          }
         </select>
         <input className="create-submit" type="submit" value="Create Character" onClick={() => {
           checkToken()
           checkFields()
-          }} />
+        }} />
       </Form>
     </>
   )

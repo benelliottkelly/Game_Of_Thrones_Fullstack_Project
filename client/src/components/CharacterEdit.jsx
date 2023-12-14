@@ -22,16 +22,16 @@ export default function EditCharacter() {
     const { name, value } = e.target;
     let cleanedValue = value.replace(/[^\w\s'"]/gi, '')
 
-   
-      setFormData(prevState => ({
-        ...prevState,
-        [name]: cleanedValue,
-      }));
-     
-      if (e.target.value) {
-        e.target.classList.remove("empty")
-      } else if (!e.target.value) {
-        e.target.classList.add("empty")
+
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: cleanedValue,
+    }));
+
+    if (e.target.value) {
+      e.target.classList.remove("empty")
+    } else if (!e.target.value) {
+      e.target.classList.add("empty")
     }
 
   }
@@ -57,17 +57,23 @@ export default function EditCharacter() {
 
         <select id="hometown" className="create-drop" name="hometown" defaultValue={formData.hometown} onChange={handleChange}>
           <option defaultValue={formData.hometown}>{formData.hometown}</option>
-          {allCharacters.length > 0 && Array.from(new Set(allCharacters.map(char => char.hometown))).map((hometown, index) => (
-            <option key={index} defaultValue={hometown}>{hometown}</option>
-          ))}
+          {allCharacters.length > 0 &&
+            Array.from(new Set(allCharacters.map(char => char.hometown)))
+              .sort((a, b) => a.localeCompare(b))
+              .map((hometown, index) => (
+                <option key={index} defaultValue={hometown}>{hometown}</option>
+              ))}
+
         </select>
 
         <select id="house" className="create-drop" name="house" defaultValue={formData.house} onChange={handleChange}>
           <option defaultValue=''>{formData.house}</option>
           {houses.length > 0 &&
-            houses.map(house => {
-              return <option key={house._id} defaultValue={house.houseName}>{house.houseName}</option>
-            })}
+            houses.sort((a, b) => a.houseName.localeCompare(b.houseName))
+              .map(house => (
+                <option key={house._id} defaultValue={house.houseName}>{house.houseName}</option>
+              ))}
+
         </select>
         <input className="create-submit" type="submit" defaultValue="Update Character" />
       </Form>

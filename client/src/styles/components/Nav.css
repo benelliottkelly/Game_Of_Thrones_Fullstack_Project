@@ -1,0 +1,78 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-icon {
+  width: 60px;
+}
+
+/* Ensure the content inside the modal takes up the full height of the modal */
+.nav-toggle {
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  height: 3px;
+  display: block;
+  width: 40px;
+  background: black;
+  margin-bottom: 3px;
+}
+
+.modal-header {
+  flex-grow: 1;
+  background-color: beige;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-header button {
+  top: 2rem;
+  right: 2rem;
+}
+.modal-header button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: black;
+}
+.modal-header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-header nav a, .modal-header nav span {
+  font-size: large;
+  text-decoration: none;
+}
+
+.log-out-button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.log-out-button:hover {
+  cursor: pointer;
+  background-color: rgb(138, 14, 14);
+  font-weight: bold;
+  color: white;
+}
+
+.nav-option:hover {
+  background-color: goldenrod;
+  font-weight: bold;
+}
+
+.log-out-text {
+  color: black;
+}
+
+.log-out-title {
+  color: black;
+}/*# sourceMappingURL=Nav.css.map */

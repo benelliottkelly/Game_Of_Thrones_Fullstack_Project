@@ -96,7 +96,7 @@ export default [
     {
         firstName: "Bran",
         lastName: "Stark",
-        image: "https://awoiaf.westeros.org/images/7/79/Bran_stark_dreams_by_teiiku.jpg",
+        image: "https://awoiaf.westeros.org/images/thumb/4/44/Bran_stark_and_raven_by_daaria.jpg/531px-Bran_stark_and_raven_by_daaria.jpg",
         battles: [
             "Battle of Winterfell"
         ],
@@ -169,7 +169,7 @@ export default [
         lastName: "Martell",
         image: "https://awoiaf.westeros.org/images/f/fc/MagaliVilleneuve_Prince_Oberyn_Nymeros_Martell.jpg",
         battles: [
-            "Trial by Combat (Tyrion Lannister)"
+            "Trial by Combat on behalf of Tyrion Lannister against Gregor Clegane, The Mountain"
         ],
         biography: "Oberyn Martell, known as the Red Viper, seeks vengeance for his sister's brutal murder. A skilled fighter and charismatic personality, he arrives in King's Landing with a mission to confront the Lannisters, but meets a tragic fate in his pursuit of justice.",
         hometown: "Sunspear",
@@ -207,7 +207,7 @@ export default [
         ],
         biography: "Varys, known as the Spider, is a master of secrets and intelligence gathering. Skilled in manipulation and espionage, he serves multiple rulers while secretly plotting to maintain stability in the realm.",
         hometown: "Lys",
-        house: "None (serves the realm)"
+        house: "Independent"
     },
     {
         firstName: "Ygritte",
@@ -242,5 +242,431 @@ export default [
         biography: "Gendry, an illegitimate son of King Robert Baratheon, grows up unaware of his noble heritage. Skilled in smithing, he is sought after for his royal bloodline, eventually aiding in the battle against the forces of King's Landing.",
         hometown: "King's Landing",
         house: "Baratheon"
+    },
+    {
+        firstName: "Tormund",
+        lastName: "Giantsbane",
+        image: "https://awoiaf.westeros.org/images/9/95/Tormumd.jpg",
+        battles: [
+            "Battle of Castle Black",
+            "Battle of Winterfell"
+        ],
+        biography: "Tormund Giantsbane, a renowned leader among the Free Folk, becomes a pivotal figure in the conflict against the Night King. Known for his bravery and leadership, he fights alongside Jon Snow in crucial battles beyond the Wall and at Winterfell.",
+        hometown: "Beyond the Wall",
+        house: "Free Folk"
+    },
+    {
+        firstName: "Beric",
+        lastName: "Dondarrion",
+        image: "https://awoiaf.westeros.org/images/thumb/c/c6/Tiziano_Baracchi_BericD.jpg/428px-Tiziano_Baracchi_BericD.jpg",
+        battles: [
+            "Battle of the Mummer's Ford",
+            "Battle of the Green Fork",
+            "Battle of the Whispering Wood",
+            "Battle of Castle Black",
+            "Battle of Winterfell"
+        ],
+        biography: "Beric Dondarrion, a member of the Brotherhood Without Banners, is known for his multiple resurrections by the Lord of Light. He fights in various battles across Westeros, notably defending Castle Black and Winterfell against the forces of darkness.",
+        hometown: "Blackhaven",
+        house: "Dondarrion"
+    },
+    {
+        firstName: "Gilly",
+        lastName: " ",
+        image: "https://awoiaf.westeros.org/images/2/22/Gilly_by_pojypojy.jpg",
+        battles: [
+            "No noteable battles"
+        ],
+        biography: "Gilly, a young woman from beyond the Wall, escapes from a life of hardship and abuse. She finds refuge with Samwell Tarly at the Night's Watch, eventually becoming an integral part of his life.",
+        hometown: "Beyond the Wall",
+        house: "Free Folk"
+    },
+    {
+        firstName: "Podrick",
+        lastName: "Payne",
+        image: "https://awoiaf.westeros.org/images/5/53/JulepePodrick_Payne.png",
+        battles: [
+            "Battle of the Blackwater",
+            "Battle of Winterfell"
+        ],
+        biography: "Podrick Payne, a squire to Tyrion Lannister, demonstrates loyalty and valor on the battlefield. Despite his humble beginnings, he proves to be a capable fighter and devoted companion to various prominent characters.",
+        hometown: "Unknown",
+        house: "Payne"
+    },
+    {
+        firstName: "Bronn",
+        lastName: " ",
+        image: "https://awoiaf.westeros.org/images/thumb/6/60/Bronn_by_Amok.jpg/390px-Bronn_by_Amok.jpg",
+        battles: [
+            "Battle of Blackwater",
+            "Battle of the Goldroad",
+            "Battle of Winterfell"
+        ],
+        biography: "Bronn, a skilled sellsword, rises through the ranks due to his combat prowess and cunning nature. He becomes a trusted ally to several key figures, often playing a pivotal role in significant battles.",
+        hometown: "Unknown",
+        house: "Stokeworth"
+    },
+    {
+        firstName: "Ramsay",
+        lastName: "Bolton",
+        image: "https://awoiaf.westeros.org/images/thumb/5/5f/Ramsay_Bolton.jpg/390px-Ramsay_Bolton.jpg",
+        battles: [
+            "Sack of Winterfell",
+            "Battle of the Bastards"
+        ],
+        biography: "Ramsay Bolton, known for his sadistic nature, is the legitimized son of Roose Bolton. His brutal methods and manipulative tactics make him a feared figure in the North. Ramsay's actions lead to the Sack of Winterfell and the Battle of the Bastards against Jon Snow.",
+        hometown: "Dreadfort",
+        house: "Bolton"
+    },
+    {
+        firstName: "Roose",
+        lastName: "Bolton",
+        image: "https://awoiaf.westeros.org/images/thumb/4/40/Roose_bolton_by_berghots.jpg/438px-Roose_bolton_by_berghots.jpg",
+        battles: [
+            "Sack of Winterfell",
+            "Battle of the Green Fork"
+        ],
+        biography: "Roose Bolton, the calculating and strategic head of House Bolton, orchestrates significant events in the North's power struggles. His actions include the Sack of Winterfell and leading the Bolton forces in the Battle of the Green Fork during the War of the Five Kings.",
+        hometown: "Dreadfort",
+        house: "Bolton"
+    },
+    {
+        firstName: "Euron",
+        lastName: "Greyjoy",
+        image: "https://awoiaf.westeros.org/images/thumb/e/e4/Euron-mike-hallstein-infobox.jpg/337px-Euron-mike-hallstein-infobox.jpg",
+        battles: [
+            "Battle of Slaver's Bay",
+            "Capture of the Shield Islands",
+            "Battle of Casterly Rock"
+        ],
+        biography: "Euron Greyjoy, a ruthless and cunning pirate, vies for power in the Iron Islands. His naval expertise and treacherous nature lead to conflicts such as the Battle of Slaver's Bay and the Capture of the Shield Islands.",
+        hometown: "Pyke",
+        house: "Greyjoy"
+    },
+    {
+        firstName: "Meera",
+        lastName: "Reed",
+        image: "https://awoiaf.westeros.org/images/b/bf/Meera_Reed_by_Amok.png",
+        battles: [
+            "Battle of the Cave",
+            "Battle of Winterfell"
+        ],
+        biography: "Meera Reed, a loyal companion to Bran Stark, proves her valor in protecting and aiding Bran on his journey. Her bravery in battles, such as the Battle of the Cave against wights and the Battle of Winterfell, showcases her strength and determination.",
+        hometown: "Greywater Watch",
+        house: "Reed"
+    },
+    {
+        firstName: "Loras",
+        lastName: "Tyrell",
+        image: "https://awoiaf.westeros.org/images/thumb/9/9e/MKomarck_KnightOfFlowers.jpg/600px-MKomarck_KnightOfFlowers.jpg",
+        battles: [
+            "Siege of Dragonstone",
+            "Siege of Storm's End"
+        ],
+        biography: "Loras Tyrell, a skilled knight known as the Knight of Flowers, fights in several battles to secure House Tyrell's position. His valor in conflicts such as the Siege of Dragonstone and the Siege of Storm's End earns him recognition as a formidable warrior.",
+        hometown: "Highgarden",
+        house: "Tyrell"
+    },
+    {
+        firstName: "Melisandre",
+        lastName: " ",
+        image: "https://awoiaf.westeros.org/images/5/5f/John_Picacio_Melisandre_of_Asshai.jpg",
+        battles: [
+            "Battle of the Blackwater",
+            "Battle of Winterfell"
+        ],
+        biography: "Melisandre, a Red Priestess serving the Lord of Light, wields mystical powers and influences key events. Her involvement in battles such as the Battle of the Blackwater and the Battle of Winterfell shapes destinies in Westeros.",
+        hometown: "Asshai",
+        house: "Independent"
+    },
+    {
+        firstName: "Robb",
+        lastName: "Stark",
+        image: "https://awoiaf.westeros.org/images/thumb/7/74/Magali_Villeneuve_Robb_StarkII.jpg/450px-Magali_Villeneuve_Robb_StarkII.jpg",
+        battles: [
+            "Battle of the Whispering Wood",
+            "Battle of the Green Fork",
+            "Battle of the Camps",
+            "Battle of Oxcross"
+        ],
+        biography: "Robb Stark, the eldest son of Eddard and Catelyn Stark, becomes the King in the North following his father's execution. He leads the Northern armies during the War of the Five Kings, displaying strategic prowess and determination in various battles.",
+        hometown: "Winterfell",
+        house: "Stark"
+    },
+    {
+        firstName: "Viserys",
+        lastName: "Targaryen",
+        image: "https://awoiaf.westeros.org/images/thumb/9/93/Viserys_Targaryen_by_Laura_Avellino.jpg/600px-Viserys_Targaryen_by_Laura_Avellino.jpg",
+        battles: [
+            "No noteable battles"
+        ],
+        biography: "Viserys Targaryen, the exiled son of King Aerys II, envisions himself as the rightful heir to the Iron Throne. Driven by a desire to reclaim power, he arranges his sister Daenerys' marriage to Khal Drogo in hopes of securing an army to retake Westeros. His obsession with power and entitlement ultimately leads to his downfall.",
+        hometown: "Dragonstone",
+        house: "Targaryen"
+    },
+    {
+        firstName: "Eddard",
+        lastName: "Stark",
+        image: "https://awoiaf.westeros.org/images/thumb/0/0a/Eddard_Amoka.jpg/390px-Eddard_Amoka.jpg",
+        battles: [
+            "Battle of the Trident",
+            "Siege of Pyke"
+        ],
+        biography: "Eddard Stark, also known as Ned, is the honorable lord of Winterfell and Warden of the North. Renowned for his sense of duty and integrity, he plays a crucial role in Robert's Rebellion, fighting in the Battle of the Trident. He later leads the siege at Pyke during Greyjoy's Rebellion. His commitment to honor and truth ultimately leads to his tragic end in King's Landing.",
+        hometown: "Winterfell",
+        house: "Stark"
+    },
+    {
+        firstName: "Joffrey",
+        lastName: "Baratheon",
+        image: "https://awoiaf.westeros.org/images/thumb/9/93/Joffrey_Baratheon.jpg/390px-Joffrey_Baratheon.jpg",
+        battles: [
+            "Battle of the Blackwater"
+        ],
+        biography: "Joffrey Baratheon, the sadistic and capricious king, sits on the Iron Throne as the supposed son of King Robert Baratheon. His involvement in the Battle of the Blackwater marks a crucial point in his reign, where his cruelty and lack of strategic prowess are exposed. His tyrannical rule creates internal strife and rebellion, ultimately leading to his untimely demise.",
+        hometown: "King's Landing",
+        house: "Baratheon"
+    },
+    {
+        firstName: "Drogo",
+        lastName: " ",
+        image: "https://awoiaf.westeros.org/images/thumb/a/a1/MagaliVilleneuve_khal_drogoII.jpg/449px-MagaliVilleneuve_khal_drogoII.jpg",
+        battles: [
+            "Raid on a Lhazareen village",
+            "Battle of the Great Grass Sea"
+        ],
+        biography: "Khal Drogo, a Dothraki warlord, leads a fierce khalasar. Known for his unmatched skill in combat and mastery in horse riding, he raids villages and engages in battles to expand his influence. His marriage to Daenerys Targaryen initiates a new path for both, which is tragically cut short, leaving a significant impact on Daenerys's journey.",
+        hometown: "Vaes Dothrak",
+        house: "Dothraki"
+    },
+    {
+        firstName: "Robert",
+        lastName: "Baratheon",
+        image: "https://awoiaf.westeros.org/images/thumb/b/bd/RobertBKingMagali_Villeneuve.jpg/514px-RobertBKingMagali_Villeneuve.jpg",
+        battles: [
+            "Battle of Summerhall",
+            "Battle of Ashford",
+            "Battle of the Bells",
+            "Battle of the Trident"
+        ],
+        biography: "Robert Baratheon, the charismatic and formidable warrior, was a key figure in the rebellion against the Targaryens. Renowned for his combat prowess, he fought in pivotal battles such as the Battle of Summerhall, Ashford, the Bells, and ultimately the Trident, where he vanquished Prince Rhaegar Targaryen, leading to the end of the Targaryen dynasty and his ascent to the Iron Throne.",
+        hometown: "Storm's End",
+        house: "Baratheon"
+    },
+    {
+        firstName: "Catelyn",
+        lastName: "Stark",
+        image: "https://awoiaf.westeros.org/images/4/4a/NRCatStark11.jpg",
+        battles: [
+            "Ambush at the Crossroads",
+            "Battle of the Whispering Wood"
+        ],
+        biography: "Catelyn Stark, born a Tully, married into House Stark, and was a steadfast and devoted wife to Eddard Stark. She played a significant role in her family's life and the events of the realm. During the War of the Five Kings, she was integral in negotiations and securing alliances for House Stark, but faced hardships, including the tragic events at the Red Wedding.",
+        hometown: "Riverrun",
+        house: "Stark"
+    },
+    {
+        firstName: "Jeor",
+        lastName: "Mormont",
+        image: "https://awoiaf.westeros.org/images/thumb/b/b1/Ryan_Valle_Old_Bear_MormontII.jpg/659px-Ryan_Valle_Old_Bear_MormontII.jpg",
+        battles: [
+            "Battle of Castle Black",
+            "Great Ranging Beyond the Wall"
+        ],
+        biography: "Jeor Mormont, the Lord Commander of the Night's Watch, was a respected and experienced leader. He led expeditions beyond the Wall to uncover threats and protect the realm from dangers like the White Walkers. His leadership during the Great Ranging and Battle of Castle Black stood as a testament to his commitment to defending the realms of men.",
+        hometown: "Bear Island",
+        house: "Mormont"
+    },
+    {
+        firstName: "Tywin",
+        lastName: "Lannister",
+        image: "https://awoiaf.westeros.org/images/thumb/4/4a/Brittmartin_TywinL.jpg/450px-Brittmartin_TywinL.jpg",
+        battles: [
+            "Sack of King's Landing",
+            "Battle of the Green Fork",
+            "Battle of the Blackwater"
+        ],
+        biography: "Tywin Lannister, the cunning and powerful head of House Lannister, was known for his strategic brilliance and unwavering dedication to the legacy of his house. He orchestrated significant battles such as the Sack of King's Landing during Robert's Rebellion and led House Lannister's forces in crucial conflicts like the Battle of the Green Fork and the Battle of the Blackwater.",
+        hometown: "Casterly Rock",
+        house: "Lannister"
+    },
+    {
+        firstName: "Yara",
+        lastName: "Greyjoy",
+        image: "https://awoiaf.westeros.org/images/thumb/4/4a/Magali_Villeneuve_Asha_GreyjoyII.jpg/423px-Magali_Villeneuve_Asha_GreyjoyII.jpg",
+        battles: [
+            "Battle of the Blackwater",
+            "Kingsmoot"
+        ],
+        biography: "Yara Greyjoy, the bold and determined daughter of Balon Greyjoy, emerged as a formidable leader among the Ironborn. Her prowess in naval warfare was evident in the Battle of the Blackwater and her candidacy in the Kingsmoot, showcasing her determination to rule the Iron Islands.",
+        hometown: "Pyke",
+        house: "Greyjoy"
+    },
+    {
+        firstName: "Hodor",
+        lastName: " ",
+        image: "https://awoiaf.westeros.org/images/7/79/John_Matson_Hodor.jpg",
+        battles: [
+            "Defending Bran Stark"
+        ],
+        biography: "Hodor, a gentle giant, served House Stark as a loyal protector, notably defending Bran Stark during their perilous journeys. His unwavering loyalty and immense strength made him an invaluable companion on Bran's quests beyond the Wall.",
+        hometown: "Winterfell",
+        house: "Stark"
+    },
+    {
+        firstName: "Davos",
+        lastName: "Seaworth",
+        image: "https://awoiaf.westeros.org/images/f/f5/Davos_Seaworth.jpg",
+        battles: [
+            "Battle of Blackwater",
+            "Battle of Winterfell"
+        ],
+        biography: "Davos Seaworth, known as the Onion Knight, was a former smuggler who became a trusted advisor to Stannis Baratheon. His loyalty, honesty, and strategic insight were pivotal in several battles, notably the Battle of Blackwater and the Battle of Winterfell, where he played crucial roles.",
+        hometown: "Flea Bottom",
+        house: "Seaworth"
+    },
+    {
+        firstName: "Petyr",
+        lastName: "Baelish",
+        image: "https://awoiaf.westeros.org/images/thumb/a/a8/Knowledge_is_power_by_robotdelespacio.jpg/800px-Knowledge_is_power_by_robotdelespacio.jpg",
+        battles: [
+            "Battle of the Bastards",
+            "Capture of Moat Cailin"
+        ],
+        biography: "Petyr Baelish, known as Littlefinger, was a master manipulator and schemer in the political landscape of Westeros. Rising from humble beginnings, he orchestrated complex plots and alliances to ascend in power. His involvement in conflicts such as the Battle of the Bastards and the Capture of Moat Cailin showcased his cunning tactics and ambitions.",
+        hometown: "The Fingers",
+        house: "Baelish"
+    },
+    {
+        firstName: "Olenna",
+        lastName: "Tyrell",
+        image: "https://awoiaf.westeros.org/images/thumb/2/22/Borja_Pindado_thequeenofthorns.jpg/660px-Borja_Pindado_thequeenofthorns.jpg",
+        battles: [
+            "Siege of Highgarden",
+            "Battle of Blackwater"
+        ],
+        biography: "Olenna Tyrell, often referred to as the Queen of Thorns, was the matriarch of House Tyrell known for her wit and cunning. A key player in the game of thrones, she navigated through intricate political schemes. Her involvement in conflicts such as the Siege of Highgarden and the Battle of Blackwater displayed her strategic prowess.",
+        hometown: "Highgarden",
+        house: "Tyrell"
+    },
+    {
+        firstName: "Grey Worm",
+        lastName: " ",
+        image: "https://awoiaf.westeros.org/images/thumb/3/3b/Grey_Worm_by_Ryan_Valle-FFG.jpg/653px-Grey_Worm_by_Ryan_Valle-FFG.jpg",
+        battles: [
+            "Battle of Astapor",
+            "Battle of Yunkai",
+            "Battle of Meereen",
+            "Siege of Meereen",
+            "Battle of Winterfell"
+        ],
+        biography: "Grey Worm, originally known as Torgo Nudho, was an Unsullied warrior who became a trusted commander in Daenerys Targaryen's service. He played a pivotal role in liberating several cities from slavery, notably participating in the battles of Astapor, Yunkai, and Meereen. His leadership and loyalty were crucial during the Siege of Meereen and the Battle of Winterfell.",
+        hometown: "Astapor",
+        house: "Unsullied"
+    },
+    {
+        firstName: "Arthur",
+        lastName: "Dayne",
+        image: "https://awoiaf.westeros.org/images/thumb/f/fd/Arthur_dayne_by_bellabergolts.jpg/676px-Arthur_dayne_by_bellabergolts.jpg",
+        battles: [
+            "Tower of Joy",
+            "Battle of the Trident"
+        ],
+        biography: "Arthur Dayne, known as the 'Sword of the Morning,' was a highly esteemed knight of House Dayne and a member of the Kingsguard. Renowned for his exceptional skill with a sword, he wielded the legendary blade Dawn. He fought valiantly in the Tower of Joy, where he met his end defending the newborn Jon Snow, and previously in the Battle of the Trident during Robert's Rebellion.",
+        hometown: "Starfall",
+        house: "Dayne"
+    },
+    {
+        firstName: "Jon",
+        lastName: "Arryn",
+        image: "https://awoiaf.westeros.org/images/9/9b/970110_1331165364981_full.jpg",
+        battles: [
+            "Robert's Rebellion"
+        ],
+        biography: "Jon Arryn was a respected noble and the Hand of the King under King Robert Baratheon. Known for his wisdom and commitment to justice, he played a pivotal role in stabilizing the realm after Robert's Rebellion. He fostered strong alliances by arranging marriages, notably that of Ned Stark and Catelyn Tully. His mysterious death led to significant political unrest, triggering events that plunged Westeros into chaos.",
+        hometown: "The Eyrie",
+        house: "Arryn"
+    },
+    {
+        firstName: "Robert",
+        lastName: "Arryn",
+        image: "https://awoiaf.westeros.org/images/a/a8/Robert_Arryn.jpg",
+        battles: [
+            "none"
+        ],
+        biography: "Robert Arryn, also known as 'Sweetrobin,' was the Lord of the Eyrie and the Vale after his father's untimely death. He was a sickly child, often sheltered and overly dependent on his mother, Lysa Tully. Despite his fragility, he found himself caught in the turbulent events of the War of the Five Kings, which significantly affected the Vale's stability.",
+        hometown: "The Eyrie",
+        house: "Arryn"
+    },
+    {
+        firstName: "Lysa",
+        lastName: "Arryn",
+        image: "https://awoiaf.westeros.org/images/2/25/Lysa_Arryn.jpg",
+        battles: [
+            "none"
+        ],
+        biography: "Lysa Arryn, originally Lysa Tully, was the sister of Catelyn Stark. She married Jon Arryn, becoming the Lady of the Eyrie and the Vale. Lysa was known for her overprotectiveness towards her son, Robert Arryn, and her obsessive love for Petyr Baelish. Her involvement in the Game of Thrones was marked by secrecy, manipulation, and a tragic end.",
+        hometown: "Riverrun",
+        house: "Arryn"
+    },
+    {
+        firstName: "Edmure",
+        lastName: "Tully",
+        image: "https://awoiaf.westeros.org/images/thumb/5/56/Edmure_Tully.jpg/390px-Edmure_Tully.jpg",
+        battles: [
+            "Battle of the Fords",
+            "Siege of Riverrun"
+        ],
+        biography: "Edmure Tully, the younger brother of Catelyn Stark, inherited the responsibilities of Riverrun after their father's death. He proved his valor in battles but faced setbacks due to impulsive decisions. His actions during the War of the Five Kings, particularly the Battle of the Fords and the Siege of Riverrun, significantly affected the Stark-Tully alliance.",
+        hometown: "Riverrun",
+        house: "Tully"
+    },
+    {
+        firstName: "Hoster",
+        lastName: "Tully",
+        image: "https://awoiaf.westeros.org/images/1/1d/Jonathan_Standing_HosterT.jpg",
+        battles: [
+            "War of the Ninepenny Kings",
+            "Battle of the Bells"
+        ],
+        biography: "Hoster Tully, Lord of Riverrun, played a crucial role in the political landscape of Westeros. He participated in the War of the Ninepenny Kings, displaying his prowess in battle. His alliances and strategic decisions, including the Battle of the Bells during Robert's Rebellion, shaped the fate of House Tully and its alliances.",
+        hometown: "Riverrun",
+        house: "Tully"
+    },
+    {
+        firstName: "Gregor",
+        lastName: "Clegane",
+        image: "https://awoiaf.westeros.org/images/e/e6/GregorCleganebyJohn_Stanko.jpg",
+        battles: [
+            "Sack of King's Landing",
+            "Battle of the Green Fork",
+            "Raid on the Riverlands"
+        ],
+        biography: "Gregor Clegane, known as the Mountain, is a feared and ruthless warrior notorious for his brutality. His actions include the Sack of King's Landing during Robert's Rebellion and leading raids on the Riverlands, contributing to the instability and violence plaguing the region.",
+        hometown: "Clegane's Keep",
+        house: "Clegane"
+    },
+    {
+        firstName: "Walder",
+        lastName: "Frey",
+        image: "https://awoiaf.westeros.org/images/e/e6/Old_Walder_Frey.jpg",
+        battles: [
+            "Massacre at the Red Wedding"
+        ],
+        biography: "Walder Frey, head of House Frey, orchestrates the infamous Red Wedding, a treacherous betrayal during the War of the Five Kings. Breaking sacred hospitality, he arranges the massacre of guests, including King Robb Stark and his entourage, altering the course of the war.",
+        hometown: "The Twins",
+        house: "Frey"
+    },
+    {
+        firstName: "Benjen",
+        lastName: "Stark",
+        image: "https://awoiaf.westeros.org/images/9/9c/Mark_Evans_BenjenStark.jpg",
+        battles: [
+            "Ranging Beyond the Wall",
+            "Battle at the Fist of the First Men"
+        ],
+        biography: "Benjen Stark, First Ranger of the Night's Watch and brother to Eddard Stark, leads expeditions beyond the Wall. His disappearance while ranging north sparks Jon Snow's journey to join the Night's Watch, and his fate remains a mystery for some time.",
+        hometown: "Winterfell",
+        house: "Stark"
     }
 ]

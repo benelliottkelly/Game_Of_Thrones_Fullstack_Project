@@ -52,8 +52,8 @@ router.route('/login')
 router.route('/register')
   .post(register)
 
-router.route('/users/:userId')
-  .get(getProfile)
+router.route('/users')
+  .get(secureRoute, getProfile)
   .put(secureRoute, updateUserImage)
 
 export default router

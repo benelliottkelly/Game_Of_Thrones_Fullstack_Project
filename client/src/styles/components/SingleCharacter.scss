@@ -216,6 +216,10 @@
   @include houseColours(#0f86e1, #FCFCFC, #1c517c)
 }
 
+.Baelish-container{
+  @include houseColours(#16a516, #84a584, #d3d4d3)
+}
+
 .Baratheon-container{
   @include houseColours(#F4D71B, #313131, #D63232)
 }
@@ -272,6 +276,10 @@
   @include houseColours(#475351, #55B357, #CDCABE)
 }
 
+.Independent-container{
+  @include houseColours(#475351, #cbdacb, #a76262)
+}
+
 .Karstark-container{
   @include houseColours(#201C1D, #F9F9F9, #403D3E)
 }
@@ -312,6 +320,10 @@
   @include houseColours(#818181, #F1F1F1, #E19797)
 }
 
+.Stokeworth-container{
+  @include houseColours(#098309, #f5d81f, #fcfcfc)
+}
+
 .Targaryen-container{
   @include houseColours(#0B0B0B, #B62B2B, #F8F6F6)
 }
@@ -334,6 +346,10 @@
 
 .Umber-container{
   @include houseColours(#982023, #C3C2C2, #B14245)
+}
+
+.Unsullied-container{
+  @include houseColours(brown, white, beige)
 }
 
 .Westerling-container{
