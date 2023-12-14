@@ -44,7 +44,7 @@ export default function AllCharacters() {
                                                 <Card.Img variant="top" className="card-img-top" src={character.image} alt="Crest Image" />
                                                 <Card.Body className="card-body">
                                                     <Card.Title className="card-title">{`${character.firstName} ${character.lastName}`}</Card.Title>
-                                                    <Card.Text className="card-text"><h6>{character.house}</h6>
+                                                    <Card.Text className="card-text"><span className='card-inner'>{character.house}</span>
                                                     {character.biography}</Card.Text >
                                                 </Card.Body>
                                             </Card>

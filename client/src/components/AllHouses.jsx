@@ -62,7 +62,7 @@ export default function AllHouses() {
                                                         <Card.Img variant="top" className="card-img-top" src={house.crest} alt="Crest Image" />
                                                         <Card.Body className="card-body">
                                                             <Card.Title className="card-title">{house.houseName}</Card.Title>
-                                                            <Card.Text className="card-text"><h6>{house.motto}</h6></Card.Text >
+                                                            <Card.Text className="card-text"><span className='card-inner'>{house.motto}</span></Card.Text >
                                                         </Card.Body>
                                                     </Card>
                                                 </Link>

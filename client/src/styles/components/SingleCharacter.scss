@@ -1,117 +1,127 @@
 @import '../global/variables.scss';
 @import '../fonts/fonts.scss';
 
-.container{
+.container {
   display: flex;
   align-items: center;
 }
 
-.split-page {
-  color: rgba(245, 245, 255, 0.8);
-  @include flex-center(row);
-  .row{
-    padding: 5em;
-  }
-  .column{
-    @include flex-center(column);
-    height: 100%;
-  }
-  .column-right{
-    padding: 2em 5em;
-  }
-}
+
 
 .edit-delete-container {
   .single-button {
     background-color: gold;
     border-radius: 5px;
-    box-shadow: 5px 5px white ;
+    box-shadow: 5px 5px white;
     width: 80px;
     color: black;
     margin-bottom: 10px;
+
     &:hover {
       transform: scale(1.2);
       box-shadow: none;
       transform: translate(5px, 5px);
     }
   }
+
   .edit-button {
     margin-right: 15px;
   }
-  .delete-button {
-
-  }
 }
 
-@mixin houseColours($primary, $secondary, $tertiary ){
+@mixin houseColours($primary, $secondary, $tertiary ) {
+  @include flex-center(column);
+  position: relative;
+  min-width: 375px;
   h2 {
+    display: inline-block;
     font-family: 'GameOfThrones';
-    font-size: 3em;
+    font-size: 5vw;
     text-align: center;
     box-shadow: 0 4px 30px $tertiary;
     padding: 0.1em;
     margin: 0.5em;
   }
-  h3{
+  h3 {
     font-family: 'Grogoth';
-    font-size: 3em;
+    font-size: 4vw;
     text-align: center;
     box-shadow: 0 4px 30px $tertiary;
     padding: 0.1em;
-    margin: 0.5em;
   }
-  p{
+  p {
     font-family: 'Emperialisme';
-    font-size: 2em;
+    font-size: 3vw;
     box-shadow: 0 4px 30px $tertiary;
     padding: 0.5em;
     margin: 0.5em;
   }
-  ul{
+  ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
   }
-  li{
-    font-size: 1.5em;
+  li {
+    font-size: 3vw;
     font-family: 'BlackCastle';
     list-style: none;
     padding: 0 1em;
     box-shadow: 0 4px 30px $tertiary;
   }
-  .stained-glass{
+  .col{
+    @include flex-center(row);
+    min-width: 400px;
+  }
+  .split-page {
+    color: rgba(245, 245, 255, 0.8);
+    @include flex-center(row);
+    .column {
+      @include flex-center(column);
+      height: 100%;
+      min-width: 400px;
+      padding: 1em;
+    }
+  }
+  .stained-glass {
     @include flex-center(column);
     box-shadow: 0 4px 40px $secondary;
     backdrop-filter: blur(5px);
-    width: 100%;
+    width: 90%;
+    min-width: 350px;
     background-image: linear-gradient(200deg, $primary 20%, rgba(255, 255, 255, 0.5) 30%, $primary 50%);
     opacity: 0.75;
     color: $secondary;
     border: 1em double $tertiary;
     border-radius: 5px;
     padding: 1em 2em;
+    margin: 1em 5vw;
   }
-  .index-return{
+  .index-return {
+    position: absolute;
     color: $primary;
-    font-size: 2em;
-    float: right;
-    margin: 0 0.5em;
-    svg{
+    font-size: 3em;
+    right: 0;
+    top: 0;
+    margin-right: 0.5em;
+    margin-top: -0.5em;
+    svg {
       @include radial-background($secondary);
     }
   }
-  .index-return:hover{
+  .index-return:hover {
     animation: grow alternate infinite 0.5s;
   }
-  .main-image-container{
-    padding: 1em 5em;
+  .main-image-container {
     @include radial-background($primary);
-    .main-image{
+    .main-image {
       @include flex-center(column);
-      padding: 1em 5em;
-      img{
+      margin: 1em;
+      img {
         display: inline-block;
-        height: 55vh;
+        width: auto;
+        height: auto;
+        max-width: 500px;
         max-height: 500px;
         border: 1em double $tertiary;
         border-radius: 5px;
@@ -119,29 +129,32 @@
       }
     }
   }
-  .pictureFrame{
+  .single-character-hero{
+    align-self: flex-start;
+  }
+  .pictureFrame {
     background-image: url("../images/picture-frame.png");
     @include background-image(contain);
     aspect-ratio: 1;
     @include flex-center(column);
-    .picture-single{
+    .picture-single {
       width: 66%;
       aspect-ratio: 0.85;
       margin: 5em;
-    };
+    }
   }
-  .banner-container{
+  .banner-container {
     @include flex-center(column);
     @include radial-background($secondary);
-    .crest-single{
-      width: 25%;
+    .crest-single {
+      width: 40%;
       margin: 1em;
     }
-    .crest-single:hover{
+    .crest-single:hover {
       animation: tilt-shaking linear 1s infinite;
     }
   }
-  .family-home{
+  .family-home {
     color: $primary;
     text-decoration: none;
   }
@@ -149,19 +162,22 @@
     color: $secondary;
     box-shadow: inset 0 3em 0 0 $primary;
   }
-  .occupying-house{
+  .occupying-house {
     @include flex-center(column);
     width: 100%;
-    .occupier{
+    .occupier {
       @include flex-wrap();
       justify-content: center;
       width: 100%;
-      .house-link{
+      min-width: 350px;
+      .house-link {
         width: 30%;
+        min-width: 300px;
         text-decoration: none;
         transition: box-shadow, linear, 1s, infinite;
         margin: 1% 2%;
-        .house-picture-link{
+        .house-picture-link {
+          width: 100%;
           margin: 0 auto;
           @include background-image(cover);
           font-size: 2vw;
@@ -172,32 +188,33 @@
       }
     }
   }
-  .house-link:hover{
+  .house-link:hover {
     box-shadow: 0 0 20px 20px $secondary;
   }
-  .house-member-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .house-member-container {
+    @include flex-center(row);
+    justify-content: space-evenly;
     flex-wrap: wrap;
     box-shadow: 0 4px 30px $tertiary;
     width: 90%;
-    .house-member{
+    .house-member {
       @include flex-wrap();
+      justify-content: center;
       width: 29%;
+      min-width: 200px;
       border: 0.5em inset $tertiary;
       border-radius: 5px;
       text-decoration: none;
       color: $secondary;
       padding: 1em;
-      margin: 1em;
+      margin: 1em auto;
       transition: box-shadow, linear, 1s, infinite;
-      .individual{
+      .individual {
         @include flex-center(column);
-        h2{
+        h2 {
           font-size: 1em;
-        };
-        img{
+        }
+        img {
           width: 100%;
           border: 0.2em outset $tertiary;
           border-radius: 5px;
@@ -207,183 +224,265 @@
       }
     }
   }
-  .house-member:hover{
+  .house-member:hover {
     box-shadow: 0 0 20px 20px $secondary;
   }
 }
 
-.Arryn-container{
-  @include houseColours(#0f86e1, #FCFCFC, #1c517c)
+@mixin smallScreens() {
+  @media screen and (max-width: 576px) {
+  h2 {
+    font-size: 1.5em;
+    margin: 1vw;
+  }
+  h3 {
+    font-size: 3em;
+    margin: 0.2em;
+  }
+  p {
+    font-size: 2em;
+  }
+  li {
+    font-size: 1.5em;
+  }
+  .col{
+    @include flex-center(column);
+    margin: 1.5em auto;
+  }
+  .split-page {
+    @include flex-center(column);
+    .row {
+      padding: 1em;
+    }
+  }
+  .stained-glass {
+    @include flex-center(column);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .index-return {
+    font-size: 3em;
+  }
+  .house-picture-link {
+    font-size: 1.5em !important;
+  }
+}
+}
+
+.Arryn-container {
+  @include houseColours(#0f86e1, #FCFCFC, #1c517c);
+  @include smallScreens()
 }
 
 .Baelish-container{
-  @include houseColours(#16a516, #84a584, #d3d4d3)
+  @include houseColours(#16a516, #84a584, #d3d4d3);
+  @include smallScreens()
 }
 
-.Baratheon-container{
-  @include houseColours(#F4D71B, #313131, #D63232)
+.Baratheon-container {
+  @include houseColours(#F4D71B, #313131, #D63232);
+  @include smallScreens()
 }
 
-.Blackwood-container{
-  @include houseColours(#971818, #E8E6E6, #1D1C1C)
+.Blackwood-container {
+  @include houseColours(#971818, #E8E6E6, #1D1C1C);
+  @include smallScreens()
 }
 
-.Bolton-container{
-  @include houseColours(#E58B8B, #A62929, #EA7070)
+.Bolton-container {
+  @include houseColours(#E58B8B, #A62929, #EA7070);
+  @include smallScreens()
 }
 
-.Brax-container{
-  @include houseColours(#991399, #E0E0E0, #751E75)
+.Brax-container {
+  @include houseColours(#991399, #E0E0E0, #751E75);
+  @include smallScreens()
 }
 
-.Clegane-container{
-  @include houseColours(#E4BB07, #444141, #C4C4C4)
+.Clegane-container {
+  @include houseColours(#E4BB07, #444141, #C4C4C4);
+  @include smallScreens()
 }
 
-.Dayne-container{
-  @include houseColours(#0C5891, #FEFEFE, #6E7A7C)
+.Dayne-container {
+  @include houseColours(#0C5891, #FEFEFE, #6E7A7C);
+  @include smallScreens()
 }
 
-.Dondarrion-container{
-  @include houseColours(#050505, #AC1CAC, #FFFFFF)
+.Dondarrion-container {
+  @include houseColours(#050505, #AC1CAC, #FFFFFF);
+  @include smallScreens()
 }
 
-.Dothraki-container{
-  @include houseColours(#E69B1C, #71472F, #D67A13)
+.Dothraki-container {
+  @include houseColours(#E69B1C, #71472F, #D67A13);
+  @include smallScreens()
 }
 
-.Dustin-container{
-  @include houseColours(#ECEC08, #A0A0A0, #9E6045)
+.Dustin-container {
+  @include houseColours(#ECEC08, #A0A0A0, #9E6045);
+  @include smallScreens()
 }
 
-.Free.Folk-container{
-  @include houseColours(#0C5891, #927330, #6E7A7C)
+.Free.Folk-container {
+  @include houseColours(#0C5891, #927330, #6E7A7C);
+  @include smallScreens()
 }
 
-.Frey-container{
-  @include houseColours(#1F1F3D, #C3C1B2, #7F7F7F)
+.Frey-container {
+  @include houseColours(#1F1F3D, #C3C1B2, #7F7F7F);
+  @include smallScreens()
 }
 
-.Glover-container{
-  @include houseColours(#F13F12, #ACACAC, #E12F02)
+.Glover-container {
+  @include houseColours(#F13F12, #ACACAC, #E12F02);
+  @include smallScreens()
 }
 
-.Greyjoy-container{
-  @include houseColours(#191919, #F2C615, #F7F7F7)
+.Greyjoy-container {
+  @include houseColours(#191919, #F2C615, #F7F7F7);
+  @include smallScreens()
 }
 
-.Hightower-container{
-  @include houseColours(#475351, #55B357, #CDCABE)
+.Hightower-container {
+  @include houseColours(#475351, #55B357, #CDCABE);
+  @include smallScreens()
 }
 
 .Independent-container{
-  @include houseColours(#475351, #cbdacb, #a76262)
+  @include houseColours(#475351, #cbdacb, #a76262);
+  @include smallScreens()
 }
 
-.Karstark-container{
-  @include houseColours(#201C1D, #F9F9F9, #403D3E)
+.Karstark-container {
+  @include houseColours(#201C1D, #F9F9F9, #403D3E);
+  @include smallScreens()
 }
 
-.Lannister-container{
-  @include houseColours(#86090A, #C2AD77, #000000)
+.Lannister-container {
+  @include houseColours(#86090A, #C2AD77, #000000);
+  @include smallScreens()
 }
 
-.Mallister-container{
-  @include houseColours(#440274, #E4E4E4, #C91C1C)
+.Mallister-container {
+  @include houseColours(#440274, #E4E4E4, #C91C1C);
+  @include smallScreens()
 }
 
-.Manderly-container{
-  @include houseColours(#108080, #118111, #FFFFFF)
+.Manderly-container {
+  @include houseColours(#108080, #118111, #FFFFFF);
+  @include smallScreens()
 }
 
-.Martell-container{
-  @include houseColours(#E37D17, #D32D2D, #FBFB52)
+.Martell-container {
+  @include houseColours(#E37D17, #D32D2D, #FBFB52);
+  @include smallScreens()
 }
 
-.Mormont-container{
-  @include houseColours(#047C04, #94E494, #1D1D1D)
+.Mormont-container {
+  @include houseColours(#047C04, #94E494, #1D1D1D);
+  @include smallScreens()
 }
 
-.Watch-container{
-  @include houseColours(#3900a3, #000000, #6d00b6)
+.Watch-container {
+  @include houseColours(#3900a3, #000000, #6d00b6);
+  @include smallScreens()
 }
 
-.Reed-container{
-  @include houseColours(#81A688, #0B0B0B, #567E5E)
+.Reed-container {
+  @include houseColours(#81A688, #0B0B0B, #567E5E);
+  @include smallScreens()
 }
 
-.Royce-container{
-  @include houseColours(#CA8846, #353535, #4C341C)
+.Royce-container {
+  @include houseColours(#CA8846, #353535, #4C341C);
+  @include smallScreens()
 }
 
-.Stark-container{
-  @include houseColours(#818181, #F1F1F1, #E19797)
+.Stark-container {
+  @include houseColours(#818181, #F1F1F1, #E19797);
+  @include smallScreens()
 }
 
 .Stokeworth-container{
-  @include houseColours(#098309, #f5d81f, #fcfcfc)
+  @include houseColours(#098309, #f5d81f, #fcfcfc);
+  @include smallScreens()
 }
 
-.Targaryen-container{
-  @include houseColours(#0B0B0B, #B62B2B, #F8F6F6)
+.Targaryen-container {
+  @include houseColours(#0B0B0B, #B62B2B, #F8F6F6);
+  @include smallScreens()
 }
 
-.Tarly-container{
-  @include houseColours(#047C04, #C30F0F, #8A9159)
+.Tarly-container {
+  @include houseColours(#047C04, #C30F0F, #8A9159);
+  @include smallScreens()
 }
 
-.Tarth-container{
-  @include houseColours(#34355C, #A14432, #DFD548)
+.Tarth-container {
+  @include houseColours(#34355C, #A14432, #DFD548);
+  @include smallScreens()
 }
 
-.Tully-container{
-  @include houseColours(#0E0EB4, #9C1919, #D0D0D0)
+.Tully-container {
+  @include houseColours(#0E0EB4, #9C1919, #D0D0D0);
+  @include smallScreens()
 }
 
-.Tyrell-container{
-  @include houseColours(#1A8E1A, #FFE646, #A4580C)
+.Tyrell-container {
+  @include houseColours(#1A8E1A, #FFE646, #A4580C);
+  @include smallScreens()
 }
 
-.Umber-container{
-  @include houseColours(#982023, #C3C2C2, #B14245)
+.Umber-container {
+  @include houseColours(#982023, #C3C2C2, #B14245);
+  @include smallScreens()
 }
 
 .Unsullied-container{
-  @include houseColours(brown, white, beige)
+  @include houseColours(brown, white, beige);
+  @include smallScreens()
 }
 
-.Westerling-container{
-  @include houseColours(#D4B96A, #C8C8C8, #FFFFFF)
+.Westerling-container {
+  @include houseColours(#D4B96A, #C8C8C8, #FFFFFF);
+  @include smallScreens()
 }
 
-.general-container{
-  @include houseColours(#ffd900, #0004ff, #ff9900)
+.general-container {
+  @include houseColours(#ffd900, #0004ff, #ff9900);
+  @include smallScreens()
 }
 
 @keyframes tilt-shaking {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes grow {
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(1.2);
   }
 }
-
-// @mixin shadow($colour){
-//   @keyframes shadow-grow-secondary {
-//     from {
-//       box-shadow: 0 0 20px 0px $colour;
-//     }
-//     to {
-//       box-shadow: 0 0 20px 10px $colour;
-//     }
-//   }
-// }

@@ -61,37 +61,37 @@ export default function SingleHouse() {
 
         </Col>
       </Row>
-      <Row className="p-5" xs={12} md={12} lg={12}>
-        <Col>
-          {characters.length > 0 &&
-            <div className="stained-glass">
-              <h3>House Members</h3>
-              <div className="house-member-container">
-                {characters.map((character, idx) => {
-                  return <Link onClick={scrollUp} className="house-member" key={idx} to={`/characters/${character.id}`}>
-                    <div>
-                      <div className="individual">
-                        <h2>{`${character.firstName} ${character.lastName}`}</h2>
-                        <img className="individual-picture" src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
+      <Row xs={12} md={12} lg={12}>
+          <Col>
+            {characters.length > 0 &&
+              <div className="stained-glass">
+                <h3>House Members</h3>
+                <div className="house-member-container">
+                  {characters.map((character, idx) => {
+                    return <Link onClick={scrollUp} className="house-member" key={idx} to={`/characters/${character.id}`}>
+                      <div>
+                        <div className="individual">
+                          <h2>{`${character.firstName} ${character.lastName}`}</h2>
+                          <img className="individual-picture" src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                })}
+                    </Link>
+                  })}
+                </div>
               </div>
-            </div>
-          }
-        </Col>
-      </Row>
-      <Row className="p-5" xs={12} md={12} lg={12}>
-        <div className="stained-glass">
-          <h3>Bannermen</h3>
-          <ul>
-            {bannermen.length > 0 && bannermen.map((banner, idx) => {
-              return <li key={idx}>{banner}</li>
-            })}
-          </ul>
-        </div>
-      </Row>
+            }
+          </Col>
+        </Row>
+        <Row xs={12} md={12} lg={12}>
+          <div className="stained-glass">
+            <h3>Bannermen</h3>
+            <ul>
+              {bannermen.length > 0 && bannermen.map((banner, idx) => {
+                return <li key={idx}>{banner}</li>
+              })}
+            </ul>
+          </div>
+        </Row>
     </Container>
   )
 }
