@@ -105,6 +105,11 @@ export default function SingleCharacter() {
           <Col className="column column-right" xs={12} md={8} lg={8}>
             <div className="stained-glass">
               <h2>{firstName} {lastName}</h2>
+              {house === 'Unsullied' || house === 'Independent' || house === 'Dothraki' || house === "Night's Watch" || house === 'Free Folk' ? (
+        <h3>{house}</h3>
+      ) : (
+        <h3>{`House ${house}`}</h3>
+       )}
               <h3>House {house}</h3>
               <p>Home: {hometown}</p>
               <article className="description">

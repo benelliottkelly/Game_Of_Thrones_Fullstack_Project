@@ -24,7 +24,12 @@ export default function SingleHouse() {
   return (
     <Container fluid className={`${houseName}-container`}>
       <Link className="index-return" to={`/houses`}><GiCrossedSwords /></Link>
-      <h2>{`House ${houseName}`}</h2>
+      {houseName === 'Unsullied' || houseName === 'Independent' || houseName === 'Dothraki' || houseName === "Night's Watch" || houseName === 'Free Folk' ? (
+        <h2>{houseName}</h2>
+      ) : (
+        <h2>{`House ${houseName}`}</h2>
+       )}
+
       <Row className="main-image-container" xs={12} md={12} lg={12}>
         <Col xs={12} md={12} lg={12}>
           <div className="main-image">
@@ -37,7 +42,8 @@ export default function SingleHouse() {
           <h2>{motto}</h2>
         </Col>
         <Col className="column" xs={12} md={6} lg={6}>
-          {places.length > 0 && <h3>Family home: {<Link onClick={scrollUp} className="family-home" to={`/places/${places[0].id}`}>{ places[0].name }</Link>} </h3>}
+          {places.length > 0 && 
+          <h3>Home: {<Link onClick={scrollUp} className="family-home" to={`/places/${places[0].id}`}>{places[0].name}</Link>} </h3>}
           <p>{description}</p>
         </Col>
       </Row>

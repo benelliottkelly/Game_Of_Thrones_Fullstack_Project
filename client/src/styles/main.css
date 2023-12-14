@@ -1,0 +1,7120 @@
+h1 {
+  text-align: center;
+  padding: 5px 0 20px 0;
+  background-color: black;
+  margin-bottom: 0;
+}
+
+.places-container {
+  background-color: rgb(248, 248, 255);
+}
+
+.houses-container {
+  background-color: rgb(248, 248, 255);
+}
+
+.characters-container {
+  background-color: #FC4C4E;
+}
+
+.map {
+  margin: 18px 0 8px 40px;
+}
+
+.map-filt {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.house-org {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-self: center;
+}
+
+@media (max-width: 836px) {
+  .filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    align-items: flex-start;
+  }
+  .card-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 590px) {
+  .filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .vert-banner {
+    display: none;
+  }
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-icon {
+  width: 60px;
+}
+
+/* Ensure the content inside the modal takes up the full height of the modal */
+.nav-toggle {
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  height: 3px;
+  display: block;
+  width: 40px;
+  background: black;
+  margin-bottom: 3px;
+}
+
+.modal-header {
+  flex-grow: 1;
+  background-color: beige;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-header button {
+  top: 2rem;
+  right: 2rem;
+}
+.modal-header button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: black;
+}
+.modal-header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-header nav a, .modal-header nav span {
+  font-size: large;
+  text-decoration: none;
+}
+
+.log-out-button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.log-out-button:hover {
+  cursor: pointer;
+  background-color: rgb(138, 14, 14);
+  font-weight: bold;
+  color: white;
+}
+
+.nav-option:hover {
+  background-color: goldenrod;
+  font-weight: bold;
+}
+
+.log-out-text {
+  color: black;
+}
+
+.log-out-title {
+  color: black;
+}
+
+@font-face {
+  font-family: "GameOfThrones";
+  src: url("../styles/fonts/GameofThrones.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grogoth";
+  src: url("../styles/fonts/Grogoth.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Emperialisme";
+  src: url("../styles/fonts/Emperialisme.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Serkan";
+  src: url("../styles/fonts/Serkan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BlackCastle";
+  src: url("../styles/fonts/BlackCastle.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.split-page {
+  color: rgba(245, 245, 255, 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.split-page .row {
+  padding: 5em;
+}
+.split-page .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.split-page .column-right {
+  padding: 2em 5em;
+}
+
+.edit-delete-container .single-button {
+  background-color: gold;
+  border-radius: 5px;
+  box-shadow: 5px 5px white;
+  width: 80px;
+  color: black;
+  margin-bottom: 10px;
+}
+.edit-delete-container .single-button:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+  transform: translate(5px, 5px);
+}
+.edit-delete-container .edit-button {
+  margin-right: 15px;
+}
+.Arryn-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #1c517c;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Arryn-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #1c517c;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Arryn-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #1c517c;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Arryn-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Arryn-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #1c517c;
+}
+.Arryn-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #FCFCFC;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #0f86e1 20%, rgba(255, 255, 255, 0.5) 30%, #0f86e1 50%);
+  opacity: 0.75;
+  color: #FCFCFC;
+  border: 1em double #1c517c;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Arryn-container .index-return {
+  color: #0f86e1;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Arryn-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#FCFCFC 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Arryn-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Arryn-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0f86e1 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Arryn-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Arryn-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #1c517c;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #0f86e1;
+}
+.Arryn-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Arryn-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Arryn-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#FCFCFC 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Arryn-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Arryn-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Arryn-container .family-home {
+  color: #0f86e1;
+  text-decoration: none;
+}
+.Arryn-container .family-home:hover {
+  color: #FCFCFC;
+  box-shadow: inset 0 3em 0 0 #0f86e1;
+}
+.Arryn-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Arryn-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Arryn-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Arryn-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Arryn-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Arryn-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #1c517c;
+  width: 90%;
+}
+.Arryn-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #1c517c;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FCFCFC;
+  padding: 1em;
+  margin: 1em;
+}
+.Arryn-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Arryn-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Arryn-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #1c517c;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #FCFCFC;
+  aspect-ratio: 1/1.2;
+}
+.Arryn-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Baratheon-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #D63232;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Baratheon-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #D63232;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Baratheon-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #D63232;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Baratheon-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Baratheon-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #D63232;
+}
+.Baratheon-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #313131;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #F4D71B 20%, rgba(255, 255, 255, 0.5) 30%, #F4D71B 50%);
+  opacity: 0.75;
+  color: #313131;
+  border: 1em double #D63232;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Baratheon-container .index-return {
+  color: #F4D71B;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Baratheon-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#313131 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Baratheon-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Baratheon-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F4D71B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Baratheon-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Baratheon-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #D63232;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #F4D71B;
+}
+.Baratheon-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Baratheon-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Baratheon-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#313131 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Baratheon-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Baratheon-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Baratheon-container .family-home {
+  color: #F4D71B;
+  text-decoration: none;
+}
+.Baratheon-container .family-home:hover {
+  color: #313131;
+  box-shadow: inset 0 3em 0 0 #F4D71B;
+}
+.Baratheon-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Baratheon-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Baratheon-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Baratheon-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Baratheon-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Baratheon-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #D63232;
+  width: 90%;
+}
+.Baratheon-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #D63232;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #313131;
+  padding: 1em;
+  margin: 1em;
+}
+.Baratheon-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Baratheon-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Baratheon-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #D63232;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #313131;
+  aspect-ratio: 1/1.2;
+}
+.Baratheon-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Blackwood-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #1D1C1C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Blackwood-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #1D1C1C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Blackwood-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #1D1C1C;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Blackwood-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Blackwood-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #1D1C1C;
+}
+.Blackwood-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #E8E6E6;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #971818 20%, rgba(255, 255, 255, 0.5) 30%, #971818 50%);
+  opacity: 0.75;
+  color: #E8E6E6;
+  border: 1em double #1D1C1C;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Blackwood-container .index-return {
+  color: #971818;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Blackwood-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E8E6E6 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Blackwood-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Blackwood-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#971818 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Blackwood-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Blackwood-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #1D1C1C;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #971818;
+}
+.Blackwood-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Blackwood-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Blackwood-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E8E6E6 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Blackwood-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Blackwood-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Blackwood-container .family-home {
+  color: #971818;
+  text-decoration: none;
+}
+.Blackwood-container .family-home:hover {
+  color: #E8E6E6;
+  box-shadow: inset 0 3em 0 0 #971818;
+}
+.Blackwood-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Blackwood-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Blackwood-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Blackwood-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Blackwood-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Blackwood-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #1D1C1C;
+  width: 90%;
+}
+.Blackwood-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #1D1C1C;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #E8E6E6;
+  padding: 1em;
+  margin: 1em;
+}
+.Blackwood-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Blackwood-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Blackwood-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #1D1C1C;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #E8E6E6;
+  aspect-ratio: 1/1.2;
+}
+.Blackwood-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Bolton-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #EA7070;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Bolton-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #EA7070;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Bolton-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #EA7070;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Bolton-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Bolton-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #EA7070;
+}
+.Bolton-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #A62929;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #E58B8B 20%, rgba(255, 255, 255, 0.5) 30%, #E58B8B 50%);
+  opacity: 0.75;
+  color: #A62929;
+  border: 1em double #EA7070;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Bolton-container .index-return {
+  color: #E58B8B;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Bolton-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#A62929 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Bolton-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Bolton-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E58B8B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Bolton-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Bolton-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #EA7070;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #E58B8B;
+}
+.Bolton-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Bolton-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Bolton-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#A62929 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Bolton-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Bolton-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Bolton-container .family-home {
+  color: #E58B8B;
+  text-decoration: none;
+}
+.Bolton-container .family-home:hover {
+  color: #A62929;
+  box-shadow: inset 0 3em 0 0 #E58B8B;
+}
+.Bolton-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Bolton-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Bolton-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Bolton-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Bolton-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Bolton-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #EA7070;
+  width: 90%;
+}
+.Bolton-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #EA7070;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #A62929;
+  padding: 1em;
+  margin: 1em;
+}
+.Bolton-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Bolton-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Bolton-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #EA7070;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #A62929;
+  aspect-ratio: 1/1.2;
+}
+.Bolton-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Brax-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #751E75;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Brax-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #751E75;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Brax-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #751E75;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Brax-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Brax-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #751E75;
+}
+.Brax-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #E0E0E0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #991399 20%, rgba(255, 255, 255, 0.5) 30%, #991399 50%);
+  opacity: 0.75;
+  color: #E0E0E0;
+  border: 1em double #751E75;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Brax-container .index-return {
+  color: #991399;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Brax-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E0E0E0 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Brax-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Brax-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#991399 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Brax-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Brax-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #751E75;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #991399;
+}
+.Brax-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Brax-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Brax-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E0E0E0 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Brax-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Brax-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Brax-container .family-home {
+  color: #991399;
+  text-decoration: none;
+}
+.Brax-container .family-home:hover {
+  color: #E0E0E0;
+  box-shadow: inset 0 3em 0 0 #991399;
+}
+.Brax-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Brax-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Brax-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Brax-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Brax-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Brax-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #751E75;
+  width: 90%;
+}
+.Brax-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #751E75;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #E0E0E0;
+  padding: 1em;
+  margin: 1em;
+}
+.Brax-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Brax-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Brax-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #751E75;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #E0E0E0;
+  aspect-ratio: 1/1.2;
+}
+.Brax-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Clegane-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #C4C4C4;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Clegane-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #C4C4C4;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Clegane-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #C4C4C4;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Clegane-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Clegane-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #C4C4C4;
+}
+.Clegane-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #444141;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #E4BB07 20%, rgba(255, 255, 255, 0.5) 30%, #E4BB07 50%);
+  opacity: 0.75;
+  color: #444141;
+  border: 1em double #C4C4C4;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Clegane-container .index-return {
+  color: #E4BB07;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Clegane-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#444141 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Clegane-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Clegane-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E4BB07 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Clegane-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Clegane-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #C4C4C4;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #E4BB07;
+}
+.Clegane-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Clegane-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Clegane-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#444141 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Clegane-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Clegane-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Clegane-container .family-home {
+  color: #E4BB07;
+  text-decoration: none;
+}
+.Clegane-container .family-home:hover {
+  color: #444141;
+  box-shadow: inset 0 3em 0 0 #E4BB07;
+}
+.Clegane-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Clegane-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Clegane-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Clegane-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Clegane-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Clegane-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #C4C4C4;
+  width: 90%;
+}
+.Clegane-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #C4C4C4;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #444141;
+  padding: 1em;
+  margin: 1em;
+}
+.Clegane-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Clegane-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Clegane-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #C4C4C4;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #444141;
+  aspect-ratio: 1/1.2;
+}
+.Clegane-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Dayne-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #6E7A7C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dayne-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #6E7A7C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dayne-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #6E7A7C;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Dayne-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Dayne-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #6E7A7C;
+}
+.Dayne-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #FEFEFE;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #0C5891 20%, rgba(255, 255, 255, 0.5) 30%, #0C5891 50%);
+  opacity: 0.75;
+  color: #FEFEFE;
+  border: 1em double #6E7A7C;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Dayne-container .index-return {
+  color: #0C5891;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Dayne-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#FEFEFE 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dayne-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Dayne-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0C5891 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dayne-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Dayne-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #6E7A7C;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #0C5891;
+}
+.Dayne-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dayne-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Dayne-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#FEFEFE 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dayne-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Dayne-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dayne-container .family-home {
+  color: #0C5891;
+  text-decoration: none;
+}
+.Dayne-container .family-home:hover {
+  color: #FEFEFE;
+  box-shadow: inset 0 3em 0 0 #0C5891;
+}
+.Dayne-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Dayne-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Dayne-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Dayne-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Dayne-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dayne-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #6E7A7C;
+  width: 90%;
+}
+.Dayne-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #6E7A7C;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FEFEFE;
+  padding: 1em;
+  margin: 1em;
+}
+.Dayne-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dayne-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Dayne-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #6E7A7C;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #FEFEFE;
+  aspect-ratio: 1/1.2;
+}
+.Dayne-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Dondarrion-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dondarrion-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dondarrion-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Dondarrion-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Dondarrion-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #FFFFFF;
+}
+.Dondarrion-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #AC1CAC;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #050505 20%, rgba(255, 255, 255, 0.5) 30%, #050505 50%);
+  opacity: 0.75;
+  color: #AC1CAC;
+  border: 1em double #FFFFFF;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Dondarrion-container .index-return {
+  color: #050505;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Dondarrion-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#AC1CAC 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dondarrion-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Dondarrion-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#050505 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dondarrion-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Dondarrion-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #050505;
+}
+.Dondarrion-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dondarrion-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Dondarrion-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#AC1CAC 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dondarrion-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Dondarrion-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dondarrion-container .family-home {
+  color: #050505;
+  text-decoration: none;
+}
+.Dondarrion-container .family-home:hover {
+  color: #AC1CAC;
+  box-shadow: inset 0 3em 0 0 #050505;
+}
+.Dondarrion-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Dondarrion-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Dondarrion-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Dondarrion-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Dondarrion-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dondarrion-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #FFFFFF;
+  width: 90%;
+}
+.Dondarrion-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #FFFFFF;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #AC1CAC;
+  padding: 1em;
+  margin: 1em;
+}
+.Dondarrion-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dondarrion-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Dondarrion-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #AC1CAC;
+  aspect-ratio: 1/1.2;
+}
+.Dondarrion-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Dothraki-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #D67A13;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dothraki-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #D67A13;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dothraki-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #D67A13;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Dothraki-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Dothraki-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #D67A13;
+}
+.Dothraki-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #71472F;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #E69B1C 20%, rgba(255, 255, 255, 0.5) 30%, #E69B1C 50%);
+  opacity: 0.75;
+  color: #71472F;
+  border: 1em double #D67A13;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Dothraki-container .index-return {
+  color: #E69B1C;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Dothraki-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#71472F 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dothraki-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Dothraki-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E69B1C 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dothraki-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Dothraki-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #D67A13;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #E69B1C;
+}
+.Dothraki-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dothraki-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Dothraki-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#71472F 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dothraki-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Dothraki-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dothraki-container .family-home {
+  color: #E69B1C;
+  text-decoration: none;
+}
+.Dothraki-container .family-home:hover {
+  color: #71472F;
+  box-shadow: inset 0 3em 0 0 #E69B1C;
+}
+.Dothraki-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Dothraki-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Dothraki-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Dothraki-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Dothraki-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dothraki-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #D67A13;
+  width: 90%;
+}
+.Dothraki-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #D67A13;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #71472F;
+  padding: 1em;
+  margin: 1em;
+}
+.Dothraki-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dothraki-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Dothraki-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #D67A13;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #71472F;
+  aspect-ratio: 1/1.2;
+}
+.Dothraki-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Dustin-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #9E6045;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dustin-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #9E6045;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Dustin-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #9E6045;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Dustin-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Dustin-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #9E6045;
+}
+.Dustin-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #A0A0A0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #ECEC08 20%, rgba(255, 255, 255, 0.5) 30%, #ECEC08 50%);
+  opacity: 0.75;
+  color: #A0A0A0;
+  border: 1em double #9E6045;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Dustin-container .index-return {
+  color: #ECEC08;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Dustin-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#A0A0A0 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dustin-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Dustin-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#ECEC08 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dustin-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Dustin-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #9E6045;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #ECEC08;
+}
+.Dustin-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dustin-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Dustin-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#A0A0A0 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Dustin-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Dustin-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dustin-container .family-home {
+  color: #ECEC08;
+  text-decoration: none;
+}
+.Dustin-container .family-home:hover {
+  color: #A0A0A0;
+  box-shadow: inset 0 3em 0 0 #ECEC08;
+}
+.Dustin-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Dustin-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Dustin-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Dustin-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Dustin-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Dustin-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #9E6045;
+  width: 90%;
+}
+.Dustin-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #9E6045;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #A0A0A0;
+  padding: 1em;
+  margin: 1em;
+}
+.Dustin-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Dustin-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Dustin-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #9E6045;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #A0A0A0;
+  aspect-ratio: 1/1.2;
+}
+.Dustin-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Free.Folk-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #6E7A7C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Free.Folk-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #6E7A7C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Free.Folk-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #6E7A7C;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Free.Folk-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Free.Folk-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #6E7A7C;
+}
+.Free.Folk-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #927330;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #0C5891 20%, rgba(255, 255, 255, 0.5) 30%, #0C5891 50%);
+  opacity: 0.75;
+  color: #927330;
+  border: 1em double #6E7A7C;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Free.Folk-container .index-return {
+  color: #0C5891;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Free.Folk-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#927330 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Free.Folk-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Free.Folk-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0C5891 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Free.Folk-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Free.Folk-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #6E7A7C;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #0C5891;
+}
+.Free.Folk-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Free.Folk-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Free.Folk-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#927330 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Free.Folk-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Free.Folk-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Free.Folk-container .family-home {
+  color: #0C5891;
+  text-decoration: none;
+}
+.Free.Folk-container .family-home:hover {
+  color: #927330;
+  box-shadow: inset 0 3em 0 0 #0C5891;
+}
+.Free.Folk-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Free.Folk-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Free.Folk-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Free.Folk-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Free.Folk-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Free.Folk-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #6E7A7C;
+  width: 90%;
+}
+.Free.Folk-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #6E7A7C;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #927330;
+  padding: 1em;
+  margin: 1em;
+}
+.Free.Folk-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Free.Folk-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Free.Folk-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #6E7A7C;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #927330;
+  aspect-ratio: 1/1.2;
+}
+.Free.Folk-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Frey-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #7F7F7F;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Frey-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #7F7F7F;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Frey-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #7F7F7F;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Frey-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Frey-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #7F7F7F;
+}
+.Frey-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #C3C1B2;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #1F1F3D 20%, rgba(255, 255, 255, 0.5) 30%, #1F1F3D 50%);
+  opacity: 0.75;
+  color: #C3C1B2;
+  border: 1em double #7F7F7F;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Frey-container .index-return {
+  color: #1F1F3D;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Frey-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C3C1B2 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Frey-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Frey-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#1F1F3D 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Frey-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Frey-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #7F7F7F;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #1F1F3D;
+}
+.Frey-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Frey-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Frey-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C3C1B2 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Frey-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Frey-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Frey-container .family-home {
+  color: #1F1F3D;
+  text-decoration: none;
+}
+.Frey-container .family-home:hover {
+  color: #C3C1B2;
+  box-shadow: inset 0 3em 0 0 #1F1F3D;
+}
+.Frey-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Frey-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Frey-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Frey-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Frey-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Frey-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #7F7F7F;
+  width: 90%;
+}
+.Frey-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #7F7F7F;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #C3C1B2;
+  padding: 1em;
+  margin: 1em;
+}
+.Frey-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Frey-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Frey-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #7F7F7F;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #C3C1B2;
+  aspect-ratio: 1/1.2;
+}
+.Frey-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Glover-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #E12F02;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Glover-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #E12F02;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Glover-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #E12F02;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Glover-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Glover-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #E12F02;
+}
+.Glover-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #ACACAC;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #F13F12 20%, rgba(255, 255, 255, 0.5) 30%, #F13F12 50%);
+  opacity: 0.75;
+  color: #ACACAC;
+  border: 1em double #E12F02;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Glover-container .index-return {
+  color: #F13F12;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Glover-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#ACACAC 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Glover-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Glover-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F13F12 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Glover-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Glover-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #E12F02;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #F13F12;
+}
+.Glover-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Glover-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Glover-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#ACACAC 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Glover-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Glover-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Glover-container .family-home {
+  color: #F13F12;
+  text-decoration: none;
+}
+.Glover-container .family-home:hover {
+  color: #ACACAC;
+  box-shadow: inset 0 3em 0 0 #F13F12;
+}
+.Glover-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Glover-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Glover-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Glover-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Glover-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Glover-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #E12F02;
+  width: 90%;
+}
+.Glover-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #E12F02;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ACACAC;
+  padding: 1em;
+  margin: 1em;
+}
+.Glover-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Glover-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Glover-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #E12F02;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #ACACAC;
+  aspect-ratio: 1/1.2;
+}
+.Glover-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Greyjoy-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #F7F7F7;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Greyjoy-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #F7F7F7;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Greyjoy-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #F7F7F7;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Greyjoy-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Greyjoy-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #F7F7F7;
+}
+.Greyjoy-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #F2C615;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #191919 20%, rgba(255, 255, 255, 0.5) 30%, #191919 50%);
+  opacity: 0.75;
+  color: #F2C615;
+  border: 1em double #F7F7F7;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Greyjoy-container .index-return {
+  color: #191919;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Greyjoy-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F2C615 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Greyjoy-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Greyjoy-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#191919 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Greyjoy-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Greyjoy-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #F7F7F7;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #191919;
+}
+.Greyjoy-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Greyjoy-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Greyjoy-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F2C615 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Greyjoy-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Greyjoy-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Greyjoy-container .family-home {
+  color: #191919;
+  text-decoration: none;
+}
+.Greyjoy-container .family-home:hover {
+  color: #F2C615;
+  box-shadow: inset 0 3em 0 0 #191919;
+}
+.Greyjoy-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Greyjoy-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Greyjoy-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Greyjoy-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Greyjoy-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Greyjoy-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #F7F7F7;
+  width: 90%;
+}
+.Greyjoy-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #F7F7F7;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #F2C615;
+  padding: 1em;
+  margin: 1em;
+}
+.Greyjoy-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Greyjoy-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Greyjoy-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #F7F7F7;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #F2C615;
+  aspect-ratio: 1/1.2;
+}
+.Greyjoy-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Hightower-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #CDCABE;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Hightower-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #CDCABE;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Hightower-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #CDCABE;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Hightower-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Hightower-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #CDCABE;
+}
+.Hightower-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #55B357;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #475351 20%, rgba(255, 255, 255, 0.5) 30%, #475351 50%);
+  opacity: 0.75;
+  color: #55B357;
+  border: 1em double #CDCABE;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Hightower-container .index-return {
+  color: #475351;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Hightower-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#55B357 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Hightower-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Hightower-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#475351 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Hightower-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Hightower-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #CDCABE;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #475351;
+}
+.Hightower-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Hightower-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Hightower-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#55B357 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Hightower-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Hightower-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Hightower-container .family-home {
+  color: #475351;
+  text-decoration: none;
+}
+.Hightower-container .family-home:hover {
+  color: #55B357;
+  box-shadow: inset 0 3em 0 0 #475351;
+}
+.Hightower-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Hightower-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Hightower-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Hightower-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Hightower-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Hightower-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #CDCABE;
+  width: 90%;
+}
+.Hightower-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #CDCABE;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #55B357;
+  padding: 1em;
+  margin: 1em;
+}
+.Hightower-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Hightower-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Hightower-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #CDCABE;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #55B357;
+  aspect-ratio: 1/1.2;
+}
+.Hightower-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Karstark-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #403D3E;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Karstark-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #403D3E;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Karstark-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #403D3E;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Karstark-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Karstark-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #403D3E;
+}
+.Karstark-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #F9F9F9;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #201C1D 20%, rgba(255, 255, 255, 0.5) 30%, #201C1D 50%);
+  opacity: 0.75;
+  color: #F9F9F9;
+  border: 1em double #403D3E;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Karstark-container .index-return {
+  color: #201C1D;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Karstark-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F9F9F9 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Karstark-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Karstark-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#201C1D 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Karstark-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Karstark-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #403D3E;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #201C1D;
+}
+.Karstark-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Karstark-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Karstark-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F9F9F9 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Karstark-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Karstark-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Karstark-container .family-home {
+  color: #201C1D;
+  text-decoration: none;
+}
+.Karstark-container .family-home:hover {
+  color: #F9F9F9;
+  box-shadow: inset 0 3em 0 0 #201C1D;
+}
+.Karstark-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Karstark-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Karstark-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Karstark-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Karstark-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Karstark-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #403D3E;
+  width: 90%;
+}
+.Karstark-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #403D3E;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #F9F9F9;
+  padding: 1em;
+  margin: 1em;
+}
+.Karstark-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Karstark-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Karstark-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #403D3E;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #F9F9F9;
+  aspect-ratio: 1/1.2;
+}
+.Karstark-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Lannister-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #000000;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Lannister-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #000000;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Lannister-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #000000;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Lannister-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Lannister-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #000000;
+}
+.Lannister-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #C2AD77;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #86090A 20%, rgba(255, 255, 255, 0.5) 30%, #86090A 50%);
+  opacity: 0.75;
+  color: #C2AD77;
+  border: 1em double #000000;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Lannister-container .index-return {
+  color: #86090A;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Lannister-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C2AD77 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Lannister-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Lannister-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#86090A 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Lannister-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Lannister-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #000000;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #86090A;
+}
+.Lannister-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Lannister-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Lannister-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C2AD77 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Lannister-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Lannister-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Lannister-container .family-home {
+  color: #86090A;
+  text-decoration: none;
+}
+.Lannister-container .family-home:hover {
+  color: #C2AD77;
+  box-shadow: inset 0 3em 0 0 #86090A;
+}
+.Lannister-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Lannister-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Lannister-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Lannister-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Lannister-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Lannister-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #000000;
+  width: 90%;
+}
+.Lannister-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #C2AD77;
+  padding: 1em;
+  margin: 1em;
+}
+.Lannister-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Lannister-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Lannister-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #000000;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #C2AD77;
+  aspect-ratio: 1/1.2;
+}
+.Lannister-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Mallister-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #C91C1C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Mallister-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #C91C1C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Mallister-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #C91C1C;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Mallister-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Mallister-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #C91C1C;
+}
+.Mallister-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #E4E4E4;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #440274 20%, rgba(255, 255, 255, 0.5) 30%, #440274 50%);
+  opacity: 0.75;
+  color: #E4E4E4;
+  border: 1em double #C91C1C;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Mallister-container .index-return {
+  color: #440274;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Mallister-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E4E4E4 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Mallister-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Mallister-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#440274 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Mallister-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Mallister-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #C91C1C;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #440274;
+}
+.Mallister-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Mallister-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Mallister-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E4E4E4 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Mallister-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Mallister-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Mallister-container .family-home {
+  color: #440274;
+  text-decoration: none;
+}
+.Mallister-container .family-home:hover {
+  color: #E4E4E4;
+  box-shadow: inset 0 3em 0 0 #440274;
+}
+.Mallister-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Mallister-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Mallister-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Mallister-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Mallister-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Mallister-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #C91C1C;
+  width: 90%;
+}
+.Mallister-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #C91C1C;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #E4E4E4;
+  padding: 1em;
+  margin: 1em;
+}
+.Mallister-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Mallister-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Mallister-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #C91C1C;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #E4E4E4;
+  aspect-ratio: 1/1.2;
+}
+.Mallister-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Manderly-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Manderly-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Manderly-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Manderly-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Manderly-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #FFFFFF;
+}
+.Manderly-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #118111;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #108080 20%, rgba(255, 255, 255, 0.5) 30%, #108080 50%);
+  opacity: 0.75;
+  color: #118111;
+  border: 1em double #FFFFFF;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Manderly-container .index-return {
+  color: #108080;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Manderly-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#118111 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Manderly-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Manderly-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#108080 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Manderly-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Manderly-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #108080;
+}
+.Manderly-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Manderly-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Manderly-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#118111 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Manderly-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Manderly-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Manderly-container .family-home {
+  color: #108080;
+  text-decoration: none;
+}
+.Manderly-container .family-home:hover {
+  color: #118111;
+  box-shadow: inset 0 3em 0 0 #108080;
+}
+.Manderly-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Manderly-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Manderly-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Manderly-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Manderly-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Manderly-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #FFFFFF;
+  width: 90%;
+}
+.Manderly-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #FFFFFF;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #118111;
+  padding: 1em;
+  margin: 1em;
+}
+.Manderly-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Manderly-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Manderly-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #118111;
+  aspect-ratio: 1/1.2;
+}
+.Manderly-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Martell-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FBFB52;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Martell-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FBFB52;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Martell-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #FBFB52;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Martell-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Martell-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #FBFB52;
+}
+.Martell-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #D32D2D;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #E37D17 20%, rgba(255, 255, 255, 0.5) 30%, #E37D17 50%);
+  opacity: 0.75;
+  color: #D32D2D;
+  border: 1em double #FBFB52;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Martell-container .index-return {
+  color: #E37D17;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Martell-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#D32D2D 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Martell-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Martell-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#E37D17 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Martell-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Martell-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #FBFB52;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #E37D17;
+}
+.Martell-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Martell-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Martell-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#D32D2D 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Martell-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Martell-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Martell-container .family-home {
+  color: #E37D17;
+  text-decoration: none;
+}
+.Martell-container .family-home:hover {
+  color: #D32D2D;
+  box-shadow: inset 0 3em 0 0 #E37D17;
+}
+.Martell-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Martell-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Martell-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Martell-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Martell-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Martell-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #FBFB52;
+  width: 90%;
+}
+.Martell-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #FBFB52;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #D32D2D;
+  padding: 1em;
+  margin: 1em;
+}
+.Martell-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Martell-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Martell-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #FBFB52;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #D32D2D;
+  aspect-ratio: 1/1.2;
+}
+.Martell-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Mormont-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #1D1D1D;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Mormont-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #1D1D1D;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Mormont-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #1D1D1D;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Mormont-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Mormont-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #1D1D1D;
+}
+.Mormont-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #94E494;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #047C04 20%, rgba(255, 255, 255, 0.5) 30%, #047C04 50%);
+  opacity: 0.75;
+  color: #94E494;
+  border: 1em double #1D1D1D;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Mormont-container .index-return {
+  color: #047C04;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Mormont-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#94E494 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Mormont-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Mormont-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#047C04 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Mormont-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Mormont-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #1D1D1D;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #047C04;
+}
+.Mormont-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Mormont-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Mormont-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#94E494 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Mormont-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Mormont-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Mormont-container .family-home {
+  color: #047C04;
+  text-decoration: none;
+}
+.Mormont-container .family-home:hover {
+  color: #94E494;
+  box-shadow: inset 0 3em 0 0 #047C04;
+}
+.Mormont-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Mormont-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Mormont-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Mormont-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Mormont-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Mormont-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #1D1D1D;
+  width: 90%;
+}
+.Mormont-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #1D1D1D;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #94E494;
+  padding: 1em;
+  margin: 1em;
+}
+.Mormont-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Mormont-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Mormont-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #1D1D1D;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #94E494;
+  aspect-ratio: 1/1.2;
+}
+.Mormont-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Watch-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #6d00b6;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Watch-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #6d00b6;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Watch-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #6d00b6;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Watch-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Watch-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #6d00b6;
+}
+.Watch-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #000000;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #3900a3 20%, rgba(255, 255, 255, 0.5) 30%, #3900a3 50%);
+  opacity: 0.75;
+  color: #000000;
+  border: 1em double #6d00b6;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Watch-container .index-return {
+  color: #3900a3;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Watch-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#000000 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Watch-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Watch-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#3900a3 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Watch-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Watch-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #6d00b6;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #3900a3;
+}
+.Watch-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Watch-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Watch-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#000000 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Watch-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Watch-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Watch-container .family-home {
+  color: #3900a3;
+  text-decoration: none;
+}
+.Watch-container .family-home:hover {
+  color: #000000;
+  box-shadow: inset 0 3em 0 0 #3900a3;
+}
+.Watch-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Watch-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Watch-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Watch-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Watch-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Watch-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #6d00b6;
+  width: 90%;
+}
+.Watch-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #6d00b6;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000000;
+  padding: 1em;
+  margin: 1em;
+}
+.Watch-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Watch-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Watch-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #6d00b6;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #000000;
+  aspect-ratio: 1/1.2;
+}
+.Watch-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Reed-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #567E5E;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Reed-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #567E5E;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Reed-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #567E5E;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Reed-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Reed-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #567E5E;
+}
+.Reed-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #0B0B0B;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #81A688 20%, rgba(255, 255, 255, 0.5) 30%, #81A688 50%);
+  opacity: 0.75;
+  color: #0B0B0B;
+  border: 1em double #567E5E;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Reed-container .index-return {
+  color: #81A688;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Reed-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0B0B0B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Reed-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Reed-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#81A688 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Reed-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Reed-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #567E5E;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #81A688;
+}
+.Reed-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Reed-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Reed-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0B0B0B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Reed-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Reed-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Reed-container .family-home {
+  color: #81A688;
+  text-decoration: none;
+}
+.Reed-container .family-home:hover {
+  color: #0B0B0B;
+  box-shadow: inset 0 3em 0 0 #81A688;
+}
+.Reed-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Reed-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Reed-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Reed-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Reed-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Reed-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #567E5E;
+  width: 90%;
+}
+.Reed-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #567E5E;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #0B0B0B;
+  padding: 1em;
+  margin: 1em;
+}
+.Reed-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Reed-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Reed-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #567E5E;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #0B0B0B;
+  aspect-ratio: 1/1.2;
+}
+.Reed-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Royce-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #4C341C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Royce-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #4C341C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Royce-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #4C341C;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Royce-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Royce-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #4C341C;
+}
+.Royce-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #353535;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #CA8846 20%, rgba(255, 255, 255, 0.5) 30%, #CA8846 50%);
+  opacity: 0.75;
+  color: #353535;
+  border: 1em double #4C341C;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Royce-container .index-return {
+  color: #CA8846;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Royce-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#353535 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Royce-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Royce-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#CA8846 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Royce-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Royce-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #4C341C;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #CA8846;
+}
+.Royce-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Royce-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Royce-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#353535 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Royce-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Royce-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Royce-container .family-home {
+  color: #CA8846;
+  text-decoration: none;
+}
+.Royce-container .family-home:hover {
+  color: #353535;
+  box-shadow: inset 0 3em 0 0 #CA8846;
+}
+.Royce-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Royce-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Royce-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Royce-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Royce-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Royce-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #4C341C;
+  width: 90%;
+}
+.Royce-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #4C341C;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #353535;
+  padding: 1em;
+  margin: 1em;
+}
+.Royce-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Royce-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Royce-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #4C341C;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #353535;
+  aspect-ratio: 1/1.2;
+}
+.Royce-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Stark-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #E19797;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Stark-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #E19797;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Stark-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #E19797;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Stark-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Stark-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #E19797;
+}
+.Stark-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #F1F1F1;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #818181 20%, rgba(255, 255, 255, 0.5) 30%, #818181 50%);
+  opacity: 0.75;
+  color: #F1F1F1;
+  border: 1em double #E19797;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Stark-container .index-return {
+  color: #818181;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Stark-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F1F1F1 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Stark-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Stark-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#818181 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Stark-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Stark-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #E19797;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #818181;
+}
+.Stark-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Stark-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Stark-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#F1F1F1 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Stark-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Stark-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Stark-container .family-home {
+  color: #818181;
+  text-decoration: none;
+}
+.Stark-container .family-home:hover {
+  color: #F1F1F1;
+  box-shadow: inset 0 3em 0 0 #818181;
+}
+.Stark-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Stark-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Stark-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Stark-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Stark-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Stark-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #E19797;
+  width: 90%;
+}
+.Stark-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #E19797;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #F1F1F1;
+  padding: 1em;
+  margin: 1em;
+}
+.Stark-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Stark-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Stark-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #E19797;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #F1F1F1;
+  aspect-ratio: 1/1.2;
+}
+.Stark-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Targaryen-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #F8F6F6;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Targaryen-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #F8F6F6;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Targaryen-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #F8F6F6;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Targaryen-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Targaryen-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #F8F6F6;
+}
+.Targaryen-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #B62B2B;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #0B0B0B 20%, rgba(255, 255, 255, 0.5) 30%, #0B0B0B 50%);
+  opacity: 0.75;
+  color: #B62B2B;
+  border: 1em double #F8F6F6;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Targaryen-container .index-return {
+  color: #0B0B0B;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Targaryen-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#B62B2B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Targaryen-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Targaryen-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0B0B0B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Targaryen-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Targaryen-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #F8F6F6;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #0B0B0B;
+}
+.Targaryen-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Targaryen-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Targaryen-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#B62B2B 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Targaryen-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Targaryen-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Targaryen-container .family-home {
+  color: #0B0B0B;
+  text-decoration: none;
+}
+.Targaryen-container .family-home:hover {
+  color: #B62B2B;
+  box-shadow: inset 0 3em 0 0 #0B0B0B;
+}
+.Targaryen-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Targaryen-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Targaryen-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Targaryen-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Targaryen-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Targaryen-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #F8F6F6;
+  width: 90%;
+}
+.Targaryen-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #F8F6F6;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #B62B2B;
+  padding: 1em;
+  margin: 1em;
+}
+.Targaryen-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Targaryen-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Targaryen-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #F8F6F6;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #B62B2B;
+  aspect-ratio: 1/1.2;
+}
+.Targaryen-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Tarly-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #8A9159;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tarly-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #8A9159;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tarly-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #8A9159;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Tarly-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Tarly-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #8A9159;
+}
+.Tarly-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #C30F0F;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #047C04 20%, rgba(255, 255, 255, 0.5) 30%, #047C04 50%);
+  opacity: 0.75;
+  color: #C30F0F;
+  border: 1em double #8A9159;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Tarly-container .index-return {
+  color: #047C04;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Tarly-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C30F0F 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tarly-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Tarly-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#047C04 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tarly-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Tarly-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #8A9159;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #047C04;
+}
+.Tarly-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tarly-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Tarly-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C30F0F 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tarly-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Tarly-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tarly-container .family-home {
+  color: #047C04;
+  text-decoration: none;
+}
+.Tarly-container .family-home:hover {
+  color: #C30F0F;
+  box-shadow: inset 0 3em 0 0 #047C04;
+}
+.Tarly-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Tarly-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Tarly-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Tarly-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Tarly-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tarly-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #8A9159;
+  width: 90%;
+}
+.Tarly-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #8A9159;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #C30F0F;
+  padding: 1em;
+  margin: 1em;
+}
+.Tarly-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tarly-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Tarly-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #8A9159;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #C30F0F;
+  aspect-ratio: 1/1.2;
+}
+.Tarly-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Tarth-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #DFD548;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tarth-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #DFD548;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tarth-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #DFD548;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Tarth-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Tarth-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #DFD548;
+}
+.Tarth-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #A14432;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #34355C 20%, rgba(255, 255, 255, 0.5) 30%, #34355C 50%);
+  opacity: 0.75;
+  color: #A14432;
+  border: 1em double #DFD548;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Tarth-container .index-return {
+  color: #34355C;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Tarth-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#A14432 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tarth-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Tarth-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#34355C 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tarth-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Tarth-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #DFD548;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #34355C;
+}
+.Tarth-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tarth-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Tarth-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#A14432 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tarth-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Tarth-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tarth-container .family-home {
+  color: #34355C;
+  text-decoration: none;
+}
+.Tarth-container .family-home:hover {
+  color: #A14432;
+  box-shadow: inset 0 3em 0 0 #34355C;
+}
+.Tarth-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Tarth-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Tarth-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Tarth-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Tarth-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tarth-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #DFD548;
+  width: 90%;
+}
+.Tarth-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #DFD548;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #A14432;
+  padding: 1em;
+  margin: 1em;
+}
+.Tarth-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tarth-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Tarth-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #DFD548;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #A14432;
+  aspect-ratio: 1/1.2;
+}
+.Tarth-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Tully-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #D0D0D0;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tully-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #D0D0D0;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tully-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #D0D0D0;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Tully-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Tully-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #D0D0D0;
+}
+.Tully-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #9C1919;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #0E0EB4 20%, rgba(255, 255, 255, 0.5) 30%, #0E0EB4 50%);
+  opacity: 0.75;
+  color: #9C1919;
+  border: 1em double #D0D0D0;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Tully-container .index-return {
+  color: #0E0EB4;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Tully-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#9C1919 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tully-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Tully-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0E0EB4 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tully-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Tully-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #D0D0D0;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #0E0EB4;
+}
+.Tully-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tully-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Tully-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#9C1919 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tully-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Tully-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tully-container .family-home {
+  color: #0E0EB4;
+  text-decoration: none;
+}
+.Tully-container .family-home:hover {
+  color: #9C1919;
+  box-shadow: inset 0 3em 0 0 #0E0EB4;
+}
+.Tully-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Tully-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Tully-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Tully-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Tully-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tully-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #D0D0D0;
+  width: 90%;
+}
+.Tully-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #D0D0D0;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #9C1919;
+  padding: 1em;
+  margin: 1em;
+}
+.Tully-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tully-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Tully-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #D0D0D0;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #9C1919;
+  aspect-ratio: 1/1.2;
+}
+.Tully-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Tyrell-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #A4580C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tyrell-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #A4580C;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Tyrell-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #A4580C;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Tyrell-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Tyrell-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #A4580C;
+}
+.Tyrell-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #FFE646;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #1A8E1A 20%, rgba(255, 255, 255, 0.5) 30%, #1A8E1A 50%);
+  opacity: 0.75;
+  color: #FFE646;
+  border: 1em double #A4580C;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Tyrell-container .index-return {
+  color: #1A8E1A;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Tyrell-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#FFE646 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tyrell-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Tyrell-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#1A8E1A 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tyrell-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Tyrell-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #A4580C;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #1A8E1A;
+}
+.Tyrell-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tyrell-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Tyrell-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#FFE646 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Tyrell-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Tyrell-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tyrell-container .family-home {
+  color: #1A8E1A;
+  text-decoration: none;
+}
+.Tyrell-container .family-home:hover {
+  color: #FFE646;
+  box-shadow: inset 0 3em 0 0 #1A8E1A;
+}
+.Tyrell-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Tyrell-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Tyrell-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Tyrell-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Tyrell-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Tyrell-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #A4580C;
+  width: 90%;
+}
+.Tyrell-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #A4580C;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FFE646;
+  padding: 1em;
+  margin: 1em;
+}
+.Tyrell-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Tyrell-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Tyrell-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #A4580C;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #FFE646;
+  aspect-ratio: 1/1.2;
+}
+.Tyrell-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Umber-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #B14245;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Umber-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #B14245;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Umber-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #B14245;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Umber-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Umber-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #B14245;
+}
+.Umber-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #C3C2C2;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #982023 20%, rgba(255, 255, 255, 0.5) 30%, #982023 50%);
+  opacity: 0.75;
+  color: #C3C2C2;
+  border: 1em double #B14245;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Umber-container .index-return {
+  color: #982023;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Umber-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C3C2C2 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Umber-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Umber-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#982023 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Umber-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Umber-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #B14245;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #982023;
+}
+.Umber-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Umber-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Umber-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C3C2C2 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Umber-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Umber-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Umber-container .family-home {
+  color: #982023;
+  text-decoration: none;
+}
+.Umber-container .family-home:hover {
+  color: #C3C2C2;
+  box-shadow: inset 0 3em 0 0 #982023;
+}
+.Umber-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Umber-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Umber-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Umber-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Umber-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Umber-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #B14245;
+  width: 90%;
+}
+.Umber-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #B14245;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #C3C2C2;
+  padding: 1em;
+  margin: 1em;
+}
+.Umber-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Umber-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Umber-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #B14245;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #C3C2C2;
+  aspect-ratio: 1/1.2;
+}
+.Umber-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.Westerling-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Westerling-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.Westerling-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #FFFFFF;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.Westerling-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.Westerling-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #FFFFFF;
+}
+.Westerling-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #C8C8C8;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #D4B96A 20%, rgba(255, 255, 255, 0.5) 30%, #D4B96A 50%);
+  opacity: 0.75;
+  color: #C8C8C8;
+  border: 1em double #FFFFFF;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.Westerling-container .index-return {
+  color: #D4B96A;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.Westerling-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C8C8C8 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Westerling-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.Westerling-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#D4B96A 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Westerling-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.Westerling-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #D4B96A;
+}
+.Westerling-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Westerling-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.Westerling-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#C8C8C8 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.Westerling-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.Westerling-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Westerling-container .family-home {
+  color: #D4B96A;
+  text-decoration: none;
+}
+.Westerling-container .family-home:hover {
+  color: #C8C8C8;
+  box-shadow: inset 0 3em 0 0 #D4B96A;
+}
+.Westerling-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Westerling-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.Westerling-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.Westerling-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.Westerling-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.Westerling-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #FFFFFF;
+  width: 90%;
+}
+.Westerling-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #FFFFFF;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #C8C8C8;
+  padding: 1em;
+  margin: 1em;
+}
+.Westerling-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Westerling-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.Westerling-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #C8C8C8;
+  aspect-ratio: 1/1.2;
+}
+.Westerling-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+.general-container h2 {
+  font-family: "GameOfThrones";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #ff9900;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.general-container h3 {
+  font-family: "Grogoth";
+  font-size: 3em;
+  text-align: center;
+  box-shadow: 0 4px 30px #ff9900;
+  padding: 0.1em;
+  margin: 0.5em;
+}
+.general-container p {
+  font-family: "Emperialisme";
+  font-size: 2em;
+  box-shadow: 0 4px 30px #ff9900;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.general-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.general-container li {
+  font-size: 1.5em;
+  font-family: "BlackCastle";
+  list-style: none;
+  padding: 0 1em;
+  box-shadow: 0 4px 30px #ff9900;
+}
+.general-container .stained-glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 40px #0004ff;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  background-image: linear-gradient(200deg, #ffd900 20%, rgba(255, 255, 255, 0.5) 30%, #ffd900 50%);
+  opacity: 0.75;
+  color: #0004ff;
+  border: 1em double #ff9900;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.general-container .index-return {
+  color: #ffd900;
+  font-size: 2em;
+  float: right;
+  margin: 0 0.5em;
+}
+.general-container .index-return svg {
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0004ff 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.general-container .index-return:hover {
+  animation: grow alternate infinite 0.5s;
+}
+.general-container .main-image-container {
+  padding: 1em 5em;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#ffd900 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.general-container .main-image-container .main-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 5em;
+}
+.general-container .main-image-container .main-image img {
+  display: inline-block;
+  height: 55vh;
+  max-height: 500px;
+  border: 1em double #ff9900;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px #ffd900;
+}
+.general-container .pictureFrame {
+  background-image: url("../images/picture-frame.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.general-container .pictureFrame .picture-single {
+  width: 66%;
+  aspect-ratio: 0.85;
+  margin: 5em;
+}
+.general-container .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-image: radial-gradient(#0004ff 0%, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0) 100%);
+}
+.general-container .banner-container .crest-single {
+  width: 25%;
+  margin: 1em;
+}
+.general-container .banner-container .crest-single:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.general-container .family-home {
+  color: #ffd900;
+  text-decoration: none;
+}
+.general-container .family-home:hover {
+  color: #0004ff;
+  box-shadow: inset 0 3em 0 0 #ffd900;
+}
+.general-container .occupying-house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.general-container .occupying-house .occupier {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.general-container .occupying-house .occupier .house-link {
+  width: 30%;
+  text-decoration: none;
+}
+.general-container .occupying-house .occupier .house-link .house-picture-link {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 1em;
+  color: rgba(245, 245, 255, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.general-container .house-link:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+.general-container .house-member-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 30px #ff9900;
+  width: 90%;
+}
+.general-container .house-member-container .house-member {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  border: 0.5em inset #ff9900;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #0004ff;
+  padding: 1em;
+  margin: 1em;
+}
+.general-container .house-member-container .house-member .individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.general-container .house-member-container .house-member .individual h2 {
+  font-size: 1em;
+}
+.general-container .house-member-container .house-member .individual img {
+  width: 100%;
+  border: 0.2em outset #ff9900;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px #0004ff;
+  aspect-ratio: 1/1.2;
+}
+.general-container .house-member:hover {
+  animation: tilt-shaking linear 1s infinite;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.form {
+  width: 400px;
+  max-width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form input, .form textarea {
+  width: 75%;
+  border: 1px solid black;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+.form button {
+  margin-top: 1rem;
+}
+
+.filter-container {
+  background: url("https://b.kisscc0.com/20180920/iaw/kisscc0-picture-frames-medieval-ornament-950-illustration-frame-1-5ba36645213e39.2758425615374352051362.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  width: 30vh;
+  margin: 20px 10px 20px 10px;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.filter-container button {
+  margin: 0px 0 5px 40px;
+  background-color: gold;
+  border-radius: 5px;
+  box-shadow: 5px 5px black;
+  width: 80px;
+  color: black;
+  margin-bottom: 10px;
+}
+.filter-container button:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+  transform: translate(5px, 5px);
+}
+
+.main-title {
+  margin: 40px 0 0 40px;
+  color: black;
+}
+
+.search-bar {
+  background-color: white;
+  margin: 10px 0 20px 40px;
+  width: 180px;
+}
+.search-bar:hover {
+  background-color: gold;
+}
+
+.drop {
+  margin: 3px 0 20px 40px;
+  width: 180px;
+  border-radius: 5px;
+}
+.drop:hover {
+  background-color: gold;
+  cursor: pointer;
+}
+
+.drop-title {
+  color: black;
+  margin: 0 0 0 40px;
+}
+
+.home {
+  background-color: goldenrod;
+  height: 140vh;
+  margin: 0;
+}
+.home .hero {
+  min-height: 92vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("https://j.gifs.com/NLgqyK.gif");
+  background: url("../assets/gotbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  justify-content: flex-end;
+}
+.home .hero .title {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .hero .title h2 {
+  font-size: 100px;
+  color: gold;
+  font-family: Emperialisme;
+}
+.home .hero .title h5 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.home .hero .home-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 0;
+  background-color: white;
+  height: 8vh;
+}
+.home .hero .home-nav .link {
+  color: goldenrod;
+  text-decoration: none;
+  font-weight: bold;
+}
+.home .hero .home-nav .link i {
+  font-size: 20px;
+}
+
+.info {
+  padding: 0;
+}
+.info h2 {
+  background-color: white;
+  color: rgb(99, 99, 99);
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.info .info-block {
+  padding: 0 20px 0 20px;
+}
+.info .info-block h4 {
+  font-size: 40px;
+}
+
+.input-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav-search {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  margin-left: 5px;
+  font-size: 1.15rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-icon {
+  color: royalblue;
+  margin-left: 0px;
+}
+
+.results-list {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #DDD;
+  border-radius: 10px;
+  max-height: 300px;
+}
+.results-list div {
+  height: 24px;
+  color: black;
+  padding: 0 40px;
+  border-radius: 10px;
+  margin-top: 0.5px;
+  box-shadow: 0px 0px 8px #ddd;
+}
+.results-list a {
+  text-decoration: none;
+}
+
+.create-drop {
+  width: 75%;
+  height: 40px;
+  margin: 10px 0 5px 0;
+  border-radius: 5px;
+}
+
+.create-submit:hover {
+  background-color: gold;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.form input {
+  border: 3px solid transparent;
+}
+
+.valid {
+  background-color: rgb(248, 227, 105);
+}
+
+.empty {
+  background-color: red;
+}
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  background-color: transparent;
+  justify-content: center;
+}
+.card-layout .card {
+  margin: 10px;
+  border-radius: 10px;
+  width: 230px;
+  height: 370px;
+  box-shadow: 1px 1px 1px 1px;
+}
+.card-layout .card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+.card-layout .card .card-img-top {
+  height: 200px;
+  width: 218px;
+  margin: 5px 0 5px 0;
+  border-radius: 10px;
+  align-self: center;
+  border: 2px solid goldenrod;
+}
+.card-layout .card .card-body {
+  background-color: rgb(248, 248, 255);
+  border-radius: 10px;
+  padding-top: 7px;
+  border: 2px solid goldenrod;
+  margin: 5px 0 5px 0;
+  width: 218px;
+  align-self: center;
+}
+.card-layout .card .card-body .card-title {
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 0;
+  background-color: rgb(248, 248, 255);
+}
+.card-layout .card .card-body .card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  margin: 0;
+  padding-bottom: 0.5em;
+  background-color: rgb(248, 248, 255);
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-layout .card .card-body .card-text h6 {
+  text-align: center;
+  margin-top: 7px;
+  font-weight: bold;
+}
+
+.house-card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  background-color: transparent;
+  width: 100%;
+}
+.house-card-layout .card {
+  margin: 15px 15px 15px 15px;
+  border-radius: 10px;
+  width: 230px;
+  height: 280px;
+  box-shadow: 1px 1px 1px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.house-card-layout .card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+.house-card-layout .card .card-img-top {
+  height: 170px;
+  width: 220px;
+  padding: 8px 0 5px 0;
+  border-radius: 10px;
+}
+.house-card-layout .card .card-body {
+  background: url("https://i.pinimg.com/originals/2f/9a/98/2f9a98ceaae39ffc206ae26f7bdf9e36.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  width: 230px;
+  color: black;
+}
+.house-card-layout .card .card-body .card-title {
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 0;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+.house-card-layout .card .card-body .card-text {
+  text-align: center;
+  margin: 0;
+  background-color: transparent;
+  font-weight: bold;
+}
+.house-card-layout .card .card-body .card-text h6 {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 0 30px 0 30px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.squish-house-card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  background-color: transparent;
+}
+.squish-house-card-layout .card {
+  margin: 10px 10px 0px 10px;
+  border-radius: 10px;
+  width: 228px;
+  height: 100px;
+  box-shadow: 1px 1px 1px 1px;
+}
+.squish-house-card-layout .card:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transform: translateY(-140px);
+}
+.squish-house-card-layout .card .card-img-top {
+  height: 150px;
+  width: 228px;
+  padding: 5px 0 5px 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  align-self: center;
+  background-color: white;
+}
+.squish-house-card-layout .card .card-body {
+  background: url("https://i.pinimg.com/originals/2f/9a/98/2f9a98ceaae39ffc206ae26f7bdf9e36.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 230px;
+  color: black;
+  align-self: center;
+}
+.squish-house-card-layout .card .card-body .card-title {
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 0;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+.squish-house-card-layout .card .card-body .card-text {
+  text-align: center;
+  margin: 0;
+  background-color: transparent;
+  font-weight: bold;
+}
+.squish-house-card-layout .card .card-body .card-text h6 {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 0 30px 0 30px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@font-face {
+  font-family: "GameOfThrones";
+  src: url("../styles/fonts/GameofThrones.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grogoth";
+  src: url("../styles/fonts/Grogoth.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Emperialisme";
+  src: url("../styles/fonts/Emperialisme.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Serkan";
+  src: url("../styles/fonts/Serkan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BlackCastle";
+  src: url("../styles/fonts/BlackCastle.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.character-list-container {
+  display: flex;
+  flex-direction: column;
+}
+.character-list-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.character-list-container .character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.character-list-container .character-list img {
+  height: 100px;
+  width: 100px;
+}
+.character-list-container .character-list p {
+  text-decoration: none;
+}
+
+.map-container {
+  position: relative;
+}
+.map-container .map-popup {
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+}
+.map-container .map-popup h1 {
+  width: 100%;
+}
+.map-container .map-popup img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h4 {
+  font-family: Emperialisme;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("../images/embers.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgba(245, 245, 255, 0.8);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}/*# sourceMappingURL=main.css.map */

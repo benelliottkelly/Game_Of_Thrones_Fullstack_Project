@@ -24,20 +24,15 @@ export default function AllCharacters() {
 
     return (
         <>
-        <div className="characters-container">
-            <h1>All Characters</h1>
+        <div className="color-container">
+            <h1 className="index-h1">All Characters</h1>
             <Container fluid>
-                <Row className="filter-row">
-                    <Col
-                        xs={12}
-                        md={6}
-                        lg={3} 
-                        className="filter">
-                            <Filter characters={characters} setFilteredCharacters={setFilteredCharacters} />
-                            <div className="vert-banner"></div>
-                            </Col>
                     <Col>
-                        <section className="card-layout">
+                    <Row className='house-org'>
+                        <section className="char-card-layout">
+                            <div>
+                        <Filter characters={characters} setFilteredCharacters={setFilteredCharacters} />
+                        </div>
                             {filteredCharacters.map(character => {
                                 return (
                                     <>
@@ -59,8 +54,8 @@ export default function AllCharacters() {
                             })
                             }
                         </section>
+                        </Row>
                     </Col>
-                </Row>
             </Container >
             </div>
         </>

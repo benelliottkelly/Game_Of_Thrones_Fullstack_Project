@@ -27,16 +27,17 @@ export default function AllPlaces() {
 
   return (
     <>
-      <div className='places-container'>
-        <h1>All Places</h1>
+      <div className='color-container'>
+        <h1 className="index-h1">All Places</h1>
 
         <Container fluid>
             <Col>
+            
               <Row>
                 <div className="map-filt">
                 <Col
               xs={12}
-              md={6}
+              md={4}
               lg={3}
               className="filter">
               <Filter places={places} setFilteredPlaces={setFilteredPlaces} filteredPlaces={filteredPlaces} />

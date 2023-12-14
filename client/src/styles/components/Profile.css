@@ -1,9 +1,7 @@
-@import '../global/variables.scss';
-
 .profile-container {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   height: 80vh;
   padding-right: 0;
   padding-left: 0;
@@ -16,12 +14,10 @@
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
-  border: 0 solid rgba(0,0,0,.125);
-  border-radius: .25rem;
-  // max-width: 300px;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
   align-items: center;
   background-color: black;
-  
 }
 
 .card--body {
@@ -36,37 +32,34 @@
   color: white;
 }
 
-
-
 .account-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  
 }
 
 .character-list-container {
   display: flex;
   flex-direction: column;
-  h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .character-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 40vw;
-    align-self:center;
-    img {
-      height: 100px;
-      width: 100px;
-    }
-    p {
-      text-decoration: none;
-    }
-  }
 }
+.character-list-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.character-list-container .character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 40vw;
+  align-self: center;
+}
+.character-list-container .character-list img {
+  height: 100px;
+  width: 100px;
+}
+.character-list-container .character-list p {
+  text-decoration: none;
+}/*# sourceMappingURL=Profile.css.map */

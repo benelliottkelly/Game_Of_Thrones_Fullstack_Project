@@ -30,7 +30,7 @@ export const login = async (req, res) => {
         // Consists of the headers, payload, and secret
         // Add payload as first argument - payload has key: value pairs, the sub is most important
         // Add secret to second argument - its a string passwqord used to encrypt the third part of the token
-        const token = jwt.sign({ sub: userToLogin._id }, process.env.SECRET, { expiresIn: '5000' })
+        const token = jwt.sign({ sub: userToLogin._id }, process.env.SECRET, { expiresIn: '1d' })
 
         console.log('Password match, user validated')
         return res.status(202).json({ message: `Welcome back to the database ${userToLogin.username}`, token: token })
@@ -43,7 +43,7 @@ export const login = async (req, res) => {
 
 export const getProfile = async (req, res) => {
   try {
-      const userId = req.params.userId // Get the user ID from request params
+      const userId = req.currentUser // Get the user ID from req.currentUser
       if (!mongoose.Types.ObjectId.isValid(userId)) {
         return res.status(400).json({ message: 'Invalid user ID format' })
       }
@@ -63,7 +63,7 @@ export const getProfile = async (req, res) => {
 
 export const updateUserImage = async (req, res) => {
   try{
-    const userId = req.params.userId
+    const userId = req.currentUser
     if (!mongoose.Types.ObjectId.isValid(userId)) {
       return res.status(400).json({ message: 'Invalid user ID format' })
   }
