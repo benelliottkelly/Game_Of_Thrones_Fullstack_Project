@@ -18,7 +18,7 @@ import {
   getSinglePlace
 } from '../controllers/places.js'
 
-import { register, login, getProfile } from '../controllers/users.js'
+import { register, login, getProfile, updateUserImage } from '../controllers/users.js'
 
 import secureRoute from './secureRoute.js'
 
@@ -54,5 +54,6 @@ router.route('/register')
 
 router.route('/users/:userId')
   .get(getProfile)
+  .put(secureRoute, updateUserImage)
 
 export default router

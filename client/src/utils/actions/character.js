@@ -2,6 +2,8 @@ import axios from 'axios'
 import { formToObj, getToken } from '../helpers/common'
 import { redirect } from 'react-router-dom'
 
+import { updateUserImage } from './user'
+
 export async function createCharacter(request) {
     const data = await formToObj(request)
     return await axios.post(`/api/characters`, data, {
