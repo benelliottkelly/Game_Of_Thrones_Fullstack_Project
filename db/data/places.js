@@ -14,8 +14,8 @@ export default [
     region: "The North",
     image: "https://awoiaf.westeros.org/images/thumb/a/ac/Ted_Nasmith_A_Song_of_Ice_and_Fire_Winterfell.jpg/450px-Ted_Nasmith_A_Song_of_Ice_and_Fire_Winterfell.jpg",
     occupiedBy: [
-      "Stark",
-      "Bolton"
+      "Bolton",
+      "Stark"
     ]
   },
   {
