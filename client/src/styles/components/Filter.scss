@@ -5,11 +5,12 @@
     background-position: center;
     height: 40vh;
     width: 30vh;
-    margin: 20px 10px 20px 10px;
-    margin-top: 18px;
+    margin: 20px 0px 20px 10px;
     display: flex;
     flex-direction: column;
+    align-self: center;
     position: sticky;
+    top: 0;
     button {
         margin: 0px 0 5px 40px;
         background-color: gold;
@@ -26,6 +27,25 @@
 
     }
 }
+
+main {
+    margin: 0;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+
+// @media (min-width: 1800px) {
+//     .filter-container {
+//         margin-top: 550px;
+//         margin-left: 60px;
+//     }
+// }
 
 .main-title {
     margin: 40px 0 0 40px;

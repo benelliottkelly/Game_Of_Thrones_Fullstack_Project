@@ -24,7 +24,12 @@ export default function SingleHouse() {
   return (
     <Container fluid className={`${houseName}-container`}>
       <Link className="index-return" to={`/houses`}><GiCrossedSwords /></Link>
-      <h2>{`House ${houseName}`}</h2>
+      {houseName === 'Unsullied' || houseName === 'Independent' || houseName === 'Dothraki' || houseName === "Night's Watch" || houseName === 'Free Folk' ? (
+        <h2>{houseName}</h2>
+      ) : (
+        <h2>{`House ${houseName}`}</h2>
+       )}
+
       <Row className="main-image-container" xs={12} md={12} lg={12}>
         <Col xs={12} md={12} lg={12}>
           <div className="main-image">
@@ -37,41 +42,42 @@ export default function SingleHouse() {
           <h2>{motto}</h2>
         </Col>
         <Col className="column" xs={12} md={6} lg={6}>
-          {places.length > 0 && <h3>Family home: {<Link onClick={scrollUp} className="family-home" to={`/places/${places[0].id}`}>{ places[0].name }</Link>} </h3>}
+          {places.length > 0 && 
+          <h3>Home: {<Link onClick={scrollUp} className="family-home" to={`/places/${places[0].id}`}>{places[0].name}</Link>} </h3>}
           <p>{description}</p>
         </Col>
       </Row>
       <Row className="p-5" xs={12} md={12} lg={12}>
-          <Col>
-            {characters.length > 0 &&
-              <div className="stained-glass">
-                <h3>House Members</h3>
-                <div className="house-member-container">
-                  {characters.map((character, idx) => {
-                    return <Link onClick={scrollUp} className="house-member" key={idx} to={`/characters/${character.id}`}>
-                      <div>
-                        <div className="individual">
-                          <h2>{`${character.firstName} ${character.lastName}`}</h2>
-                          <img className="individual-picture" src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
-                        </div>
+        <Col>
+          {characters.length > 0 &&
+            <div className="stained-glass">
+              <h3>House Members</h3>
+              <div className="house-member-container">
+                {characters.map((character, idx) => {
+                  return <Link onClick={scrollUp} className="house-member" key={idx} to={`/characters/${character.id}`}>
+                    <div>
+                      <div className="individual">
+                        <h2>{`${character.firstName} ${character.lastName}`}</h2>
+                        <img className="individual-picture" src={character.image} alt={`Image of ${character.firstName} ${character.lastName}`} />
                       </div>
-                    </Link>
-                  })}
-                </div>
+                    </div>
+                  </Link>
+                })}
               </div>
-            }
-          </Col>
-        </Row>
-        <Row className="p-5" xs={12} md={12} lg={12}>
-          <div className="stained-glass">
-            <h3>Bannermen</h3>
-            <ul>
-              {bannermen.length > 0 && bannermen.map((banner, idx) => {
-                return <li key={idx}>{banner}</li>
-              })}
-            </ul>
-          </div>
-        </Row>
+            </div>
+          }
+        </Col>
+      </Row>
+      <Row className="p-5" xs={12} md={12} lg={12}>
+        <div className="stained-glass">
+          <h3>Bannermen</h3>
+          <ul>
+            {bannermen.length > 0 && bannermen.map((banner, idx) => {
+              return <li key={idx}>{banner}</li>
+            })}
+          </ul>
+        </div>
+      </Row>
     </Container>
   )
 }

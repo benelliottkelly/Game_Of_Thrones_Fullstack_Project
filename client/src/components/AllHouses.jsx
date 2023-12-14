@@ -37,10 +37,10 @@ export default function AllHouses() {
 
     return (
         <>
-            <div className='houses-container'>
+            <div className='color-container'>
                 <div className="header">
                     <button onClick={changeView}>Change View</button>
-                    <h1>All Houses</h1>
+                    <h1 className="index-h1">All Houses</h1>
                 </div>
 
                 <Container fluid>
@@ -48,7 +48,9 @@ export default function AllHouses() {
                         <Row className="house-org">
         
                                 <section className="house-card-layout" id="view">
+                                    <div>
                                     <Filter houses={houses} setfilteredHouses={setfilteredHouses} />
+                                    </div>
                                     {filteredHouses.map(house => {
                                         return (
                                             <>
