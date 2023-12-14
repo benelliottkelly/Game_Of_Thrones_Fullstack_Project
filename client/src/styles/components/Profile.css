@@ -7,7 +7,7 @@
   padding-left: 0;
 }
 
-.card {
+.card-two {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   background-color: black;
 }
 
-.card-body {
+.card--body {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1rem;

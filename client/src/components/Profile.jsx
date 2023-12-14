@@ -55,8 +55,8 @@ export default function Profile(){
 
 
   return (
-    <>  <div className="card">
-          <div className="card-body">
+    <>  <div className="card-two">
+          <div className="card--body">
             <div className="account-info">
               <h2>Account Info</h2>
               {userInfo.image ? (
