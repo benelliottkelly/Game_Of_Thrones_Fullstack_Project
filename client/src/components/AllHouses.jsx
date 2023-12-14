@@ -44,39 +44,37 @@ export default function AllHouses() {
                 </div>
 
                 <Container fluid>
-                    <Row className="filter-row">
-                        <Col
-                            xs={4}
-                            md={3}
-                            lg={3}
-                            className="filter">
-                            <Filter houses={houses} setfilteredHouses={setfilteredHouses} />
-                            <div className="vert-banner"></div>
-                        </Col>
-                        <Col>
-                            <section className="house-card-layout" id="view">
-                                {filteredHouses.map(house => {
-                                    return (
-                                        <>
-                                            <Link onClick={scrollUp} key={house.id} to={`/houses/${house.id}`} style={{
-                                                textDecoration: 'none',
-                                                color: 'black'
-                                            }}>
-                                                <Card className="card" id="house-card">
-                                                    <Card.Img variant="top" className="card-img-top" src={house.crest} alt="Crest Image" />
-                                                    <Card.Body className="card-body">
-                                                        <Card.Title className="card-title">{house.houseName}</Card.Title>
-                                                        <Card.Text className="card-text">{house.motto}</Card.Text >
-                                                    </Card.Body>
-                                                </Card>
-                                            </Link>
-                                        </>
-                                    )
-                                })
-                                }
-                            </section>
-                        </Col>
-                    </Row>
+                    <Col>
+                        <Row className="house-org">
+        
+                                <section className="house-card-layout" id="view">
+                                    <Filter houses={houses} setfilteredHouses={setfilteredHouses} />
+                                    {filteredHouses.map(house => {
+                                        return (
+                                            <>
+                                                <Link onClick={scrollUp} key={house.id} to={`/houses/${house.id}`} style={{
+                                                    textDecoration: 'none',
+                                                    color: 'black'
+                                                }}>
+                                                    <Card className="card" id="house-card">
+                                                        <Card.Img variant="top" className="card-img-top" src={house.crest} alt="Crest Image" />
+                                                        <Card.Body className="card-body">
+                                                            <Card.Title className="card-title">{house.houseName}</Card.Title>
+                                                            <Card.Text className="card-text"><h6>{house.motto}</h6></Card.Text >
+                                                        </Card.Body>
+                                                    </Card>
+                                                </Link>
+                                            </>
+                                        )
+                                    })
+                                    }
+                                </section>
+                            </Row>
+
+
+                  
+
+                    </Col>
                 </Container>
             </div>
         </>
