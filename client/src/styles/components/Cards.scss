@@ -2,6 +2,14 @@ $house-card-color: transparent;
 $border-radius: 10px;
 $card-color: rgb(248, 248, 255);
 
+.card-inner {
+    font-weight: bold;
+    text-align: left;
+}
+
+.card-inner-inner {
+    text-align: left;
+}
 
 .card-layout {
     display: flex;
@@ -60,12 +68,7 @@ $card-color: rgb(248, 248, 255);
                 height: 105px;
                 overflow: hidden;
                 text-overflow: ellipsis;
-
-                h6 {
-                    text-align: center;
-                    margin-top: 7px;
-                    font-weight: bold;
-                }
+                text-align: center;
             }
         }
     }
@@ -131,6 +134,7 @@ $card-color: rgb(248, 248, 255);
                 height: 104px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+    
 
                 .card-inner {
                     text-align: center;
@@ -198,12 +202,11 @@ $card-color: rgb(248, 248, 255);
                 margin: 0;
                 background-color: $house-card-color;
                 font-weight: bold;
+                padding: 20px 20px 0 20px;
 
                 .card-inner {
-                    text-align: center;
                     margin-top: 15px;
                     font-weight: bold;
-                    padding: 0 30px 0 30px;
                     text-decoration: underline;
                     text-decoration-thickness: 2px;
                 }
