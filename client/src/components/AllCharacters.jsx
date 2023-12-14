@@ -13,6 +13,10 @@ export default function AllCharacters() {
 
     const people = useLoaderData()
 
+    function scrollUp() {
+        document.documentElement.scrollTop = 0
+      }
+
     useEffect(() => {
         setCharacters(people)
         console.log(characters)
@@ -20,6 +24,7 @@ export default function AllCharacters() {
 
     return (
         <>
+        <div className="characters-container">
             <h1>All Characters</h1>
             <Container fluid>
                 <Row className="filter-row">
@@ -36,7 +41,7 @@ export default function AllCharacters() {
                             {filteredCharacters.map(character => {
                                 return (
                                     <>
-                                        <Link key={character.id} to={`/characters/${character.id}`} style={{
+                                        <Link onClick={scrollUp} key={character.id} to={`/characters/${character.id}`} style={{
                                             textDecoration: 'none',
                                             color: 'black'
                                         }}>
@@ -44,7 +49,8 @@ export default function AllCharacters() {
                                                 <Card.Img variant="top" className="card-img-top" src={character.image} alt="Crest Image" />
                                                 <Card.Body className="card-body">
                                                     <Card.Title className="card-title">{`${character.firstName} ${character.lastName}`}</Card.Title>
-                                                    <Card.Text className="card-text">{character.house}</Card.Text >
+                                                    <Card.Text className="card-text"><h6>{character.house}</h6>
+                                                    {character.biography}</Card.Text >
                                                 </Card.Body>
                                             </Card>
                                         </Link>
@@ -56,6 +62,7 @@ export default function AllCharacters() {
                     </Col>
                 </Row>
             </Container >
+            </div>
         </>
     )
 }
