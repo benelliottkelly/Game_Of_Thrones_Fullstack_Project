@@ -35,6 +35,8 @@ export function activeUser(){
   if (exp > now) {
     console.log(payload.sub)
     return payload.sub
+  } else {
+    removeToken()
   }
 
   // Validate expiry date (payload.exp) by checking the number is greater than the date right now
