@@ -1,26 +1,45 @@
-import { useLoaderData, Link, useActionData } from "react-router-dom"
+import { useLoaderData, Link, Form, useFetcher } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
+
 
 // Bootstrap components
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { Form } from "react-router-dom"
+
 
 import { activeUser } from "../utils/helpers/common"
+// import { updateUserImage } from "../utils/actions/user"
+import { getToken, formToObj } from "../utils/helpers/common"
+
+export const handleUpload = async ({request}) => {
+  try {
+    const data = await formToObj(request)
+    console.log(data)
+    return await axios.put(`/api/users`, data, { headers: { Authorization: `Bearer ${getToken()}` }})
+    
+  } catch(error) {
+    console.log(error)
+  }
+}
 
 
 export default function Profile(){
   console.log('Hit profile route')  
-  
+
+  const userId = activeUser()
+  console.log(userId)
   // On initial render
   const userInfo = useLoaderData()
-  const { userId, username, email, characterCreated } = userInfo
+  const fetcher = useFetcher()
+  const { username, email, characterCreated, image } = userInfo
 
-  const res = useActionData()
+  // const res = useActionData()
 
-  const [userImage, setUserImage] = useState(null)
+  const [formData, setFormData] = useState({
+    image: ''
+  })
 
 
 
@@ -32,31 +51,14 @@ export default function Profile(){
     const data = new FormData()
     data.append('file', file)
     data.append('upload_preset', preset)
-    
-    try{
-      const response = await axios.post(endpoint, data);
-      const secureUrl = response.data.secure_url;
 
-      setUserImage(secureUrl)
-      console.log(secureUrl)
-      return secureUrl
-    } catch(error) {
+    try {
+      const response = await axios.post(endpoint, data)
+      const secureUrl = response.data.secure_url
+
+      setFormData({ image: secureUrl })      
+    } catch (error) {
       console.error('Error uploading image', error)
-    }
-
-  }
-
-  const handleSubmit = async (event) => {
-
-    const imageUrl = await handleImageUpload(event)
-
-    if(imageUrl) {
-      const formData = {
-        image: imageUrl
-      }
-      console.log('Form submitted with image URL:', formData)
-    } else {
-      console.error('Failed to upload image. Cannot submit form.');
     }
   }
 
@@ -70,12 +72,15 @@ export default function Profile(){
             <div className="account-info">
               <h1>Account Info</h1>
               {userInfo.image ? (
-                <img src={URL.createObjectURL(userImage)} alt="User" style={{ maxWidth: "150px", maxHeight: "150px" }} />
+                <img src={userInfo.image} alt="User" style={{ maxWidth: "150px", maxHeight: "150px" }} />
               ) : (
-                <Form className="form" method="PUT">
-                <input type="file" onChange={handleImageUpload} accept="image/*" />
-                <input className="create-submit" type="submit" defaultValue="Profile Picture" />
-                </Form>
+                <>
+                  <input type="file" onChange={handleImageUpload} accept="image/*" />
+                  <Form method="POST">
+                    <input name="image" type="hidden" value={formData.image} />
+                    <input className="create-submit" type="submit" />
+                  </Form>
+                </>
               )}
               <h2>Username: {username}</h2>
               <h2>Email: {email}</h2>

@@ -30,6 +30,7 @@ import { characterLoader, houseLoader, placeLoader, singleCharacterLoader, singl
 import { loginUser, registerUser } from './utils/actions/auth.js'
 import { createCharacter, updateCharacter, deleteCharacter } from './utils/actions/character.js';
 import { updateUserImage } from './utils/actions/user.js';
+import { handleUpload } from './components/Profile.jsx';
 
 // Browser Router
 const router = createBrowserRouter([
@@ -99,8 +100,8 @@ const router = createBrowserRouter([
       {
         path: '/users/:userId',
         element: <Profile />,
-        loader: async ({ params }) => profileLoader(params.userId),
-        action: async ({ params }) => updateUserImage(params.userId)
+        loader: profileLoader,
+        action: handleUpload,
         // Add action for edit character
       }
     ]

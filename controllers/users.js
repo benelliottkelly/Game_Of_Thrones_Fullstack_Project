@@ -43,7 +43,7 @@ export const login = async (req, res) => {
 
 export const getProfile = async (req, res) => {
   try {
-      const userId = req.params.userId // Get the user ID from request params
+      const userId = req.currentUser // Get the user ID from req.currentUser
       if (!mongoose.Types.ObjectId.isValid(userId)) {
         return res.status(400).json({ message: 'Invalid user ID format' })
       }
@@ -63,7 +63,7 @@ export const getProfile = async (req, res) => {
 
 export const updateUserImage = async (req, res) => {
   try{
-    const userId = req.params.userId
+    const userId = req.currentUser
     if (!mongoose.Types.ObjectId.isValid(userId)) {
       return res.status(400).json({ message: 'Invalid user ID format' })
   }
