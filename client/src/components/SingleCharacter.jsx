@@ -97,7 +97,7 @@ export default function SingleCharacter() {
 
         </div>
         <Row className="split-page" xs={12} md={12} lg={12}>
-          <Col className="column" xs={12} md={4} lg={4}>
+          <Col className="column single-character-hero" xs={12} md={4} lg={4}>
             <div className="pictureFrame">
               <img className='picture-single' src={image} alt={`Image of ${firstName} ${lastName}`} />
             </div>
@@ -106,7 +106,7 @@ export default function SingleCharacter() {
             <div className="stained-glass">
               <h2>{firstName} {lastName}</h2>
               <h3>House {house}</h3>
-              <h4>Home: {hometown}</h4>
+              <p>Home: {hometown}</p>
               <article className="description">
                 <h3>Bio:</h3>
                 <p>{biography}</p>
@@ -121,7 +121,7 @@ export default function SingleCharacter() {
             </Link>
           </Col>
         </Row>
-        <Row className="p-5" xs={12} md={12} lg={12}>
+        <Row xs={12} md={12} lg={12}>
           <div className="stained-glass">
             <h3>Key Battles</h3>
             <ul>
@@ -131,7 +131,7 @@ export default function SingleCharacter() {
             </ul>
           </div>
         </Row>
-        <Row className="p-5" xs={12} md={12} lg={12}>
+        <Row xs={12} md={12} lg={12}>
           <Col>
             {relationships.length > 0 &&
               <div className="stained-glass">

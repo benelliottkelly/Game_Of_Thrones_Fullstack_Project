@@ -41,7 +41,7 @@ export default function SingleHouse() {
           <p>{description}</p>
         </Col>
       </Row>
-      <Row className="p-5" xs={12} md={12} lg={12}>
+      <Row xs={12} md={12} lg={12}>
           <Col>
             {characters.length > 0 &&
               <div className="stained-glass">
@@ -62,7 +62,7 @@ export default function SingleHouse() {
             }
           </Col>
         </Row>
-        <Row className="p-5" xs={12} md={12} lg={12}>
+        <Row xs={12} md={12} lg={12}>
           <div className="stained-glass">
             <h3>Bannermen</h3>
             <ul>

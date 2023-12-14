@@ -36,7 +36,7 @@ export default function SinglePlace() {
           </div>
         </Col>
       </Row>
-      <Row className="p-5" xs={12} md={12} lg={12}>
+      <Row xs={12} md={12} lg={12}>
           <Col>
             {occupyingHouses.length > 0 &&
               <div className="occupying-house">
@@ -56,7 +56,7 @@ export default function SinglePlace() {
             }
           </Col>
         </Row>
-        <Row className="p-5" xs={12} md={12} lg={12}>
+        <Row xs={12} md={12} lg={12}>
           <Col>
             {charactersInPlace.length > 0 &&
               <div className="stained-glass">

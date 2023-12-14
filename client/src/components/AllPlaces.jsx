@@ -57,7 +57,7 @@ export default function AllPlaces() {
                             <Card.Img variant="top" className="card-img-top" src={place.image} alt="Crest Image" />
                             <Card.Body className="card-body">
                               <Card.Title className="card-title">{place.name}</Card.Title>
-                              <Card.Text className="card-text"><h6>{place.region}</h6>{place.description}</Card.Text >
+                              <Card.Text className="card-text"><span className='card-inner'>{place.region}</span>{place.description}</Card.Text >
                             </Card.Body>
                           </Card>
                         </Link>
