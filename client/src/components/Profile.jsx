@@ -1,15 +1,8 @@
-import { useLoaderData, Link, Form, useFetcher } from "react-router-dom"
+import { useLoaderData, Link, Form } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
-
-
-// Bootstrap components
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
-
 import { activeUser } from "../utils/helpers/common"
+
 // import { updateUserImage } from "../utils/actions/user"
 import { getToken, formToObj } from "../utils/helpers/common"
 
@@ -28,11 +21,8 @@ export const handleUpload = async ({request}) => {
 export default function Profile(){
   console.log('Hit profile route')  
 
-  const userId = activeUser()
-  console.log(userId)
   // On initial render
   const userInfo = useLoaderData()
-  const fetcher = useFetcher()
   const { username, email, characterCreated, image } = userInfo
 
   // const res = useActionData()
@@ -65,12 +55,10 @@ export default function Profile(){
 
 
   return (
-    <>
-      <Container fluid className="profile-container">
-        <Row>
-          <Col sm="4">
+    <>  <div className="card">
+          <div className="card-body">
             <div className="account-info">
-              <h1>Account Info</h1>
+              <h2>Account Info</h2>
               {userInfo.image ? (
                 <img src={userInfo.image} alt="User" style={{ maxWidth: "150px", maxHeight: "150px" }} />
               ) : (
@@ -82,11 +70,11 @@ export default function Profile(){
                   </Form>
                 </>
               )}
-              <h2>Username: {username}</h2>
-              <h2>Email: {email}</h2>
-              </div>
-          </Col>
-          <Col sm="8">
+              <p>Username: {username}</p>
+              <p>Email: {email}</p>
+            </div>
+          </div>
+        </div>      
           <div className="character-list-container">
             <h2>Characters Created</h2>
             <div className="character-list">
@@ -100,9 +88,6 @@ export default function Profile(){
               ))}
             </div>
           </div>
-          </Col>
-        </Row>
-      </Container>
     </>
   )
 

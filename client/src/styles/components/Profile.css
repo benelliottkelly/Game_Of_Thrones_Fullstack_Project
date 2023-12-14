@@ -3,6 +3,33 @@
   align-items: center;
   justify-content: center;
   height: 80vh;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  align-items: center;
+  background-color: black;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+  align-self: center;
+  justify-self: center;
+  max-width: 300px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
 }
 
 .account-info {
@@ -26,6 +53,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 40vw;
+  align-self: center;
 }
 .character-list-container .character-list img {
   height: 100px;
