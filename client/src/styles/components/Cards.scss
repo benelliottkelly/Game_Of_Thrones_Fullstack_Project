@@ -4,12 +4,8 @@ $card-color: rgb(248, 248, 255);
 
 .card-inner {
     font-weight: bold;
-    text-align: left;
 }
 
-.card-inner-inner {
-    text-align: left;
-}
 
 .card-layout {
     display: flex;
@@ -65,10 +61,11 @@ $card-color: rgb(248, 248, 255);
                 -webkit-line-clamp: 4;
                 padding-bottom: 5px;
                 background-color: $card-color;
-                height: 105px;
+                height: 100px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 text-align: center;
+                align-self: center;
             }
         }
     }
@@ -131,9 +128,10 @@ $card-color: rgb(248, 248, 255);
                 margin: 0;
                 padding-bottom: 0.5em;
                 background-color: $card-color;
-                height: 104px;
+                height: 100px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                text-align: center;
     
 
                 .card-inner {
