@@ -1,5 +1,15 @@
 @import '../global/variables.scss';
 
+footer {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+
 .home {
     background-color: goldenrod;
     height: 140vh;
