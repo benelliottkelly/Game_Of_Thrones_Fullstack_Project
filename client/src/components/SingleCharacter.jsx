@@ -110,7 +110,6 @@ export default function SingleCharacter() {
       ) : (
         <h3>{`House ${house}`}</h3>
        )}
-              <h3>House {house}</h3>
               <p>Home: {hometown}</p>
               <article className="description">
                 <h3>Bio:</h3>
