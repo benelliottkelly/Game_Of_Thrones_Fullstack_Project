@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx nodemon index.js",
-    "seed": "node db/seeds.js"
+    "seed": "node db/seeds.js",
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm i --only=dev && npm i && npm run build"
   },
   "keywords": [],
   "author": "",
