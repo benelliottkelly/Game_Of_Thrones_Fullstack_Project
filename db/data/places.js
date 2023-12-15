@@ -392,5 +392,14 @@ export default [
     occupiedBy: [
       "Dondarrion"
     ]
+  },
+  {
+    name: "SEI LDN 76",
+    description: "A box full of magic pixies that carrying out 'coding' tasks in the background whenever you tpye something in. Usually they do good work but decide to do whatever they want whenever CSS is involved",
+    region: "Online",
+    image: "https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/pc_ver_1.png",
+    occupiedBy: [
+      "Assembly"
+    ]
   }
 ]

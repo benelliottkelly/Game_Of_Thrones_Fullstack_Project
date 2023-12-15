@@ -157,10 +157,12 @@
   .family-home {
     color: $primary;
     text-decoration: none;
+    text-shadow: -1px -1px 0 $tertiary, 1px -1px 0 $tertiary, -1px 1px 0 $tertiary, 1px 1px 0 $tertiary;
   }
   .family-home:hover {
     color: $secondary;
     box-shadow: inset 0 3em 0 0 $primary;
+    text-shadow: none;
   }
   .occupying-house {
     @include flex-center(column);
@@ -272,6 +274,11 @@
 
 .Arryn-container {
   @include houseColours(#0f86e1, #FCFCFC, #1c517c);
+  @include smallScreens()
+}
+
+.Assembly-container {
+  @include houseColours(red, white, black);
   @include smallScreens()
 }
 

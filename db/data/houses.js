@@ -551,7 +551,19 @@ export default [
         bannermen: [
             "No noteable bannermen, the Unsullied are loyal to Daenerys Targaryen"
         ]
+    },
+    {
+        houseName: "Assembly",
+        motto: "Oh and one more thing",
+        crest: "https://seeklogo.com/images/G/general-assembly-logo-D5C634F07A-seeklogo.com.png",
+        description: "House Assembly, a stronghold of innovation, wields scrolls and symbols of tech and design on its banner. Masters in coding, data, and strategy, they nurture minds for the ever-evolving modern world, crafting graduates into digital wizards shaping the realms of tomorrow.",
+        notableBattles: [
+            "Battle of keeping students cameras on",
+            "Battle of install-fest",
+            "Battle of keeping Sam's heating on"
+        ],
+        bannermen: [
+            "ChatGPT"
+        ]
     }
-
-    
 ]
