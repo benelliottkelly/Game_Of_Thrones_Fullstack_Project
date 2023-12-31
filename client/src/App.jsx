@@ -8,7 +8,6 @@ import NavbarFunction from './components/Nav'
 
 function App() {
   const navigation = useNavigation()
-  console.log(navigation.state)
   return (
     <>
       <NavbarFunction />

@@ -19,7 +19,6 @@ export default function AllCharacters() {
 
     useEffect(() => {
         setCharacters(people)
-        console.log(characters)
     }, [people, characters])
 
     return (

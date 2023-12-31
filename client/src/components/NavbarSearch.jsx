@@ -12,9 +12,14 @@ export default function NavBarSearch(){
   const [ results, setResults ] = useState([])
   const [ error, setError ] = useState(null)
 
+  const API_URL = process.env.NODE_ENV === 'production'
+  ? 'https://game-of-thrones-fullstack-9f43f1202e82.herokuapp.com/'
+  : 'http://localhost:3000/api/';
+
   const fetchData = async (endpoint, value) => {
     try {
-      const response = await fetch (`http://localhost:3000/api/${endpoint}`)
+      // const response = await fetch (`http://localhost:3000/api/${endpoint}`)
+      const response = await fetch(`${API_URL}${endpoint}`); // Updated URL here
       if (!response.ok) {
         throw new Error(`Network response for ${endpoint} was not ok.`)
       }
@@ -63,7 +68,6 @@ export default function NavBarSearch(){
       ])
 
       const combinedResults = [...houses, ...places, ...characters]
-      console.log(combinedResults)
       setResults(combinedResults)
       setError(null)
     } catch(error) {

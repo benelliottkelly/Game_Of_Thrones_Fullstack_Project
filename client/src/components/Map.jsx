@@ -25,8 +25,6 @@ export default function Map() {
   }
 
   function showPopup(e) {
-    console.log(e)
-    console.log((e.nativeEvent.offsetX) + 10, (e.nativeEvent.offsetY) + 10)
     setDisplay("flex")
     if(e.target.className.baseVal === "qarth") {
       setXCoord((e.nativeEvent.offsetX) *0.75)
@@ -35,8 +33,8 @@ export default function Map() {
       setXCoord((e.nativeEvent.offsetX) + 10)
       setYCoord((e.nativeEvent.offsetY) + 10)
     }
-    const markerClicked = e.target.className.baseVal
-    const pattern = new RegExp(markerClicked, 'i')
+    const markerHovered = e.target.className.baseVal
+    const pattern = new RegExp(markerHovered, 'i')
     if (places) {
       const nameMatch = places.filter(place => {
         return pattern.test((place.name).replace(/[^\w\s]|_/g, "").replace(/\s+/g, ""))

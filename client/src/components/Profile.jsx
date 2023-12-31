@@ -9,9 +9,7 @@ import { getToken, formToObj } from "../utils/helpers/common"
 export const handleUpload = async ({request}) => {
   try {
     const data = await formToObj(request)
-    console.log(data)
     return await axios.put(`/api/users`, data, { headers: { Authorization: `Bearer ${getToken()}` }})
-    
   } catch(error) {
     console.log(error)
   }
@@ -19,8 +17,6 @@ export const handleUpload = async ({request}) => {
 
 
 export default function Profile(){
-  console.log('Hit profile route')  
-
   // On initial render
   const userInfo = useLoaderData()
   const { username, email, characterCreated, image } = userInfo

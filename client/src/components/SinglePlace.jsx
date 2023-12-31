@@ -9,7 +9,6 @@ import Col from 'react-bootstrap/Col'
 export default function SinglePlace() {
 
   const loadedData = useLoaderData()
-  console.log(loadedData)
   const { charactersInPlace, description, image, name, occupiedBy, occupyingHouses, region } = loadedData
   function scrollUp() {
     document.documentElement.scrollTop = 0

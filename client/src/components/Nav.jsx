@@ -40,22 +40,19 @@ export default function NavbarFunction() {
   }
 
   function checkToken() {
-    console.log(userId)
     if (userId) {
       const token = getToken()
       const b64 = token.split('.')[1]
       const payload = JSON.parse(atob(b64))
-  
+
       const now = Date.now() / 1000
       const exp = payload.exp
 
-      if (exp > now) {
-        console.log('All good')
-      } else {
+      if (exp < now) {
         handleShowLog()
       }
     } else {
-      console.log('No active user')
+      // console.log('No active user')
       handleShowLog()
     }
   }
@@ -107,7 +104,7 @@ export default function NavbarFunction() {
             handleCloseLog()
             closeNav()
             navigate('/')
-            }}>
+          }}>
             Continue Browsing
           </Button>
           <Button variant="success" onClick={() => {
@@ -148,7 +145,7 @@ export default function NavbarFunction() {
                       checkToken()
                       navigate('/characters/create')
                       closeNav()
-                      }} className="nav-option">Create A Character</Nav.Link>
+                    }} className="nav-option">Create A Character</Nav.Link>
                     <span className="log-out-button" onClick={() => {
                       closeNav()
                       handleShow()

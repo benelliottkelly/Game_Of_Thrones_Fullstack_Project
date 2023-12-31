@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { Form, useActionData, useNavigate } from 'react-router-dom'
 
 export default function Register(){
-  console.log(`Hit register page`)
 
   const res = useActionData()
   const navigate = useNavigate()

@@ -411,7 +411,7 @@ export default [
     {
         houseName: "Dothraki",
         motto: " ",
-        crest: "https://awoiaf.westeros.org/images/0/00/Niten_Braided_Screamers.JPG",
+        crest: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9db326d1-e34f-4ff2-9597-4d2c1e42c6b2/d6ig9r4-8d250ac5-47da-4d76-88c4-447de8d1a513.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi85ZGIzMjZkMS1lMzRmLTRmZjItOTU5Ny00ZDJjMWU0MmM2YjIvZDZpZzlyNC04ZDI1MGFjNS00N2RhLTRkNzYtODhjNC00NDdkZThkMWE1MTMucG5nIn1dXX0.q2mBTnIlnGookQPRBEhVk7N6usZQNmWns-Uu3HCz0x0",
         description: "This nomadic warrior culture hails from the vast grasslands of Essos, known as the Dothraki Sea. Renowned for their exceptional horsemanship and fearsome reputation in battle, they live by a code centered on strength and honor. Led by khals, their society is organized into clans called khalasars, and they traverse the open plains, valuing freedom and valiance above all else.",
         notableBattles: [
             "Threat to Westeros",

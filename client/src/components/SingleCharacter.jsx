@@ -20,8 +20,6 @@ export default function SingleCharacter() {
   const { firstName, lastName, battles, biography, house, hometown, image, associatedHouse, id, owner } = singleCharacter
   const { crest } = associatedHouse[0]
   const relationships = []
-  console.log(loadedData)
-  console.log(owner)
 
   function scrollUp() {
     document.documentElement.scrollTop = 0
@@ -45,10 +43,8 @@ export default function SingleCharacter() {
 
 
   async function handleDelete(id) {
-    console.log(id)
     try {
       const response = await deleteCharacter(id)
-      console.log(response)
       if (response?.status === 204) {
         navigate('/characters')
       } else {

@@ -14,7 +14,10 @@ app.use(express.json())
 
 // allows same origin requests for search bar.
 app.use(cors({
-  origin: 'http://localhost:5173',
+  // for local hosting use below
+  // origin: 'http://localhost:5173',
+  // for web hosting use below
+  origin: 'https://game-of-thrones-fullstack-9f43f1202e82.herokuapp.com/',
   methods: 'GET,POST', // Add other methods as needed
   credentials: true,    // Enable credentials if your API uses cookies, sessions, or authentication
 }))

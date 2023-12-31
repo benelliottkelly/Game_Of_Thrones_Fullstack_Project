@@ -7,8 +7,6 @@ export default function ImageUploadField ({ formData, setFormData }) {
     const file = e.target.files[0]
     const endpoint = import.meta.env.VITE_UPLOAD_URL
 
-    console.log(endpoint)
-
     const data = new FormData()
     data.append('file', file)
     data.append('upload_preset', preset)

@@ -19,7 +19,6 @@ export default function CreateCharacter() {
   }
 
   function checkToken() {
-    console.log(userId)
     if (userId) {
       const token = getToken()
       const b64 = token.split('.')[1]
@@ -29,12 +28,12 @@ export default function CreateCharacter() {
       const exp = payload.exp
 
       if (exp > now) {
-        console.log('All good')
+        // console.log('All good')
       } else {
         handleShowLog()
       }
     } else {
-      console.log('No active user')
+      // console.log('No active user')
       handleShowLog()
     }
   }
@@ -79,7 +78,6 @@ export default function CreateCharacter() {
     }
     if (!lastName.classList.contains('valid')) {
       lastName.classList.add('empty')
-      console.log('last name hit')
     }
     if (!hometown.classList.contains('valid')) {
       hometown.classList.add('empty')
@@ -93,12 +91,11 @@ export default function CreateCharacter() {
   }
 
   useEffect(() => {
-    console.log(res)
     if (res?.status == 201) {
       navigate(`/characters/${res.data._id}`)
     }
     if (res?.status === 400) {
-      console.log('Not complete')
+      // console.log('Not complete')
     }
   }, [res, navigate])
 

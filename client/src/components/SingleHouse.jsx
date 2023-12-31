@@ -10,7 +10,6 @@ import Col from 'react-bootstrap/Col'
 export default function SingleHouse() {
 
   const houses = useLoaderData()
-  console.log(houses)
   const { bannermen, characters, crest, description, houseName, motto, places } = houses
 
   // Potentially add the below function to match houses with a characters home to confirm the house "headquarters"
