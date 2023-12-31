@@ -91,7 +91,7 @@ footer {
   height: 90vh;
   @include flex-center(column);
   .loading-screen{
-    background-image: url('../src/images/GoT.gif');
+    background-image: url('../images/GoT.gif');
     @include background-image(cover);
     width: 100%;
     height: 90%;

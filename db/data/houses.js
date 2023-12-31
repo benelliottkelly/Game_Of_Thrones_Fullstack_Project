@@ -339,7 +339,7 @@ export default [
     {
         houseName: "Free Folk",
         motto: "We do not kneel",
-        crest: 'https://awoiaf.westeros.org/images/thumb/5/5f/Wildlings.jpg/800px-Wildlings.jpg',
+        crest: 'https://vignette.wikia.nocookie.net/gameofthronesfanon/images/6/69/Free-Folk-Sigil.png/revision/latest?cb=20171201162447',
         description: "The Free Folk, or Wildlings, are a diverse group of people living beyond the Wall, rejecting the authority of the Seven Kingdoms.",
         notableBattles: [
             "Battle of Castle Black",

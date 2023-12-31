@@ -272,194 +272,264 @@
 }
 }
 
+@mixin largeScreens() {
+  @media screen and (min-width: 1400px) {
+    width: 1400px;
+    margin-left: 1em;
+    h2 {
+      font-size: 2.5em;
+    }
+    h3 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 2.5em;
+    }
+    li {
+      font-size: 1.5em;
+    }
+
+    .pictureFrame{
+      width: 430px;
+    }
+    .stained-glass{
+      width: 800px;
+    }
+    .index-return {
+      font-size: 3em;
+    }
+    .house-picture-link {
+      font-size: 1.5em !important;
+    }
+  }
+}
+
 .Arryn-container {
   @include houseColours(#0f86e1, #FCFCFC, #1c517c);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Assembly-container {
   @include houseColours(red, white, black);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Baelish-container{
   @include houseColours(#16a516, #84a584, #d3d4d3);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Baratheon-container {
   @include houseColours(#F4D71B, #313131, #D63232);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Blackwood-container {
   @include houseColours(#971818, #E8E6E6, #1D1C1C);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Bolton-container {
   @include houseColours(#E58B8B, #A62929, #EA7070);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Brax-container {
   @include houseColours(#991399, #E0E0E0, #751E75);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Clegane-container {
   @include houseColours(#E4BB07, #444141, #C4C4C4);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Dayne-container {
   @include houseColours(#0C5891, #FEFEFE, #6E7A7C);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Dondarrion-container {
   @include houseColours(#050505, #AC1CAC, #FFFFFF);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Dothraki-container {
   @include houseColours(#E69B1C, #71472F, #D67A13);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Dustin-container {
   @include houseColours(#ECEC08, #A0A0A0, #9E6045);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Free.Folk-container {
   @include houseColours(#0C5891, #927330, #6E7A7C);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Frey-container {
   @include houseColours(#1F1F3D, #C3C1B2, #7F7F7F);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Glover-container {
   @include houseColours(#F13F12, #ACACAC, #E12F02);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Greyjoy-container {
   @include houseColours(#191919, #F2C615, #F7F7F7);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Hightower-container {
   @include houseColours(#475351, #55B357, #CDCABE);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Independent-container{
   @include houseColours(#475351, #cbdacb, #a76262);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Karstark-container {
   @include houseColours(#201C1D, #F9F9F9, #403D3E);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Lannister-container {
   @include houseColours(#86090A, #C2AD77, #000000);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Mallister-container {
   @include houseColours(#440274, #E4E4E4, #C91C1C);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Manderly-container {
   @include houseColours(#108080, #118111, #FFFFFF);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Martell-container {
   @include houseColours(#E37D17, #D32D2D, #FBFB52);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Mormont-container {
   @include houseColours(#047C04, #94E494, #1D1D1D);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Watch-container {
   @include houseColours(#3900a3, #000000, #6d00b6);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Reed-container {
   @include houseColours(#81A688, #0B0B0B, #567E5E);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Royce-container {
   @include houseColours(#CA8846, #353535, #4C341C);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Stark-container {
   @include houseColours(#818181, #F1F1F1, #E19797);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Stokeworth-container{
   @include houseColours(#098309, #f5d81f, #fcfcfc);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Targaryen-container {
   @include houseColours(#0B0B0B, #B62B2B, #F8F6F6);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Tarly-container {
   @include houseColours(#047C04, #C30F0F, #8A9159);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Tarth-container {
   @include houseColours(#34355C, #A14432, #DFD548);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Tully-container {
   @include houseColours(#0E0EB4, #9C1919, #D0D0D0);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Tyrell-container {
   @include houseColours(#1A8E1A, #FFE646, #A4580C);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Umber-container {
   @include houseColours(#982023, #C3C2C2, #B14245);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Unsullied-container{
   @include houseColours(brown, white, beige);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .Westerling-container {
   @include houseColours(#D4B96A, #C8C8C8, #FFFFFF);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 .general-container {
   @include houseColours(#ffd900, #0004ff, #ff9900);
-  @include smallScreens()
+  @include smallScreens();
+  @include largeScreens()
 }
 
 @keyframes tilt-shaking {
